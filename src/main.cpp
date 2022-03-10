@@ -19,26 +19,39 @@ const uint8_t smiley[] = {
 
 Tone hello[] = {
     {Note::C4, 5, 10},
-    {Note::D4, 5, 10},
+    {Note::NONE, 5, 10},
     {Note::E4, 10, 10},
     {Note::F4, 5, 10},
     {Note::NONE, 10, 10},
     {Note::A5, 10, 10},
     {Note::D5, 10, 10},
     {Note::C5, 10, 10},
+    {Note::NONE, 10, 10},
     {Note::END, 0, 0},
 };
 
+Tone bass[] = {
+    {Note::C2, 10, 10},
+    {Note::D2, 10, 10},
+    {Note::E2, 10, 10},
+    {Note::F2, 10, 10},
+    {Note::C2, 10, 10},
+    {Note::A3, 10, 10},
+    {Note::D3, 10, 10},
+    {Note::C3, 10, 10},
+    {Note::LOOP, 0, 0},
+};
+
 Tone beat[] = {
-    {Note::C4, 1, 10},
-    {Note::D4, 1, 10},
-    {Note::E4, 1, 10},
-    {Note::F4, 1, 10},
-    {Note::C4, 1, 10},
-    {Note::A5, 1, 10},
-    {Note::D5, 1, 10},
-    {Note::C5, 1, 10},
-    {Note::END, 0, 0},
+    {Note::C6, 1, 10},
+    {Note::C4, 2, 10},
+    {Note::NONE, 1, 10},
+    {Note::C4, 2, 10},
+    {Note::C6, 1, 10},
+    {Note::C4, 2, 10},
+    {Note::NONE, 1, 10},
+    {Note::C4, 2, 10},
+    {Note::LOOP, 0, 0},
 };
 
 class Player
@@ -77,6 +90,8 @@ public:
         }
         if( pressedThisFrame & BUTTON_1 ){
             AudioChannel::pulse1.play(hello);
+            AudioChannel::triangle.setVolume(75);
+            AudioChannel::triangle.play(bass);
             AudioChannel::noise.play(beat);
         }
     }
@@ -97,6 +112,8 @@ void update () {
 
     player.update(tick);
     AudioChannel::pulse1.tick();
+    AudioChannel::pulse2.tick();
+    AudioChannel::triangle.tick();
     AudioChannel::noise.tick();
 
     player.render();

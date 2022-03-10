@@ -24,6 +24,11 @@ void AudioChannel::play(Tone sequence[])
     sequenceCount_= 0;
 }
 
+void AudioChannel::setVolume(uint8_t volume)
+{
+    volume_= volume;
+}
+
 void AudioChannel::tick()
 {
     if( sequence_ == nullptr ){

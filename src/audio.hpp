@@ -35,6 +35,8 @@ public:
     // sequence is an array of Tones which must end with an END or LOOP note
     void play(Tone sequence[]);
 
+    void setVolume(uint8_t volume);
+
     void tick();
 
 private:
