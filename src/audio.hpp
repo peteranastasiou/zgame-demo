@@ -33,7 +33,7 @@ public:
     AudioChannel(uint8_t index);
 
     // sequence is an array of Tones which must end with an END or LOOP note
-    void play(Tone sequence[]);
+    void play(Tone const sequence[]);
 
     void setVolume(uint8_t volume);
 
@@ -45,7 +45,7 @@ private:
     uint8_t duty_;  // TODO duty cycle bits for pulse channels
 
     // latest sequence
-    Tone * sequence_;
+    Tone const * sequence_;
     uint16_t sequenceIdx_;
     int16_t sequenceCount_;
 };

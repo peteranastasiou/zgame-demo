@@ -6,8 +6,9 @@
 #include "wasm4.h"
 #include "audio.hpp"
 #include "player.hpp"
+#include "config.hpp"
 
-Tone hello[] = {
+static Tone const hello[] = {
     {Note::C4, 5, 10},
     {Note::NONE, 5, 10},
     {Note::E4, 10, 10},
@@ -20,7 +21,7 @@ Tone hello[] = {
     {Note::END, 0, 0},
 };
 
-Tone bass[] = {
+static Tone const bass[] = {
     {Note::C2, 10, 10},
     {Note::D2, 10, 10},
     {Note::E2, 10, 10},
@@ -32,7 +33,7 @@ Tone bass[] = {
     {Note::END, 0, 0},
 };
 
-Tone beat[] = {
+static Tone const beat[] = {
     {Note::C6, 1, 10},
     {Note::C4, 2, 10},
     {Note::NONE, 1, 10},
@@ -44,19 +45,30 @@ Tone beat[] = {
     {Note::LOOP, 0, 0},
 };
 
-Player player(5, 5);
-int32_t tick= 0;
-uint8_t previousGamepad= 0;
+static uint8_t const stone[64] = {
+    0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x03,0xff,0xff,0xfc,0xfc,0xff,0xf0,0xfc,0xa8,0xff,0xcf,0x3f,0xab,0xff,0xfa,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x0f,0xfc,0x0f,0xfc,0xf3,0xf3,0xf3,0xff,0xaf,0xf2,0xa3,0xff,0xff,0xfe,0xaf,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff
+};
+
+static Player player(5, 5);
+static int32_t tick= 0;
+static uint8_t previousGamepad= 0;
 
 void start()
 {
     trace("hello");
 }
 
-void update () {
-    *DRAW_COLORS = 2;
-    //text("Hello World", 10, 10);
+void background_render()
+{
+    *DRAW_COLORS = 0x1234;
+    for( int i = 0; i < NUM_TILES; ++i ){
+        for( int j = 0; j < NUM_TILES; ++j ){
+            blit(stone, i*16, j*16, 16, 16, BLIT_2BPP);
+        }
+    }
+}
 
+void update () {
     // Manage Audio
     uint8_t gamepad = *GAMEPAD1;
     uint8_t pressedThisFrame = gamepad & (gamepad ^ previousGamepad);    
@@ -68,6 +80,7 @@ void update () {
         AudioChannel::noise.play(beat);
     }
 
+    // Update audio channels
     AudioChannel::pulse1.tick();
     AudioChannel::pulse2.tick();
     AudioChannel::triangle.tick();
@@ -75,7 +88,10 @@ void update () {
 
     // Manage player character
     player.update(tick);
+
+    // Render everything
+    background_render();
     player.render();
-    
+
     tick ++;
 }

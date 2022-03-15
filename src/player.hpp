@@ -20,5 +20,10 @@ private:
     int32_t px_, py_; // pixel position, animates to catch up with grid coordinates * TILE_SIZE
     int32_t const updatePeriod_ = 1;
 
+    enum Dir
+    {
+        N, E, S, W
+    } dir_;
+
     bool move_(int dx, int dy);
 };

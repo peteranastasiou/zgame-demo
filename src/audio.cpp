@@ -16,7 +16,7 @@ AudioChannel::AudioChannel(uint8_t index): index_(index)
     sequenceCount_= 0;
 }
 
-void AudioChannel::play(Tone sequence[])
+void AudioChannel::play(Tone const sequence[])
 {
     // TODO queue up next sequence, fade in/out
     sequence_= sequence;
