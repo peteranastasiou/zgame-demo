@@ -7,6 +7,7 @@
 #include "audio.hpp"
 #include "player.hpp"
 #include "config.hpp"
+#include "sprites.hpp"
 
 static Tone const hello[] = {
     {Note::C4, 5, 10},
@@ -60,10 +61,10 @@ void start()
 
 void background_render()
 {
-    *DRAW_COLORS = 0x1234;
+    *DRAW_COLORS = 0x4321;
     for( int i = 0; i < NUM_TILES; ++i ){
         for( int j = 0; j < NUM_TILES; ++j ){
-            blit(stone, i*16, j*16, 16, 16, BLIT_2BPP);
+            sprites::blit(sprites::COBBLESTONE, i*16, j*16, 0);
         }
     }
 }
@@ -91,7 +92,7 @@ void update () {
 
     // Render everything
     background_render();
-    player.render();
+    player.render(tick);
 
     tick ++;
 }
