@@ -7,5 +7,12 @@
     ],
     "objectTypesFile": "",
     "propertyTypes": [
+        {
+            "id": 1,
+            "members": [
+            ],
+            "name": "Class0",
+            "type": "class"
+        }
     ]
 }

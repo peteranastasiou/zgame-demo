@@ -3,6 +3,9 @@
  <editorsettings>
   <export target="test.json" format="json"/>
  </editorsettings>
+ <properties>
+  <property name="n" value="1"/>
+ </properties>
  <tileset firstgid="1" source="xipe.tsx"/>
  <layer id="1" name="Tiles" width="10" height="10">
   <data encoding="csv">

@@ -3,7 +3,7 @@
  <editorsettings>
   <export target="xipe." format="json"/>
  </editorsettings>
- <image source="sprites2.png" width="160" height="128"/>
+ <image source="sprites.png" width="160" height="128"/>
  <tile id="0" type="HOOD_FWD1"/>
  <tile id="1" type="HOOD_FWD2"/>
  <tile id="2" type="HOOD_FWD3"/>
