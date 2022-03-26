@@ -4,15 +4,9 @@
     ],
     "extensionsPath": "extensions",
     "folders": [
+        "."
     ],
     "objectTypesFile": "",
     "propertyTypes": [
-        {
-            "id": 1,
-            "members": [
-            ],
-            "name": "Class0",
-            "type": "class"
-        }
     ]
 }

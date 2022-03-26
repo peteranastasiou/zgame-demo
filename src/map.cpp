@@ -6,9 +6,14 @@ namespace map {
  * NOTES: save/load game by passing a pointer by each tile, giving each a chance to store/load from it
  *        that way, stateless tiles can ignore it and not use up the 1k space
  * 
+ * TODO object layer and background layer. object layer can be a list of points, rather than grid?
+ * background layer is simply passable or not,
+ * or: store single tile as "background" for each screen, then just need one map?
+ *
  * puzzles to test system:
  * SINGLE OBJECT:
  *  - light candelabra
+ *  - 
  *  - pick up into inventory (todo)
  *  - obstacle e.g. mob or ability check - triggers screen, then changes object
  *  - interaction triggers "animation" e.g. moving obstacle
