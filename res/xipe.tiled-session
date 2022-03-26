@@ -1,0 +1,60 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "test.tmx",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "/home/peter/untitled.tmx": {
+            "scale": 3,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 645.1666666666666,
+                "y": 296.66666666666663
+            }
+        },
+        "blowharder.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 3
+        },
+        "test.tmx": {
+            "scale": 4,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 61.625,
+                "y": 76.75
+            }
+        },
+        "xipe.tsx": {
+            "scaleInDock": 3,
+            "scaleInEditor": 5.5
+        }
+    },
+    "last.exportedFilePath": "/home/peter/workspace/xipe/res",
+    "last.imagePath": "/home/peter/workspace/xipe/res",
+    "lastUsedTilesetExportFilter": "JSON tileset files (*.tsj *.json)",
+    "map.height": 10,
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 10,
+    "openFiles": [
+        "xipe.tsx",
+        "test.tmx"
+    ],
+    "project": "xipe.tiled-project",
+    "recentFiles": [
+        "xipe.tsx",
+        "test.tmx",
+        "/home/peter/untitled.tmx",
+        "blowharder.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
