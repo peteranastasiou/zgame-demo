@@ -8,6 +8,7 @@
 #include "player.hpp"
 #include "config.hpp"
 #include "sprites.hpp"
+#include "str.hpp"
 
 static Tone const hello[] = {
     {Note::C4, 5, 10},
@@ -59,23 +60,6 @@ void start()
     trace("hello");
 }
 
-// string class
-
-
-void dec99toStr(char *& buf, int8_t n)
-{
-    if( n < 0 ){
-        *buf++= '-';
-        n *= -1;
-    }
-    if( n > 99 ) n = 99; // max number supported
-    if( n < 10 ){
-        *buf++= '0'+n;
-    }else{
-        *buf++= '0'+(n/10);
-        *buf++= '0'+(n%10);
-    }
-}
 
 void background_render()
 {
@@ -87,16 +71,14 @@ void background_render()
     }
     *DRAW_COLORS = 0x0041;
     int8_t count = (int8_t)(tick / 18);
-    char buf[6];
-    char * bufPtr = buf;
-    dec99toStr(bufPtr, count);
-    *bufPtr++='/';
-    dec99toStr(bufPtr, count);
-    *bufPtr++=0;
+    Str<6> str;
+    str.appendUint8((uint8_t)count, ' ');
+    str.append('/');
+    str.appendUint8((uint8_t)(count+2));
 
     int ox = 90;
     int oy = 2;
-    text(buf, 0, 0);
+    text(str.get(), 0, 0);
     *DRAW_COLORS = 0x0044;
     rect(ox, oy, 68, 22);
     *DRAW_COLORS = (tick/5) % 2 == 0 ? 0x0031 : 0x0032;
