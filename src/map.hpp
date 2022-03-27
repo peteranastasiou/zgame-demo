@@ -1,11 +1,38 @@
 
 #pragma once
 
+#include "sprites.hpp"
+#include "wasm4.h"
 #include <stdint.h>
 
 namespace map {
 
-struct Tile
+/**
+ * Background is made of tiles
+ */
+class Tile
+{
+private:
+    uint8_t sprite_;
+    bool passable_;
+public:
+    Tile(uint8_t sprite, bool passable):
+        sprite_(sprite), passable_(passable){
+    }
+
+    bool passable(){
+        return passable_;
+    }
+
+    void draw(uint8_t i, uint8_t j){
+        sprites::blit(64, i*16, j*16, 0);
+    }
+};
+
+/**
+ * Foreground is made of objects, attached to each screen
+ */
+class Object
 {
     // called to check if can walk into this tile
     virtual bool passable()=0;
@@ -23,12 +50,22 @@ struct Tile
     virtual void load(uint8_t ** ptr)=0;
 };
 
-/**
- * @param tx tile coordinates from 0 to 160
- * @param ty tile coordinates from 0 to 160
- * @return Tile* 
- */
-Tile * get(uint8_t x, uint8_t y);
+class Screen
+{
+    // todo list of objects
+};
+
+// draw current screen
+void draw();
+
+// first checks object list, then tile
+void interact(uint8_t i, uint8_t j);
+
+// returns which screen we are on
+void getScreen(uint8_t &si, uint8_t &sj);
+
+// sets which screen we are on
+void setScreen(uint8_t si, uint8_t sj);
 
 
 } // namespace map

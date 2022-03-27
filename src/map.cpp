@@ -1,4 +1,5 @@
 #include "map.hpp"
+#include "config.hpp"
 #include "sprites.hpp"
 
 namespace map {
@@ -26,6 +27,47 @@ namespace map {
  *  - opening one sarcophagus causes all to open
  * 
  */
+
+static uint8_t si, sj; // screen coordinates
+
+Tile tiles[]= {
+    
+};
+
+void draw(uint8_t i, uint8_t j)
+{
+    // draw background (tiles)
+    *DRAW_COLORS = 0x4321;
+    for( int i = 0; i < NUM_TILES; ++i ){
+        for( int j = 0; j < NUM_TILES; ++j ){
+            tiles[j*NUM_TILES + i].
+        }
+    }
+
+    // draw foreground (objects)
+}
+
+// first checks object list, then tile
+void interact(uint8_t i, uint8_t j)
+{
+    (void) i;
+    (void) j;
+}
+
+// returns which screen we are on
+void getScreen(uint8_t &si, uint8_t &sj)
+{
+    (void) si;
+    (void) sj;
+}
+
+// sets which screen we are on
+void setScreen(uint8_t si, uint8_t sj)
+{
+    (void) si;
+    (void) sj;
+}
+
 /*
 class GenericTile: public Tile {
 private:
