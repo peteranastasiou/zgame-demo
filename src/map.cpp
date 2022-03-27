@@ -26,7 +26,7 @@ namespace map {
  *  - opening one sarcophagus causes all to open
  * 
  */
-
+/*
 class GenericTile: public Tile {
 private:
     uint8_t sprite_;
@@ -97,5 +97,5 @@ Tile * get(uint8_t x, uint8_t y)
 {
     return tiles;
 }
-
+*/
 }

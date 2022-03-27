@@ -5,6 +5,7 @@
     },
     "activeFile": "test.tmx",
     "expandedProjectPaths": [
+        "."
     ],
     "fileStates": {
         "/home/peter/untitled.tmx": {
@@ -21,10 +22,10 @@
         },
         "test.tmx": {
             "scale": 4,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 61.625,
-                "y": 76.75
+                "x": 24,
+                "y": 24
             }
         },
         "xipe.tsx": {
