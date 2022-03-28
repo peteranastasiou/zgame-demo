@@ -6,7 +6,7 @@
  <properties>
   <property name="n" value="1"/>
  </properties>
- <tileset firstgid="1" source="xipe.tsx"/>
+ <tileset firstgid="1" source="tileset.tsx"/>
  <layer id="1" name="Background" width="10" height="10">
   <data encoding="csv">
 23,23,23,23,23,23,23,23,23,23,

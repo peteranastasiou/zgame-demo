@@ -8,28 +8,6 @@
 namespace map {
 
 /**
- * Background is made of tiles
- */
-class Tile
-{
-private:
-    uint8_t sprite_;
-    bool passable_;
-public:
-    Tile(uint8_t sprite, bool passable):
-        sprite_(sprite), passable_(passable){
-    }
-
-    bool passable(){
-        return passable_;
-    }
-
-    void draw(uint8_t i, uint8_t j){
-        sprites::blit(64, i*16, j*16, 0);
-    }
-};
-
-/**
  * Foreground is made of objects, attached to each screen
  */
 class Object
