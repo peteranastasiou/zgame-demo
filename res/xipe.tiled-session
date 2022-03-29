@@ -22,10 +22,10 @@
         },
         "map.tmx": {
             "scale": 1.8469,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 61.72505279116356,
-                "y": 193.29687584601223
+                "x": 80.13427906221236,
+                "y": 80.13427906221236
             }
         },
         "test.tmx": {
@@ -38,7 +38,7 @@
         },
         "tileset.tsx": {
             "scaleInDock": 3,
-            "scaleInEditor": 1.76
+            "scaleInEditor": 2.9878
         },
         "xipe.tsx": {
             "scaleInDock": 3,

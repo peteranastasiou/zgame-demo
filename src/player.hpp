@@ -11,20 +11,24 @@ class Player
 public:
     Player(int x, int y);
 
-    void render(int32_t tick);
+    void render(uint32_t tick);
     
-    void update(int32_t tick);
+    void update(uint32_t tick);
+
+    int getX(){ return gx_; }
+    int getY(){ return gy_; }
 
 private:
     // position
-    int32_t gx_, gy_; // grid coordinates
+    int32_t gx_, gy_; // global tile coordinates
     int32_t px_, py_; // pixel position, animates to catch up with grid coordinates * TILE_SIZE
-    int32_t const updatePeriod_ = 1;
-    int32_t const animationPeriod_ = 8;
+    uint32_t const updatePeriod_ = 1;
+    uint32_t const animationPeriod_ = 8;
 
     // animation state
     bool walking_;
-    int32_t step_, frame_;
+    uint32_t step_;
+    int32_t frame_;
 
     // facing direction
     enum Dir
@@ -32,5 +36,5 @@ private:
         N, E, S, W
     } dir_;
 
-    bool move_(int dx, int dy);
+    void move_(int dx, int dy);
 };

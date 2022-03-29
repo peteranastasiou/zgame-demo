@@ -1,4 +1,5 @@
 #include "map.hpp"
+#include "map.impl.auto.hpp"
 #include "config.hpp"
 #include "sprites.hpp"
 
@@ -28,19 +29,20 @@ namespace map {
  * 
  */
 
-static uint8_t si, sj; // screen coordinates
-
-Tile tiles[]= {
-    
-};
-
-void draw(uint8_t i, uint8_t j)
+void render(uint8_t sx, uint8_t sy, uint32_t tick)
 {
-    // draw background (tiles)
-    *DRAW_COLORS = 0x4321;
-    for( int i = 0; i < NUM_TILES; ++i ){
-        for( int j = 0; j < NUM_TILES; ++j ){
-            tiles[j*NUM_TILES + i].
+    // TODO screens 
+    (void) sx;
+    (void) sy;
+    (void) tick;
+
+    // draw background
+    *DRAW_COLORS = 0x1234;
+    for( int ii = 0; ii < map_height; ++ii ){
+        for( int jj = 0; jj < map_width; ++jj ){
+            uint8_t t = tiles[jj*map_width + ii];
+            uint8_t spriteIdx = t & 0x7F;
+            sprites::blit(spriteIdx, 16*ii, 16*jj);
         }
     }
 
@@ -48,24 +50,20 @@ void draw(uint8_t i, uint8_t j)
 }
 
 // first checks object list, then tile
-void interact(uint8_t i, uint8_t j)
+bool interact(int gx, int gy)
 {
-    (void) i;
-    (void) j;
-}
+    tracef("interact %d %d", gx, gy);
+    if( gx < 0 || gy < 0 || gx >= map_width || gy >= map_height) return false;
 
-// returns which screen we are on
-void getScreen(uint8_t &si, uint8_t &sj)
-{
-    (void) si;
-    (void) sj;
-}
+    // todo check object first
+    bool obj_passable = true;
 
-// sets which screen we are on
-void setScreen(uint8_t si, uint8_t sj)
-{
-    (void) si;
-    (void) sj;
+    // then check tile
+    uint8_t t = tiles[gy*map_width + gx];
+    tracef("tile %d: %d -- %d\n", gy*map_width + gx, t, t&0x80);
+    bool tile_passable = (t & 0x80) != 0;
+
+    return obj_passable && tile_passable;
 }
 
 /*

@@ -8,6 +8,7 @@
 #include "player.hpp"
 #include "config.hpp"
 #include "sprites.hpp"
+#include "map.hpp"
 #include "str.hpp"
 
 static Tone const hello[] = {
@@ -52,7 +53,7 @@ static uint8_t const stone[64] = {
 };
 
 static Player player(5, 5);
-static int32_t tick= 0;
+static uint32_t tick= 0;
 static uint8_t previousGamepad= 0;
 
 void start()
@@ -110,8 +111,15 @@ void update () {
     player.update(tick);
 
     // Render everything
-    background_render();
+    map::render(0, 0, tick);
     player.render(tick);
+
+    *DRAW_COLORS = 0x1234;
+    Str<6> str;
+    str.appendUint8((uint8_t)player.getX());
+    str.append(',');
+    str.appendUint8((uint8_t)player.getY());
+    text(str.get(), 0, 10);
 
     tick ++;
 }

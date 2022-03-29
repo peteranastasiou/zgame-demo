@@ -4,5 +4,10 @@ tile properties:
  class: class to use when instantiating map, or Sprite, which is used for animation only, can not appear in map
  onInteraction: function to call on interaction, or blank for null
  transparentColor: color to use as transparent when drawing object layer objects
- passable: might use class instead?
+ passable: whether hero can walk through this tile
 
+
+px, py used for pixel coords (within screen)
+tx, ty used for tile coords (within screen)
+gx, gy used for global tile coords (within map)
+sx, sy used for screen coords (within map)

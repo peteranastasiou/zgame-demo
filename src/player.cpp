@@ -1,6 +1,7 @@
 
 #include "player.hpp"
 #include "config.hpp"
+#include "map.hpp"
 #include "sprites.hpp"
 #include "wasm4.h"
 
@@ -15,7 +16,7 @@ Player::Player(int x, int y): gx_(x), gy_(y)
     frame_= 0;
 }
 
-void Player::render(int32_t tick)
+void Player::render(uint32_t tick)
 {
     (void) tick;
     int sprite;
@@ -35,11 +36,11 @@ void Player::render(int32_t tick)
             flags |= BLIT_FLIP_X;
             break;
     }
-    *DRAW_COLORS = 0x4320; // note: bg color of sprite is made transparent
+    *DRAW_COLORS = 0x0234; // note: bg color of sprite is made transparent
     sprites::blit(sprite + frame_, px_, py_, flags);
 }
 
-void Player::update(int32_t tick)
+void Player::update(uint32_t tick)
 {
     if( tick % updatePeriod_ != 0 ) return;
 
@@ -80,10 +81,13 @@ void Player::update(int32_t tick)
     }
 }
 
-bool Player::move_(int nx, int ny)
+void Player::move_(int nx, int ny)
 {
-    // TODO test position nx, ny is okay to move into or else interact with
-    gx_ = nx;
-    gy_ = ny;
-    return true;
+    // interact with new tile
+    bool passable = map::interact(nx, ny);
+
+    if( passable ){
+        gx_ = nx;
+        gy_ = ny;
+    }
 }
