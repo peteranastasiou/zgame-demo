@@ -7,6 +7,14 @@
 
 namespace map {
 
+struct Tile
+{
+    uint8_t sprite:7;
+    uint8_t passable:1; // last bit=MSB, assuming little-endian (true for wasm)
+};
+
+static_assert(sizeof(Tile) == 1, "check sizeof(Tile) 1 byte");
+
 /**
  * Foreground is made of objects, attached to each screen
  */
@@ -38,7 +46,7 @@ namespace map {
  * @param sx screen coord
  * @param sy screen coord
  */
-void render(uint8_t sx, uint8_t sy, uint32_t tick);
+void render(int sx, int sy, uint32_t tick);
 
 /**
  *  first checks object list, then tile
@@ -47,6 +55,13 @@ void render(uint8_t sx, uint8_t sy, uint32_t tick);
  * @param returns true if passable
  */
 bool interact(int gx, int gy);
+
+/**
+ * get tile and whether passable
+ * @param gx global tile coord
+ * @param gy global tile coord
+ */
+Tile getTile(int gx, int gy);
 
 
 } // namespace map

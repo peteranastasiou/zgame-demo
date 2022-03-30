@@ -252,7 +252,7 @@
  <tile id="35">
   <properties>
    <property name="onInteraction" value=""/>
-   <property name="passable" type="bool" value="false"/>
+   <property name="passable" type="bool" value="true"/>
    <property name="transparentColour" value="1"/>
   </properties>
  </tile>

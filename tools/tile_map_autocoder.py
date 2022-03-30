@@ -92,9 +92,11 @@ if __name__ == "__main__":
     with open("src/map.impl.auto.hpp", "w") as f:
         f.write(f"// Auto-generated from {map_path}\n\n")
         f.write("#include <stdint.h>\n\n")
-        f.write(f"static const uint8_t map_width = {map_w};\n")
-        f.write(f"static const uint8_t map_height = {map_h};\n")
-        f.write("static const uint8_t tiles[] = {\n")
+        f.write(f"static const uint8_t MAP_WIDTH = {map_w};\n")
+        f.write(f"static const uint8_t MAP_HEIGHT = {map_h};\n")
+        f.write(f"static const uint8_t SCREEN_WIDTH = 10;\n")
+        f.write(f"static const uint8_t SCREEN_HEIGHT = 10;\n")
+        f.write("static const uint8_t TILES[] = {\n")
         for i, tile_id in enumerate(map_tiles):
             # Lookup passability
             passable = tileset[tile_id]["passable"]

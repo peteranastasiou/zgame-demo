@@ -6,10 +6,10 @@
 #include "wasm4.h"
 
 
-Player::Player(int x, int y): gx_(x), gy_(y)
+Player::Player(int x, int y): gxCurr_(x), gyCurr_(y), gxNext_(x), gyNext_(y)
 {
-    px_ = gx_ * TILE_SIZE;
-    py_ = gy_ * TILE_SIZE;
+    px_ = gxCurr_ * TILE_SIZE;
+    py_ = gyCurr_ * TILE_SIZE;
     dir_= S;
     walking_= false;
     step_= 0;
@@ -37,7 +37,17 @@ void Player::render(uint32_t tick)
             break;
     }
     *DRAW_COLORS = 0x0234; // note: bg color of sprite is made transparent
-    sprites::blit(sprite + frame_, px_, py_, flags);
+
+    // get which screen we are on
+    int sx = gxCurr_ / 10;
+    int sy = gyCurr_ / 10;
+
+    // position on screen to draw
+    int posx = px_ - sx * SCREEN_SIZE;
+    int posy = py_ - sy * SCREEN_SIZE;
+
+    // convert global pixel to local screen pixel
+    sprites::blit(sprite + frame_, posx, posy, flags);
 }
 
 void Player::update(uint32_t tick)
@@ -45,24 +55,28 @@ void Player::update(uint32_t tick)
     if( tick % updatePeriod_ != 0 ) return;
 
     // set point to walk towards
-    int32_t sx = gx_*TILE_SIZE;
-    int32_t sy = gy_*TILE_SIZE;
+    int32_t sx = gxNext_*TILE_SIZE;
+    int32_t sy = gyNext_*TILE_SIZE;
 
     // if idle:
     if( px_ == sx && py_ == sy ){
+        // update last position
+        gxCurr_ = gxNext_;
+        gyCurr_ = gyNext_;
+
         // accept new direction to move:
         uint8_t gamepad = *GAMEPAD1;
 
         // mask the d pad so that pressing multiple keys stops movement
         gamepad &= BUTTON_RIGHT | BUTTON_LEFT | BUTTON_UP | BUTTON_DOWN;
-        if( gamepad == BUTTON_RIGHT ){ dir_= E; move_(gx_+1, gy_); }
-        if( gamepad == BUTTON_LEFT  ){ dir_= W; move_(gx_-1, gy_); }
-        if( gamepad == BUTTON_DOWN  ){ dir_= S; move_(gx_, gy_+1); }
-        if( gamepad == BUTTON_UP    ){ dir_= N; move_(gx_, gy_-1); }
+        if( gamepad == BUTTON_RIGHT ){ dir_= E; move_(gxNext_+1, gyNext_); }
+        if( gamepad == BUTTON_LEFT  ){ dir_= W; move_(gxNext_-1, gyNext_); }
+        if( gamepad == BUTTON_DOWN  ){ dir_= S; move_(gxNext_, gyNext_+1); }
+        if( gamepad == BUTTON_UP    ){ dir_= N; move_(gxNext_, gyNext_-1); }
     }
     // update set point post movement:
-    sx = gx_*TILE_SIZE;
-    sy = gy_*TILE_SIZE;
+    sx = gxNext_*TILE_SIZE;
+    sy = gyNext_*TILE_SIZE;
 
     // walking animation
     walking_= true;
@@ -87,7 +101,7 @@ void Player::move_(int nx, int ny)
     bool passable = map::interact(nx, ny);
 
     if( passable ){
-        gx_ = nx;
-        gy_ = ny;
+        gxNext_ = nx;
+        gyNext_ = ny;
     }
 }

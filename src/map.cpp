@@ -29,41 +29,49 @@ namespace map {
  * 
  */
 
-void render(uint8_t sx, uint8_t sy, uint32_t tick)
+void render(int sx, int sy, uint32_t tick)
 {
-    // TODO screens 
-    (void) sx;
-    (void) sy;
     (void) tick;
+    // origin (in tiles)
+    int ox = sx*SCREEN_WIDTH;
+    int oy = sy*SCREEN_HEIGHT;
 
     // draw background
     *DRAW_COLORS = 0x1234;
-    for( int ii = 0; ii < map_height; ++ii ){
-        for( int jj = 0; jj < map_width; ++jj ){
-            uint8_t t = tiles[jj*map_width + ii];
-            uint8_t spriteIdx = t & 0x7F;
-            sprites::blit(spriteIdx, 16*ii, 16*jj);
+    for( int tx = 0; tx < SCREEN_WIDTH; ++tx ){
+        for( int ty = 0; ty < SCREEN_HEIGHT; ++ty ){
+            Tile tile = getTile(ox + tx, oy + ty);
+            sprites::blit(tile.sprite, 16*tx, 16*ty);
         }
     }
 
     // draw foreground (objects)
+
 }
 
 // first checks object list, then tile
 bool interact(int gx, int gy)
 {
-    tracef("interact %d %d", gx, gy);
-    if( gx < 0 || gy < 0 || gx >= map_width || gy >= map_height) return false;
-
-    // todo check object first
+    // TODO check object first
     bool obj_passable = true;
 
     // then check tile
-    uint8_t t = tiles[gy*map_width + gx];
-    tracef("tile %d: %d -- %d\n", gy*map_width + gx, t, t&0x80);
-    bool tile_passable = (t & 0x80) != 0;
+    Tile tile = getTile(gx, gy);
 
-    return obj_passable && tile_passable;
+    // both object and tile need to be passable, to pass
+    return obj_passable && tile.passable;
+}
+
+Tile getTile(int gx, int gy)
+{
+    if( gx < 0 || gy < 0 || gx >= MAP_WIDTH || gy >= MAP_HEIGHT){
+        // should never happen
+        return {};
+    }
+
+    uint8_t tile = TILES[gx + gy*MAP_WIDTH];
+    // cast to Tile struct:
+    return *(Tile*) &tile;
 }
 
 /*

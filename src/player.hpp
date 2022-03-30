@@ -15,12 +15,16 @@ public:
     
     void update(uint32_t tick);
 
-    int getX(){ return gx_; }
-    int getY(){ return gy_; }
+    int getX(){ return gxCurr_; }
+    int getY(){ return gyCurr_; }
+
+    int getPX(){ return px_; }
+    int getPY(){ return py_; }
 
 private:
     // position
-    int32_t gx_, gy_; // global tile coordinates
+    int32_t gxCurr_, gyCurr_; // global tile coordinate (if walking: exiting this tile)
+    int32_t gxNext_, gyNext_; // global tile coordinates (if walking: entering this tile)
     int32_t px_, py_; // pixel position, animates to catch up with grid coordinates * TILE_SIZE
     uint32_t const updatePeriod_ = 1;
     uint32_t const animationPeriod_ = 8;

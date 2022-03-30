@@ -1,3 +1,5 @@
+.DEFAULT_GOAL := all
+
 ifndef WASI_SDK_PATH
 $(error Download the WASI SDK (https://github.com/WebAssembly/wasi-sdk) and set $$WASI_SDK_PATH)
 endif
@@ -41,7 +43,10 @@ else
 	RMDIR = rm -rf
 endif
 
-all: build/cart.wasm
+all: auto build/cart.wasm
+
+auto:
+	python3 tools/tile_map_autocoder.py
 
 # Link cart.wasm from all object files and run wasm-opt
 build/cart.wasm: $(OBJECTS)
