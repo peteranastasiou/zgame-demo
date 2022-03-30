@@ -5,7 +5,7 @@
 
 #include "wasm4.h"
 #include "audio.hpp"
-#include "player.hpp"
+#include "hero.hpp"
 #include "config.hpp"
 #include "sprites.hpp"
 #include "map.hpp"
@@ -52,7 +52,7 @@ static uint8_t const stone[64] = {
     0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x03,0xff,0xff,0xfc,0xfc,0xff,0xf0,0xfc,0xa8,0xff,0xcf,0x3f,0xab,0xff,0xfa,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x0f,0xfc,0x0f,0xfc,0xf3,0xf3,0xf3,0xff,0xaf,0xf2,0xa3,0xff,0xff,0xfe,0xaf,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff
 };
 
-static Player player(7, 2);
+static Hero hero(7, 2);
 static uint32_t tick= 0;
 static uint8_t previousGamepad= 0;
 
@@ -108,24 +108,24 @@ void update () {
     AudioChannel::noise.tick();
 
     // Manage player character
-    player.update(tick);
+    hero.update(tick);
 
     // Render everything
-    map::render(player.getX()/10, player.getY()/10, tick);
-    player.render(tick);
+    map::render(hero.getX()/10, hero.getY()/10, tick);
+    hero.render(tick);
 
     *DRAW_COLORS = 0x1231;
     Str<8> str;
-    str.appendUint8((uint8_t)player.getPX());
+    str.appendUint8((uint8_t)hero.getX());
     str.append(',');
-    str.appendUint8((uint8_t)player.getPY());
-    //text(str.get(), 0, 1);
+    str.appendUint8((uint8_t)hero.getY());
+    text(str.get(), 0, 1);
 
     tick ++;
 }
+
 
 /**
  * TODO events
  * screen change event causes animation of 
  */ 
-

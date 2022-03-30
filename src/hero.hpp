@@ -6,10 +6,10 @@
 
 #include <stdint.h>
 
-class Player
+class Hero
 {
 public:
-    Player(int x, int y);
+    Hero(int x, int y);
 
     void render(uint32_t tick);
     
@@ -17,9 +17,6 @@ public:
 
     int getX(){ return gxCurr_; }
     int getY(){ return gyCurr_; }
-
-    int getPX(){ return px_; }
-    int getPY(){ return py_; }
 
 private:
     // position

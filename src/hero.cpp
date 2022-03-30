@@ -1,12 +1,12 @@
 
-#include "player.hpp"
+#include "hero.hpp"
 #include "config.hpp"
 #include "map.hpp"
 #include "sprites.hpp"
 #include "wasm4.h"
 
 
-Player::Player(int x, int y): gxCurr_(x), gyCurr_(y), gxNext_(x), gyNext_(y)
+Hero::Hero(int x, int y): gxCurr_(x), gyCurr_(y), gxNext_(x), gyNext_(y)
 {
     px_ = gxCurr_ * TILE_SIZE;
     py_ = gyCurr_ * TILE_SIZE;
@@ -16,7 +16,7 @@ Player::Player(int x, int y): gxCurr_(x), gyCurr_(y), gxNext_(x), gyNext_(y)
     frame_= 0;
 }
 
-void Player::render(uint32_t tick)
+void Hero::render(uint32_t tick)
 {
     (void) tick;
     int sprite;
@@ -50,7 +50,7 @@ void Player::render(uint32_t tick)
     sprites::blit(sprite + frame_, posx, posy, flags);
 }
 
-void Player::update(uint32_t tick)
+void Hero::update(uint32_t tick)
 {
     if( tick % updatePeriod_ != 0 ) return;
 
@@ -95,7 +95,7 @@ void Player::update(uint32_t tick)
     }
 }
 
-void Player::move_(int nx, int ny)
+void Hero::move_(int nx, int ny)
 {
     // interact with new tile
     bool passable = map::interact(nx, ny);
