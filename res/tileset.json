@@ -13,6 +13,11 @@
          "id":0,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -32,6 +37,11 @@
         {
          "id":1,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -53,6 +63,11 @@
          "id":2,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -72,6 +87,11 @@
         {
          "id":3,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -93,6 +113,11 @@
          "id":4,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -112,6 +137,11 @@
         {
          "id":5,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -133,6 +163,11 @@
          "id":6,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -152,6 +187,11 @@
         {
          "id":7,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -173,6 +213,11 @@
          "id":8,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -193,6 +238,11 @@
          "id":9,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -211,6 +261,11 @@
         {
          "id":10,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -232,6 +287,11 @@
          "id":11,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -251,6 +311,11 @@
         {
          "id":12,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -272,6 +337,11 @@
          "id":13,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -291,6 +361,11 @@
         {
          "id":14,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -312,6 +387,11 @@
          "id":15,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -331,6 +411,11 @@
         {
          "id":16,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -352,6 +437,11 @@
          "id":17,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -371,6 +461,11 @@
         {
          "id":18,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -392,6 +487,11 @@
          "id":19,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -410,6 +510,11 @@
         {
          "id":20,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -431,6 +536,11 @@
          "id":21,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -450,6 +560,11 @@
         {
          "id":22,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -471,6 +586,11 @@
          "id":23,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":"Sconce"
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -485,12 +605,17 @@
                  "type":"string",
                  "value":"3"
                 }],
-         "type":"CANDELABRA_UNLIT"
+         "type":"SCONCE_UNLIT"
         }, 
         {
          "id":24,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -505,12 +630,17 @@
                  "type":"string",
                  "value":"3"
                 }],
-         "type":"CANDELABRA_LIT1"
+         "type":"SCONCE_LIT1"
         }, 
         {
          "id":25,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -525,11 +655,16 @@
                  "type":"string",
                  "value":"3"
                 }],
-         "type":"CANDELABRA_LIT2"
+         "type":"SCONCE_LIT2"
         }, 
         {
          "id":26,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -550,6 +685,11 @@
          "id":27,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -568,6 +708,11 @@
         {
          "id":28,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -588,6 +733,11 @@
          "id":29,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -606,6 +756,11 @@
         {
          "id":30,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -627,6 +782,11 @@
          "id":31,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -645,6 +805,11 @@
         {
          "id":32,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -665,6 +830,11 @@
          "id":33,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -683,6 +853,11 @@
         {
          "id":34,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -703,6 +878,11 @@
          "id":35,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -710,7 +890,7 @@
                 {
                  "name":"passable",
                  "type":"bool",
-                 "value":false
+                 "value":true
                 }, 
                 {
                  "name":"transparentColour",
@@ -721,6 +901,11 @@
         {
          "id":36,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -741,6 +926,11 @@
          "id":37,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -759,6 +949,11 @@
         {
          "id":38,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -779,6 +974,11 @@
          "id":39,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -797,6 +997,11 @@
         {
          "id":40,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -817,6 +1022,11 @@
          "id":41,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -835,6 +1045,11 @@
         {
          "id":42,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -855,6 +1070,11 @@
          "id":43,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -873,6 +1093,11 @@
         {
          "id":44,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -893,6 +1118,11 @@
          "id":45,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -911,6 +1141,11 @@
         {
          "id":46,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -931,6 +1166,11 @@
          "id":47,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -949,6 +1189,11 @@
         {
          "id":48,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -969,6 +1214,11 @@
          "id":49,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -987,6 +1237,11 @@
         {
          "id":50,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -1007,6 +1262,11 @@
          "id":51,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -1025,6 +1285,11 @@
         {
          "id":52,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -1045,6 +1310,11 @@
          "id":53,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -1063,6 +1333,11 @@
         {
          "id":54,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -1083,6 +1358,11 @@
          "id":55,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -1101,6 +1381,11 @@
         {
          "id":56,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -1121,6 +1406,11 @@
          "id":57,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -1139,6 +1429,11 @@
         {
          "id":58,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -1159,6 +1454,11 @@
          "id":59,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -1177,6 +1477,11 @@
         {
          "id":60,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -1197,6 +1502,11 @@
          "id":61,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -1215,6 +1525,11 @@
         {
          "id":62,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -1235,6 +1550,11 @@
          "id":63,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -1253,6 +1573,11 @@
         {
          "id":64,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -1273,6 +1598,11 @@
          "id":65,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -1291,6 +1621,11 @@
         {
          "id":66,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -1311,6 +1646,11 @@
          "id":67,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -1329,6 +1669,11 @@
         {
          "id":68,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -1349,6 +1694,11 @@
          "id":69,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -1367,6 +1717,11 @@
         {
          "id":70,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -1387,6 +1742,11 @@
          "id":71,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -1405,6 +1765,11 @@
         {
          "id":72,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -1425,6 +1790,11 @@
          "id":73,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -1443,6 +1813,11 @@
         {
          "id":74,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -1463,6 +1838,11 @@
          "id":75,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -1481,6 +1861,11 @@
         {
          "id":76,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",
@@ -1501,6 +1886,11 @@
          "id":77,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -1520,6 +1910,11 @@
          "id":78,
          "properties":[
                 {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"onInteraction",
                  "type":"string",
                  "value":""
@@ -1538,6 +1933,11 @@
         {
          "id":79,
          "properties":[
+                {
+                 "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
                 {
                  "name":"onInteraction",
                  "type":"string",

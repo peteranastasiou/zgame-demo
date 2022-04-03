@@ -1,5 +1,8 @@
 Tiled notes
 
+NEED TO CLICK Resolve object types and properties in preferences
+otherwise only edited custom properties are exported, not inherited ones
+
 tile properties:
  class: class to use when instantiating map, or Sprite, which is used for animation only, can not appear in map
  onInteraction: function to call on interaction, or blank for null

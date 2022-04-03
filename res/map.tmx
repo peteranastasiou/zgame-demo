@@ -32,11 +32,15 @@
 </data>
  </layer>
  <objectgroup id="4" name="Object Layer 1">
-  <object id="10" gid="24" x="272" y="64" width="16" height="16"/>
+  <object id="10" gid="24" x="272" y="64" width="16" height="16">
+   <properties>
+    <property name="passable" type="bool" value="false"/>
+   </properties>
+  </object>
   <object id="11" gid="24" x="208" y="96" width="16" height="16"/>
   <object id="13" gid="24" x="176" y="16" width="16" height="16">
    <properties>
-    <property name="onInteraction" value="candelabra1"/>
+    <property name="onInteraction" value="sconce1"/>
     <property name="passable" type="bool" value="true"/>
    </properties>
   </object>

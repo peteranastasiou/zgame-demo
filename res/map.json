@@ -24,8 +24,29 @@
                  "height":16,
                  "id":10,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"class",
+                         "type":"string",
+                         "value":"Sconce"
+                        }, 
+                        {
+                         "name":"onInteraction",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"passable",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"transparentColour",
+                         "type":"string",
+                         "value":"3"
+                        }],
                  "rotation":0,
-                 "type":"",
+                 "type":"SCONCE_UNLIT",
                  "visible":true,
                  "width":16,
                  "x":272,
@@ -36,8 +57,29 @@
                  "height":16,
                  "id":11,
                  "name":"",
+                 "properties":[
+                        {
+                         "name":"class",
+                         "type":"string",
+                         "value":"Sconce"
+                        }, 
+                        {
+                         "name":"onInteraction",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"passable",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"transparentColour",
+                         "type":"string",
+                         "value":"3"
+                        }],
                  "rotation":0,
-                 "type":"",
+                 "type":"SCONCE_UNLIT",
                  "visible":true,
                  "width":16,
                  "x":208,
@@ -50,17 +92,27 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"class",
+                         "type":"string",
+                         "value":"Sconce"
+                        }, 
+                        {
                          "name":"onInteraction",
                          "type":"string",
-                         "value":"candelabra1"
+                         "value":"sconce1"
                         }, 
                         {
                          "name":"passable",
                          "type":"bool",
                          "value":true
+                        }, 
+                        {
+                         "name":"transparentColour",
+                         "type":"string",
+                         "value":"3"
                         }],
                  "rotation":0,
-                 "type":"",
+                 "type":"SCONCE_UNLIT",
                  "visible":true,
                  "width":16,
                  "x":176,
