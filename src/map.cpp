@@ -37,6 +37,9 @@ static Object * const OBJECTS[]= {
 
 void render(int sx, int sy, uint32_t tick)
 {
+    // TODO move this to initialisation!
+    (&sconce1)->init(9, 4);
+
     (void) tick;
     // origin (in tiles)
     int ox = sx*SCREEN_WIDTH;
@@ -57,7 +60,7 @@ void render(int sx, int sy, uint32_t tick)
     // draw foreground (objects)
     for( int objIdx = 0; objIdx < NUM_OBJECTS; ++objIdx ){
         Object * obj = OBJECTS[objIdx];
-        // check on current screen  -- TODO make this better
+        // check if on current screen  -- TODO make this better
         if( obj->x <= ox 
          || obj->y <= oy
          || obj->x > ox+SCREEN_WIDTH 
@@ -70,14 +73,17 @@ void render(int sx, int sy, uint32_t tick)
 // first checks object list, then tile
 bool interact(int gx, int gy)
 {
-    // TODO check object first
-    bool obj_passable = true;
+    // check object first
+    Object * obj = getObject(gx, gy);
+    if( obj ){
+        // check if passable first, in case interact() changes it
+        bool passable = obj->passable();
+        obj->interact();
+        if( !passable ) return false;
+    }
 
     // then check tile
-    Tile tile = getTile(gx, gy);
-
-    // both object and tile need to be passable, to pass
-    return obj_passable && tile.passable;
+    return getTile(gx, gy).passable;
 }
 
 Tile getTile(int gx, int gy)
@@ -90,6 +96,17 @@ Tile getTile(int gx, int gy)
     uint8_t tile = TILES[gx + gy*MAP_WIDTH];
     // cast to Tile struct:
     return *(Tile*) &tile;
+}
+
+Object * getObject(int gx, int gy)
+{
+    // TODO Expand to array so this is O(1) not O(n)
+    for( Object * obj : OBJECTS ){
+        if( obj->x == gx && obj->y == gy ){
+            return obj;
+        }
+    }
+    return nullptr;
 }
 
 } // namespace map

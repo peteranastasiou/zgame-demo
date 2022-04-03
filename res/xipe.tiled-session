@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "tileset.tsx",
+    "activeFile": "map.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -72,8 +72,8 @@
     ],
     "project": "xipe.tiled-project",
     "recentFiles": [
-        "map.tmx",
         "tileset.tsx",
+        "map.tmx",
         "tileset.json",
         "map.tmj",
         "xipe.tsx",

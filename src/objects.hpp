@@ -79,7 +79,7 @@ public:
     }
 
     virtual void render(int cycle, int ox, int oy) override {
-        *DRAW_COLORS = 0x1234;
+        *DRAW_COLORS = 0x1204;
         if( triggered_ ){
             render_( cycle % 2 ? sprites::SCONCE_LIT1 : sprites::SCONCE_LIT2, ox, oy);
         }else{

@@ -28,10 +28,12 @@ public:
     int x;
     int y;
 
+    void init(int nx, int ny) { x=nx; y=ny; }
+
     // called to check if can walk into this tile
     virtual bool passable()=0;
     
-    // called when entering the tile (if passable) or bumping (if not passable)
+    // TODO called when entering the tile (if passable) or bumping (if not passable)
     virtual void interact()=0;
 
     // called once a while (how often?)
@@ -75,11 +77,17 @@ void render(int sx, int sy, uint32_t tick);
 bool interact(int gx, int gy);
 
 /**
- * get tile and whether passable
+ * get tile
  * @param gx global tile coord
  * @param gy global tile coord
  */
 Tile getTile(int gx, int gy);
 
+/**
+ * get object
+ * @param gx global tile coord
+ * @param gy global tile coord
+ */
+Object * getObject(int gx, int gy);
 
 } // namespace map
