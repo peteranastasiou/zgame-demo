@@ -22,9 +22,6 @@ static_assert(sizeof(Tile) == 1, "check sizeof(Tile) 1 byte");
 // Foreground is made of objects
 // ------------------------------------------------------------------//
 
-/** 
- * Object interface:
- */
 class Object
 {
 public:
@@ -42,7 +39,8 @@ public:
 
     // called to check what sprite to draw. 
     // cycle is slower than ticks and defines animation speed
-    virtual int render(int cycle)=0;
+    // ox, oy are origin coords of current screen
+    virtual void render(int cycle, int ox, int oy)=0;
 
     // place data into ptr and increment it
     virtual void store(uint8_t *& ptr)=0;
@@ -51,96 +49,10 @@ public:
     virtual void load(uint8_t *& ptr)=0;
 
 protected:
-    void render_(int sprite, uint32_t flags=0){
-        sprites::blit(sprite, 16*x, 16*y, flags);
+    void render_(int sprite, int ox, int oy, uint32_t flags=0){
+        sprites::blit(sprite, 16*(x-ox), 16*(y-oy), flags);
     }
 };
-
-// ------------------------------------------------------------------
-// Some partially-complete super classes which should be handy:
-// ------------------------------------------------------------------
-
-class SimpleObject : public Object
-{
-public:
-    virtual bool passable() override {
-        return false;
-    }
-    
-    virtual void interact() override {
-    }
-
-    virtual void update(int tick) override {
-        (void) tick;
-    }
-
-    virtual void store(uint8_t *& ptr) override {
-        (void) ptr;
-    }
-
-    virtual void load(uint8_t *& ptr) override {
-        (void) ptr;
-    }
-};
-
-/**
- * Triggered object has a single flag which fires once, on interaction
- */
-class TriggeredObject : public Object
-{
-protected:
-    bool triggered= false;
-
-    // Implement this to customise interaction
-    virtual bool onInteraction()=0;
-
-public:
-    virtual void update(int tick) override {
-        (void) tick;
-    }
-
-    virtual void interact() override {
-        if( triggered ) return;
-
-        if( onInteraction() ) triggered= true;
-    }
-
-    virtual void store(uint8_t *& ptr) override {
-        *ptr++ = (uint8_t)triggered;
-    }
-
-    virtual void load(uint8_t *& ptr) override {
-        triggered= (uint8_t)*ptr++;
-    }
-};
-
-
-// ----------------------------------------------
-// Alternative idea:
-// Function struct, external 1 byte state
-// This allows for mix and match reuse of functions
-// External state means easy store/load (could be array of state)
-typedef bool (*PassableFunc)(uint8_t & state);
-typedef void (*OnInteractionFunc)(uint8_t & state);
-typedef void (*RenderFunc)(uint8_t & state, int tick);
-
-struct FObject
-{
-    int x;
-    int y;
-    PassableFunc passable;
-    OnInteractionFunc onInteraction;
-    RenderFunc render;
-};
-
-// Functions specified by Tiled
-// Auto-coded like so:
-// FObject const OBJECTS = {
-//     {1, 1, impassable, sconceInteract, sconceRender},  // sconce instance
-//     {2, 2, doorPassable, doorInteract, doorRender}     // door instance
-//};
-// ----------------------------------------------
-
 
 
 // ----------------------------------------------

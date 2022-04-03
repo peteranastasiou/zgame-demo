@@ -26,9 +26,9 @@ uint8_t const SKELETON2 = 18;
 uint8_t const STONE_WALL_ROUND = 20;
 uint8_t const STONE_WALL_DARK = 21;
 uint8_t const STONE_WALL_LIGHT = 22;
-uint8_t const CANDELABRA_UNLIT = 23;
-uint8_t const CANDELABRA_LIT1 = 24;
-uint8_t const CANDELABRA_LIT2 = 25;
+uint8_t const SCONCE_UNLIT = 23;
+uint8_t const SCONCE_LIT1 = 24;
+uint8_t const SCONCE_LIT2 = 25;
 uint8_t const COBBLESTONE = 30;
 
 } // namespace sprites

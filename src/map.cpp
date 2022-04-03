@@ -1,4 +1,5 @@
 #include "map.hpp"
+#include "objects.hpp"
 #include "map.impl.auto.hpp"
 #include "config.hpp"
 #include "sprites.hpp"
@@ -26,6 +27,14 @@
 
 namespace map {
 
+Sconce sconce1;
+
+static Object * const OBJECTS[]= {
+    &sconce1
+};
+
+#define NUM_OBJECTS 1
+
 void render(int sx, int sy, uint32_t tick)
 {
     (void) tick;
@@ -42,8 +51,20 @@ void render(int sx, int sy, uint32_t tick)
         }
     }
 
-    // draw foreground (objects)
+    // animation cycle is slower than ticks
+    int cycle = tick / 4;
 
+    // draw foreground (objects)
+    for( int objIdx = 0; objIdx < NUM_OBJECTS; ++objIdx ){
+        Object * obj = OBJECTS[objIdx];
+        // check on current screen  -- TODO make this better
+        if( obj->x <= ox 
+         || obj->y <= oy
+         || obj->x > ox+SCREEN_WIDTH 
+         || obj->y > oy+SCREEN_HEIGHT ) continue;
+
+        obj->render(cycle, ox, oy);
+    }
 }
 
 // first checks object list, then tile

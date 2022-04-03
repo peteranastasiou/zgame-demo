@@ -129,7 +129,7 @@ if __name__ == "__main__":
         # Write objects
         print("static const Object OBJECTS[]= {\n")
         for obj in objs:
-            print(obj)
+            print(f"{obj['class']}")
 
     print(f"wrote {map_impl_path}")
 
