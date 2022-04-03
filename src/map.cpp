@@ -35,12 +35,11 @@ static Object * const OBJECTS[]= {
 
 #define NUM_OBJECTS 1
 
-void render(int sx, int sy, uint32_t tick)
-{
-    // TODO move this to initialisation!
-    (&sconce1)->init(9, 4);
+void init() {
+    sconce1.init(9, 4);
+}
 
-    (void) tick;
+void render(int sx, int sy, uint32_t tick) {
     // origin (in tiles)
     int ox = sx*SCREEN_WIDTH;
     int oy = sy*SCREEN_HEIGHT;
@@ -71,8 +70,7 @@ void render(int sx, int sy, uint32_t tick)
 }
 
 // first checks object list, then tile
-bool interact(int gx, int gy)
-{
+bool interact(int gx, int gy) {
     // check object first
     Object * obj = getObject(gx, gy);
     if( obj ){
@@ -86,8 +84,7 @@ bool interact(int gx, int gy)
     return getTile(gx, gy).passable;
 }
 
-Tile getTile(int gx, int gy)
-{
+Tile getTile(int gx, int gy) {
     if( gx < 0 || gy < 0 || gx >= MAP_WIDTH || gy >= MAP_HEIGHT){
         // should never happen
         return {};
@@ -98,8 +95,7 @@ Tile getTile(int gx, int gy)
     return *(Tile*) &tile;
 }
 
-Object * getObject(int gx, int gy)
-{
+Object * getObject(int gx, int gy) {
     // TODO Expand to array so this is O(1) not O(n)
     for( Object * obj : OBJECTS ){
         if( obj->x == gx && obj->y == gy ){

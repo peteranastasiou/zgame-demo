@@ -1,14 +1,16 @@
 
-#include "audio.hpp"
+#include "audio.channel.hpp"
 #include "wasm4.h"
 
-// Initialise audio channels
-AudioChannel AudioChannel::pulse1(TONE_PULSE1 | TONE_MODE3);
-AudioChannel AudioChannel::pulse2(TONE_PULSE2 | TONE_MODE3);
-AudioChannel AudioChannel::triangle(TONE_TRIANGLE);
-AudioChannel AudioChannel::noise(TONE_NOISE);
+namespace audio {
 
-AudioChannel::AudioChannel(uint8_t index): index_(index)
+// Initialise audio channels
+Channel Channel::pulse1(TONE_PULSE1 | TONE_MODE3);
+Channel Channel::pulse2(TONE_PULSE2 | TONE_MODE3);
+Channel Channel::triangle(TONE_TRIANGLE);
+Channel Channel::noise(TONE_NOISE);
+
+Channel::Channel(uint8_t index): index_(index)
 {
     volume_= 100; // max
     sequence_= nullptr;
@@ -16,7 +18,7 @@ AudioChannel::AudioChannel(uint8_t index): index_(index)
     sequenceCount_= 0;
 }
 
-void AudioChannel::play(Tone const sequence[])
+void Channel::play(Tone const sequence[])
 {
     // TODO queue up next sequence, fade in/out
     sequence_= sequence;
@@ -24,12 +26,12 @@ void AudioChannel::play(Tone const sequence[])
     sequenceCount_= 0;
 }
 
-void AudioChannel::setVolume(uint8_t volume)
+void Channel::setVolume(uint8_t volume)
 {
     volume_= volume;
 }
 
-void AudioChannel::tick()
+void Channel::tick()
 {
     if( sequence_ == nullptr ){
         // nothing to play
@@ -59,4 +61,6 @@ void AudioChannel::tick()
                 tone((uint32_t)t.note, t.duration, volume_, index_);
         }
     }
+}
+
 }

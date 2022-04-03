@@ -6,6 +6,8 @@
 
 #include <stdint.h>
 
+namespace audio {
+
 enum class Note: int16_t
 {
     END  = -2,  // special value to end a sequence
@@ -120,3 +122,5 @@ enum class Note: int16_t
     As8 = 7459,
     B8  = 7902,
 };
+
+}

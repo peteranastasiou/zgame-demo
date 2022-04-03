@@ -4,8 +4,9 @@
 
 #pragma once
 
-#include "notes.hpp"
+#include "audio.notes.hpp"
 
+namespace audio {
 
 struct Tone
 {
@@ -21,16 +22,16 @@ struct Tone
 /**
  * @brief A WASM4 Audio Channel
  */
-class AudioChannel
+class Channel
 {
 public:
     // available channels:
-    static AudioChannel pulse1;
-    static AudioChannel pulse2;
-    static AudioChannel triangle;
-    static AudioChannel noise;
+    static Channel pulse1;
+    static Channel pulse2;
+    static Channel triangle;
+    static Channel noise;
 
-    AudioChannel(uint8_t index);
+    Channel(uint8_t index);
 
     // sequence is an array of Tones which must end with an END or LOOP note
     void play(Tone const sequence[]);
@@ -49,3 +50,5 @@ private:
     uint16_t sequenceIdx_;
     int16_t sequenceCount_;
 };
+
+}

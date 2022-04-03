@@ -61,6 +61,8 @@ protected:
 // Map Functions
 // ----------------------------------------------
 
+void init();
+
 /**
  *  first checks object list, then tile
  * @param sx screen coord
