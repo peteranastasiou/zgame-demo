@@ -1,5 +1,5 @@
 #include "map.hpp"
-#include "objects.hpp"
+#include "map.objects.hpp"
 #include "map.impl.auto.hpp"
 #include "config.hpp"
 #include "sprites.hpp"
@@ -27,18 +27,6 @@
 
 namespace map {
 
-Sconce sconce1;
-
-static Object * const OBJECTS[]= {
-    &sconce1
-};
-
-#define NUM_OBJECTS 1
-
-void init() {
-    sconce1.init(9, 4);
-}
-
 void render(int sx, int sy, uint32_t tick) {
     // origin (in tiles)
     int ox = sx*SCREEN_WIDTH;
@@ -60,10 +48,10 @@ void render(int sx, int sy, uint32_t tick) {
     for( int objIdx = 0; objIdx < NUM_OBJECTS; ++objIdx ){
         Object * obj = OBJECTS[objIdx];
         // check if on current screen  -- TODO make this better
-        if( obj->x <= ox 
-         || obj->y <= oy
-         || obj->x > ox+SCREEN_WIDTH 
-         || obj->y > oy+SCREEN_HEIGHT ) continue;
+        if( obj->x < ox 
+         || obj->y < oy
+         || obj->x >= ox+SCREEN_WIDTH 
+         || obj->y >= oy+SCREEN_HEIGHT ) continue;
 
         obj->render(cycle, ox, oy);
     }

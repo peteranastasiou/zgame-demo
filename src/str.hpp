@@ -1,19 +1,47 @@
 
 #pragma once
 
-template<int LEN>
+#include <stdint.h>
+
+/**
+ * String Interface
+ */
 class Str {
+public:
+    virtual char const * get()=0;
+};
+
+/**
+ * Static C-string wrapper
+ */
+class StrStatic : public Str {
+private:
+    char const * cstr_;
+
+public:
+    StrStatic(char const * s): cstr_(s) {}
+
+    char const * get() override {
+        return cstr_;
+    }
+};
+
+/**
+ * String buffer class
+ */
+template<int LEN>
+class StrBuffer : public Str {
 private:
     char buf_[LEN];
     int idx_;
 
 public:
-    Str(){
+    StrBuffer(){
         idx_=0;
         buf_[0]= 0;
     }
 
-    char * get(){
+    char const * get() override {
         return buf_;
     }
 

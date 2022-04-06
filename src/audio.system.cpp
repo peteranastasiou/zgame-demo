@@ -13,7 +13,7 @@ static Tone const hello[] = {
     {Note::D5, 10, 10},
     {Note::C5, 10, 10},
     {Note::NONE, 10, 10},
-    {Note::END, 0, 0},
+    {Note::LOOP, 0, 0},
 };
 
 static Tone const bass[] = {
@@ -25,7 +25,7 @@ static Tone const bass[] = {
     {Note::A3, 10, 10},
     {Note::D3, 10, 10},
     {Note::C3, 10, 10},
-    {Note::END, 0, 0},
+    {Note::LOOP, 0, 0},
 };
 
 static Tone const beat[] = {
@@ -40,12 +40,17 @@ static Tone const beat[] = {
     {Note::LOOP, 0, 0},
 };
 
-void demo()
-{
+void demo() {
     audio::Channel::pulse1.play(hello);
     audio::Channel::triangle.setVolume(75);
     audio::Channel::triangle.play(bass);
     audio::Channel::noise.play(beat);
+}
+
+void demoStop() {
+    audio::Channel::pulse1.play(nullptr);
+    audio::Channel::triangle.play(nullptr);
+    audio::Channel::noise.play(nullptr);
 }
 
 }

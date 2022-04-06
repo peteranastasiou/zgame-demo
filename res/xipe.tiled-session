@@ -29,11 +29,11 @@
             }
         },
         "map.tmx": {
-            "scale": 1.0025,
+            "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 182.5436408977556,
-                "y": 24.93765586034914
+                "x": 275.3333333333333,
+                "y": 160.66666666666666
             }
         },
         "test.tmx": {
@@ -72,8 +72,8 @@
     ],
     "project": "xipe.tiled-project",
     "recentFiles": [
-        "tileset.tsx",
         "map.tmx",
+        "tileset.tsx",
         "tileset.json",
         "map.tmj",
         "xipe.tsx",

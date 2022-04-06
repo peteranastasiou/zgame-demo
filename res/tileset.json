@@ -18,19 +18,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"HOOD_FWD1"
         }, 
@@ -43,19 +33,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"HOOD_FWD2"
         }, 
@@ -68,19 +48,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"HOOD_FWD3"
         }, 
@@ -93,19 +63,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"HOOD_SIDE1"
         }, 
@@ -118,19 +78,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"HOOD_SIDE2"
         }, 
@@ -143,19 +93,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"HOOD_SIDE3"
         }, 
@@ -168,19 +108,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"HOOD_BACK1"
         }, 
@@ -193,19 +123,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"HOOD_BACK2"
         }, 
@@ -218,19 +138,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"HOOD_BACK3"
         }, 
@@ -243,19 +153,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -264,22 +164,12 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
+                 "value":"Snake"
                 }, 
                 {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"SNAKE1"
         }, 
@@ -292,19 +182,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"SNAKE2"
         }, 
@@ -317,19 +197,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"SNAKE3"
         }, 
@@ -342,19 +212,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"SHROOM1"
         }, 
@@ -367,19 +227,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"SHROOM2"
         }, 
@@ -389,22 +239,12 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
+                 "value":"Knight"
                 }, 
                 {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"KNIGHT1"
         }, 
@@ -417,21 +257,10 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
-                }],
-         "type":"KNIGHT2"
+                }]
         }, 
         {
          "id":17,
@@ -442,19 +271,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"SKELETON1"
         }, 
@@ -467,19 +286,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }],
          "type":"SKELETON2"
         }, 
@@ -492,19 +301,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -516,21 +315,11 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }],
-         "type":"STONE_WALL_ROUND"
+         "type":"STONE_WALL_LIGHT"
         }, 
         {
          "id":21,
@@ -541,19 +330,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }],
          "type":"STONE_WALL_DARK"
         }, 
@@ -563,24 +342,14 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
+                 "value":"FalseWall"
                 }, 
                 {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }],
-         "type":"STONE_WALL_LIGHT"
+         "type":"STONE_WALL"
         }, 
         {
          "id":23,
@@ -591,19 +360,9 @@
                  "value":"Sconce"
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"3"
                 }],
          "type":"SCONCE_UNLIT"
         }, 
@@ -616,19 +375,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"3"
                 }],
          "type":"SCONCE_LIT1"
         }, 
@@ -638,24 +387,14 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
+                 "value":"Jukebox"
                 }, 
                 {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"3"
                 }],
-         "type":"SCONCE_LIT2"
+         "type":"JUKEBOX"
         }, 
         {
          "id":26,
@@ -666,19 +405,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -690,19 +419,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -714,19 +433,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -738,19 +447,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -762,19 +461,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }],
          "type":"COBBLESTONE"
         }, 
@@ -787,19 +476,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -811,19 +490,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -835,19 +504,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -859,19 +518,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -880,23 +529,14 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
+                 "value":"MushroomsPickup"
                 }, 
                 {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
-                }]
+                }],
+         "type":"MUSHROOMS"
         }, 
         {
          "id":36,
@@ -907,19 +547,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -928,23 +558,14 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
+                 "value":"Hut"
                 }, 
                 {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
-                }]
+                }],
+         "type":"HUT"
         }, 
         {
          "id":38,
@@ -955,19 +576,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -979,19 +590,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1003,20 +604,11 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
-                }]
+                }],
+         "type":"COBBLESTONE_DARK"
         }, 
         {
          "id":41,
@@ -1027,19 +619,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1051,19 +633,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1075,19 +647,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1099,19 +661,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1123,19 +675,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1147,19 +689,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1168,23 +700,14 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
+                 "value":"Egg"
                 }, 
                 {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
-                }]
+                }],
+         "type":"EGG1"
         }, 
         {
          "id":48,
@@ -1195,20 +718,11 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
-                }]
+                }],
+         "type":"EGG2"
         }, 
         {
          "id":49,
@@ -1219,19 +733,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1243,19 +747,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }]
         }, 
         {
@@ -1267,19 +761,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }]
         }, 
         {
@@ -1291,19 +775,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }]
         }, 
         {
@@ -1315,19 +789,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }]
         }, 
         {
@@ -1339,19 +803,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }]
         }, 
         {
@@ -1363,19 +817,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1387,19 +831,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1411,19 +845,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1435,19 +859,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1459,19 +873,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1483,19 +887,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }]
         }, 
         {
@@ -1507,19 +901,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }]
         }, 
         {
@@ -1531,19 +915,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }]
         }, 
         {
@@ -1555,19 +929,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }]
         }, 
         {
@@ -1579,19 +943,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }]
         }, 
         {
@@ -1603,19 +957,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1627,19 +971,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1651,19 +985,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1675,19 +999,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1699,19 +1013,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1723,19 +1027,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }]
         }, 
         {
@@ -1747,19 +1041,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }]
         }, 
         {
@@ -1771,19 +1055,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }]
         }, 
         {
@@ -1795,19 +1069,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }]
         }, 
         {
@@ -1819,19 +1083,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"0"
                 }]
         }, 
         {
@@ -1843,19 +1097,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1867,19 +1111,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1891,19 +1125,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1915,19 +1139,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }, 
         {
@@ -1939,19 +1153,9 @@
                  "value":""
                 }, 
                 {
-                 "name":"onInteraction",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }, 
-                {
-                 "name":"transparentColour",
-                 "type":"string",
-                 "value":"1"
                 }]
         }],
  "tilewidth":16,

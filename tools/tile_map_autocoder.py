@@ -52,7 +52,7 @@ def load_map(path: str):
     for obj in mapdata[1]["objects"]:
         d = {}
         d['x'] = int(obj['x'] / TILE_SIZE)
-        d['y'] = int(obj['y'] / TILE_SIZE)
+        d['y'] = int(obj['y'] / TILE_SIZE) - 1   # Not sure why Tiled is off by one
         d['type'] = obj["type"]
 
         # Convert properties from {name: N, value: V} to {N: V}
@@ -108,11 +108,14 @@ if __name__ == "__main__":
     map_impl_path = "src/map.impl.auto.hpp"
     with open(map_impl_path, "w") as f:
         f.write(f"// Auto-generated from {map_path}\n\n")
-        f.write("#include <stdint.h>\n\n")
+        f.write("#include <stdint.h>\n")
+        f.write('#include "map.objects.hpp"\n\n')
+        f.write("namespace map {\n")
         f.write(f"static const uint8_t MAP_WIDTH = {map_w};\n")
         f.write(f"static const uint8_t MAP_HEIGHT = {map_h};\n")
         f.write(f"static const uint8_t SCREEN_WIDTH = {SCREEN_WIDTH};\n")
         f.write(f"static const uint8_t SCREEN_HEIGHT = {SCREEN_HEIGHT};\n")
+        f.write("\n")
 
         # Tile data (background layer)
         f.write("static const uint8_t TILES[] = {\n")
@@ -126,10 +129,30 @@ if __name__ == "__main__":
                 f.write("\n")
         f.write("};\n\n")
 
-        # Write objects
-        print("static const Object OBJECTS[]= {\n")
+        # Write out objects
+        f.write(f"static const uint8_t NUM_OBJECTS = {len(objs)};\n\n")
+
+        # Give objects names (in form: class_x_y)
         for obj in objs:
-            print(f"{obj['class']}")
+            obj['name'] = f"{obj['class'].lower()}_{obj['x']}_{obj['y']}"
+
+        # Object declarations
+        for obj in objs:
+            f.write(f"{obj['class']} {obj['name']};\n")
+        f.write("\n")
+
+        # Add objects to array
+        f.write("static Object * const OBJECTS[]= {\n")
+        for obj in objs:
+            f.write(f"    &{obj['name']},\n")
+        f.write("};\n\n")
+
+        # Init function to give them starting position
+        f.write("void init() {\n")
+        for obj in objs:
+            f.write(f"    {obj['name']}.init({obj['x']}, {obj['y']});\n")
+        f.write("}\n\n")
+        f.write("} // namespace map\n\n")
 
     print(f"wrote {map_impl_path}")
 
