@@ -2,28 +2,15 @@
 #pragma once
 
 #include "str.hpp"
-
-
-class Message {
-public:
-    // true means message has finished
-    virtual bool update()=0;
-
-    virtual Str * getStr()=0;
-};
-
-class Battle {
-// TODO interface
-};
+#include "window.hpp"
 
 namespace gameloop {
 
 // one tick of the game
 void update();
 
-// Push to event loop
-void push(Message * message);
-void push(Battle * battle);
+// Push a window to display it next
+void pushWindow(Window * message);
 
 // Input
 bool wasPressed(uint8_t btn);

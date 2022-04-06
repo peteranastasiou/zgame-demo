@@ -4,6 +4,7 @@
 #include "map.hpp"
 #include "sprites.hpp"
 #include "gameloop.hpp"
+#include "window.dialogue.hpp"
 #include "audio.system.hpp"
 
 namespace map {
@@ -86,30 +87,14 @@ public:
     }
 };
 
-class SimpleMessage: public Message {
-private:
-    StrStatic str_;
-
-public:
-    SimpleMessage(char const * cstr): str_(cstr) {}
-
-    virtual bool update() override {
-        return gameloop::wasPressed(BUTTON_1 | BUTTON_2);
-    }
-
-    virtual Str * getStr() override {
-        return &str_;
-    }
-};
-
 // ------------------------------------------------------------------
 // Custom objects for the game
 // ------------------------------------------------------------------
 
-static SimpleMessage hutMsg("A hut made of mud\nand wood.\n\nYou may rest here.");
+static Dialogue hutMsg("A hut made of mud\nand wood.\n\nYou may rest here.");
 class Hut : public SimpleObject {
     virtual void interact() override {
-        gameloop::push(&hutMsg);
+        gameloop::pushWindow(&hutMsg);
     }
 
     virtual void render(int cycle, int ox, int oy) override {
@@ -119,14 +104,15 @@ class Hut : public SimpleObject {
     }
 };
 
-static SimpleMessage sconceMsg("A spark leaps from\nyour\nELECTRIC CLOAK\nand sets the\nsconce ablaze");
+static Dialogue sconceMsg("A spark leaps from\nyour\nELECTRIC CLOAK\nand sets the\nsconce ablaze");
+
 class Sconce : public TriggeredObject {
 public:
     virtual bool passable() override { return false; }
 
     virtual bool onInteraction() override {
         static bool doOnce = true;
-        if( doOnce ) gameloop::push(&sconceMsg);
+        if( doOnce ) gameloop::pushWindow(&sconceMsg);
         doOnce = false;
         return true;
     }
@@ -162,8 +148,9 @@ public:
     }
 };
 
-static SimpleMessage guardMsg("The guard blocks \nyour passage.");
-static SimpleMessage guardMsg2("10 STR required");
+static Dialogue guardMsg("The guard blocks \nyour passage.");
+static Dialogue guardMsg2("10 STR required");
+
 class Knight : public TriggeredObject {
 public:
     virtual bool passable() override { return triggered_; }
@@ -173,8 +160,8 @@ public:
         //TODO enqueue battle screen
         tracef("msg1 %x", (int)(&guardMsg));
         tracef("msg2 %x", (int)(&guardMsg2));
-        gameloop::push(&guardMsg);
-        gameloop::push(&guardMsg2);
+        gameloop::pushWindow(&guardMsg);
+        gameloop::pushWindow(&guardMsg2);
         return false;
     }
 
@@ -231,8 +218,8 @@ public:
     }
 };
 
-static SimpleMessage jukeMsg1("You turn the\njukebox on.\nThe developer's\nattempt at a\ntune assalts your\nsenses.");
-static SimpleMessage jukeMsg2("You turn off that\ntime-signature\n-less racket");
+static Dialogue jukeMsg1("You turn the\njukebox on.\nThe developer's\nattempt at a\ntune assalts your\nsenses.");
+static Dialogue jukeMsg2("You turn off that\ntime-signature\n-less racket");
 class Jukebox : public ToggledObject {
 public:
     virtual bool passable() override { return false; }
@@ -240,12 +227,12 @@ public:
     virtual bool onInteraction() override {
         if( triggered_ ){
             // turn off
-            gameloop::push(&jukeMsg2);
+            gameloop::pushWindow(&jukeMsg2);
             audio::demoStop();
         }else{
             // turn on
             audio::demo();
-            gameloop::push(&jukeMsg1);
+            gameloop::pushWindow(&jukeMsg1);
         }
         return true;
     }
@@ -259,13 +246,13 @@ public:
     }
 };
 
-static SimpleMessage wallMsg1("Pressing a \nconcealed button,\nyou slip through\nthe false wall.");
+static Dialogue wallMsg1("Pressing a \nconcealed button,\nyou slip through\nthe false wall.");
 class FalseWall : public SimpleObject {
 public:
     virtual bool passable() override { return true; }
 
     virtual void interact() override {
-        gameloop::push(&wallMsg1);
+        gameloop::pushWindow(&wallMsg1);
     }
 
     virtual void render(int cycle, int ox, int oy) override {

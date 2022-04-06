@@ -30,7 +30,6 @@ public:
     bool push(Type elm){
         if( size_ == BUFFER_SIZE ) return false;
 
-        tracef("push %d", tail_);
         buffer_[tail_]= elm;
         tail_ = (tail_ + 1) % BUFFER_SIZE;
         size_++;
@@ -42,7 +41,6 @@ public:
         // Invalid use, but still need to return something :P
         if( size_ == 0 ) return buffer_[0];
 
-        tracef("pop %d", head_);
         Type elm = buffer_[head_];
         head_ = (head_ + 1) % BUFFER_SIZE;
         size_--;
