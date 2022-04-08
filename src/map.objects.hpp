@@ -91,7 +91,7 @@ public:
 // Custom objects for the game
 // ------------------------------------------------------------------
 
-static Dialogue hutMsg("A hut made of mud\nand wood.\n\nYou may rest here.");
+static Dialogue hutMsg("A tiny yurt is hidden in this alcove.\nYou may rest here.");
 class Hut : public SimpleObject {
     virtual void interact() override {
         gameloop::pushWindow(&hutMsg);
@@ -104,7 +104,7 @@ class Hut : public SimpleObject {
     }
 };
 
-static Dialogue sconceMsg("A spark leaps from\nyour\nELECTRIC CLOAK\nand sets the\nsconce ablaze");
+static Dialogue sconceMsg("A spark leaps from your ELECTRIC CLOAK and sets the sconce ablaze.");
 
 class Sconce : public TriggeredObject {
 public:
@@ -148,7 +148,7 @@ public:
     }
 };
 
-static Dialogue guardMsg("The guard blocks \nyour passage.");
+static Dialogue guardMsg("The guard blocks your passage.");
 static Dialogue guardMsg2("10 STR required");
 
 class Knight : public TriggeredObject {
@@ -218,8 +218,8 @@ public:
     }
 };
 
-static Dialogue jukeMsg1("You turn the\njukebox on.\nThe developer's\nattempt at a\ntune assalts your\nsenses.");
-static Dialogue jukeMsg2("You turn off that\ntime-signature\n-less racket");
+static Dialogue jukeMsg1("You turn the jukebox on. The developer's attempt at a tune assalts your senses.");
+static Dialogue jukeMsg2("You turn that mess off.");
 class Jukebox : public ToggledObject {
 public:
     virtual bool passable() override { return false; }
@@ -246,7 +246,7 @@ public:
     }
 };
 
-static Dialogue wallMsg1("Pressing a \nconcealed button,\nyou slip through\nthe false wall.");
+static Dialogue wallMsg1("Pressing a concealed button, you slip through the false wall.");
 class FalseWall : public SimpleObject {
 public:
     virtual bool passable() override { return true; }
