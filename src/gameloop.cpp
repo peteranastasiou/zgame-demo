@@ -16,7 +16,7 @@ enum class State {
 };
 
 static State state= State::RUNNING;
-static Hero hero(4, 4);
+static Hero hero(23, 14);
 static uint32_t tick= 0;
 static Queue<Window *, 8> windowQueue;
 static Window * currentWindow;
@@ -46,9 +46,16 @@ void update(){
         state = State::WINDOW;
     }
 
+    // What map screen are we on:
+    int screenX = hero.getX()/10;
+    int screenY = hero.getY()/10;
+
     // Render everything
-    map::render(hero.getX()/10, hero.getY()/10, tick);
+    map::render(screenX, screenY, tick);
     hero.render(tick);
+
+    // Screen specific update function
+    // TODO map::update(screenX, screenY, tick);
 
     // Game state machine
     switch( state ){
@@ -67,16 +74,16 @@ void update(){
         }
     }
 
-    // // Debug info
-    // if( (gamepad & (BUTTON_1 | BUTTON_2)) == (BUTTON_1 | BUTTON_2)){
-    //     // show player position on screen:
-    //     *DRAW_COLORS = 0x0041;
-    //     StrBuffer<8> str;
-    //     str.appendUint8((uint8_t)hero.getX());
-    //     str.append(',');
-    //     str.appendUint8((uint8_t)hero.getY());
-    //     text(str.get(), 0, 1);
-    // }
+    // Debug info
+    if( isPressed(BUTTON_LEFT) && isPressed(BUTTON_RIGHT) ){
+        // show player position on screen:
+        *DRAW_COLORS = 0x0041;
+        StrBuffer<8> str;
+        str.appendUint8((uint8_t)hero.getX());
+        str.append(',');
+        str.appendUint8((uint8_t)hero.getY());
+        text(str.get(), 0, 1);
+    }
     tick ++;
 }
 

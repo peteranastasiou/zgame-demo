@@ -550,7 +550,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }]
+                }],
+         "type":"TREE"
         }, 
         {
          "id":37,
@@ -820,7 +821,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }]
+                }],
+         "type":"CELL_NW"
         }, 
         {
          "id":56,
@@ -834,7 +836,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }]
+                }],
+         "type":"CELL_NE"
         }, 
         {
          "id":57,
@@ -848,7 +851,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }]
+                }],
+         "type":"CELL_N"
         }, 
         {
          "id":58,
@@ -862,7 +866,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }]
+                }],
+         "type":"CELL_W"
         }, 
         {
          "id":59,
@@ -876,7 +881,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }]
+                }],
+         "type":"CELL_NESW"
         }, 
         {
          "id":60,
@@ -960,7 +966,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }]
+                }],
+         "type":"CELL_SW"
         }, 
         {
          "id":66,
@@ -974,7 +981,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }]
+                }],
+         "type":"CELL_SE"
         }, 
         {
          "id":67,
@@ -988,7 +996,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }]
+                }],
+         "type":"CELL_S"
         }, 
         {
          "id":68,
@@ -1002,7 +1011,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }]
+                }],
+         "type":"CELL_E"
         }, 
         {
          "id":69,
@@ -1016,7 +1026,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }]
+                }],
+         "type":"CELL_NS"
         }, 
         {
          "id":70,
@@ -1100,7 +1111,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }]
+                }],
+         "type":"CELL_ESW"
         }, 
         {
          "id":76,
@@ -1114,7 +1126,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }]
+                }],
+         "type":"CELL_SWN"
         }, 
         {
          "id":77,
@@ -1128,7 +1141,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }]
+                }],
+         "type":"CELL_NES"
         }, 
         {
          "id":78,
@@ -1142,7 +1156,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }]
+                }],
+         "type":"CELL_WNE"
         }, 
         {
          "id":79,
@@ -1156,7 +1171,8 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
-                }]
+                }],
+         "type":"CELL_EW"
         }],
  "tilewidth":16,
  "type":"tileset",

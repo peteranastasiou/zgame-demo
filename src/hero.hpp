@@ -4,6 +4,7 @@
 
 #pragma once
 
+#include "dir.hpp"
 #include <stdint.h>
 
 class Hero
@@ -32,10 +33,7 @@ private:
     int32_t frame_;
 
     // facing direction
-    enum Dir
-    {
-        N, E, S, W
-    } dir_;
+    Dir dir_;
 
     void move_(int dx, int dy);
 };

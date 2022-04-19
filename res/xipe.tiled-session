@@ -29,11 +29,11 @@
             }
         },
         "map.tmx": {
-            "scale": 1.5,
-            "selectedLayer": 1,
+            "scale": 6.0144,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 275.3333333333333,
-                "y": 160.66666666666666
+                "x": 427.889731311519,
+                "y": 184.22452779994677
             }
         },
         "test.tmx": {
@@ -49,8 +49,8 @@
             "scaleInEditor": 1
         },
         "tileset.tsx": {
-            "scaleInDock": 3,
-            "scaleInEditor": 2.98
+            "scaleInDock": 4.3099,
+            "scaleInEditor": 5.09
         },
         "xipe.tsx": {
             "scaleInDock": 3,
@@ -72,8 +72,8 @@
     ],
     "project": "xipe.tiled-project",
     "recentFiles": [
-        "map.tmx",
         "tileset.tsx",
+        "map.tmx",
         "tileset.json",
         "map.tmj",
         "xipe.tsx",

@@ -4,140 +4,144 @@
 #include "map.objects.hpp"
 
 namespace map {
-static const uint8_t MAP_WIDTH = 30;
-static const uint8_t MAP_HEIGHT = 20;
+static const uint8_t MAP_WIDTH = 40;
+static const uint8_t MAP_HEIGHT = 30;
 static const uint8_t SCREEN_WIDTH = 10;
 static const uint8_t SCREEN_HEIGHT = 10;
 
 static const uint8_t TILES[] = {
- 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
- 22, 158, 158, 158, 158, 158, 158, 158, 158,  22,  22, 158, 158, 158, 158, 158, 158, 158, 158,  22,  22, 158, 158, 158, 158, 158, 158,  22, 158,  22, 
- 22, 158,  22,  22,  22,  22,  22,  22, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158, 158,  22,  22, 158,  22,  22,  22,  22, 158,  22, 158,  22, 
- 22, 158, 158, 158, 158, 158, 158, 158, 158,  22,  22,  22,  22,  22,  22,  22,  22,  22, 158,  22,  22, 158,  22, 158, 158, 158, 158,  22, 158,  22, 
- 22,  22, 158,  22, 158,  22,  22, 158,  22,  22,  22, 158, 158, 158, 158, 158, 158, 158, 158,  22,  22, 158,  22, 158,  22,  22, 158,  22, 158,  22, 
- 22, 158, 158,  22, 158, 158,  22, 158, 158,  22,  22, 158, 158,  22, 158, 158, 158, 158, 158,  22,  22, 158,  22, 158,  22,  22, 158,  22, 158,  22, 
- 22, 158, 158,  22,  22,  22,  22, 158, 158, 158, 158, 158, 158,  22, 158, 158, 158, 158, 158, 158, 158, 158,  22, 158, 158, 158, 158,  22, 158,  22, 
- 22, 158, 158, 158, 158, 158, 158, 158, 158,  22,  22, 158, 158,  22,  22,  22,  22,  22,  22,  22,  22, 158,  22,  22,  22,  22,  22,  22, 158,  22, 
- 22, 158,  22,  22, 158, 158,  22,  22, 158,  22,  22, 158, 158, 158, 158, 158, 158, 158, 158,  22,  22, 158, 158, 158, 158, 158, 158, 158, 158,  22, 
- 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 158,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
- 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  20,  20,  20,  20,  20,  20,  20, 190,  20,  20,  20,  20,  20,  20,  20,  20,  20,  20,  20,  20, 
- 22, 158, 158, 158, 158, 158, 158, 158, 158,  36,  36, 169, 180, 181, 181, 181, 181, 202,  33,  36,  20, 169, 169, 169, 169, 169, 169, 169, 169,  20, 
- 22, 158, 158, 158, 158, 158, 158, 158,  15,  36,  36, 169, 190, 169, 169, 169,  33,  33, 180, 181, 169, 169, 169, 169, 169, 169, 169, 169, 169,  20, 
- 22, 158, 158, 158, 158, 158, 158, 158, 158, 158, 201, 201, 188, 181, 181, 181, 181, 181, 189,  36,  20, 169, 169, 169, 169, 169, 169, 169, 169,  20, 
- 22, 158, 158, 158,  47,  13, 158, 158,  15,  36,  36, 169, 169, 169, 169, 169, 169, 169, 190,  36,  20,  20,  20,  20,  19,  19, 169, 169, 169,  20, 
- 22, 158, 158, 158,  13,  47, 158, 158, 158,  36,  36, 169, 169, 169, 169, 169, 169, 169, 190,  36,  20, 169, 169, 169,  19,  19,  20,  20,  20,  20, 
- 22, 158, 158, 158, 158, 158, 158, 158, 158,  36,  36, 169, 169, 169, 169, 169, 169, 169, 190,  36,  20, 169, 169, 169, 169, 169, 169, 169, 169,  20, 
- 22, 158, 158, 158, 158, 158, 158, 158, 158,  36,  36, 169, 169, 169, 169, 169, 169, 169, 190,  36,  20, 169, 169, 169, 169, 169, 169, 169, 169,  20, 
- 22, 158, 158, 158, 158, 158, 158, 158, 158,  36,  36,  33, 169, 169, 169, 169, 169, 169, 190,  36,  20, 169, 169, 169, 169, 169, 169, 169, 169,  20, 
- 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  20,  20,  20,  20,  20,  20,  20,  20,  20,  20, 
+ 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  41,  41,  41,  41,  41,  41,  41,  41,  22,  22,  22,  22,  22, 
+ 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  41,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  41,  41,  41,  41,  41,  41,  22,  22,  22,  41,  22,  22,  22,  22,  41,  41,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  41,  41,  41,  41,  41,  41,  41,  41,  41,  41,  41,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  41,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  41,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  41,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  78,  55,  69,  56,  55,  56,  65,  69,  69,  56,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  30,  30,  30,  30,  30,  30,  30,  30,  22,  22,  30,  30,  30,  30,  30,  30,  30,  30,  22,  79,  79,  55,  68,  79,  65,  69,  69,  69,  68,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  30,  22,  22,  22,  22,  22,  22,  30,  30,  30,  30,  30,  30,  30,  30,  30,  30,  30,  22,  79,  79,  75,  79,  79,  55,  69,  69,  69,  68,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  30,  30,  30,  30,  30,  30,  30,  30,  22,  22,  22,  22,  22,  22,  22,  22,  22,  30,  22,  79,  79,  59,  79,  79,  79,  76,  69,  56,  79,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  22,  30,  22,  30,  22,  22,  30,  22,  22,  22,  30,  30,  30,  30,  30,  30,  30,  30,  22,  79,  79,  78,  79,  79,  65,  69,  56,  65,  68,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  30,  30,  22,  30,  30,  22,  30,  30,  22,  22,  30,  30,  22,  30,  30,  30,  30,  30,  22,  79,  79,  79,  79,  65,  56,  59,  79,  55,  66,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  30,  30,  22,  22,  22,  22,  30,  22,  22,  22,  30,  30,  22,  30,  30,  30,  30,  30,  30,  68,  58,  66,  65,  69,  67,  69,  66,  65,  56,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  30,  30,  30,  30,  30,  30,  30,  30,  22,  22,  30,  30,  22,  22,  22,  22,  22,  22,  22,  65,  68,  55,  69,  77,  55,  69,  69,  56,  75,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  30,  22,  22,  30,  30,  22,  22,  30,  22,  22,  30,  30,  30,  30,  30,  30,  30,  30,  22,  69,  67,  67,  69,  69,  66,  55,  56,  58,  56,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  30,  22,  22,  76,  69,  69,  69,  69,  69,  66,  65,  66,  79,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
+ 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  20,  20,  20,  20,  20,  20,  20,  62,  20,  20,  36,  36,  36,  36,  36,  36,  36,  36,  36,  42,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36, 
+ 22,  30,  30,  30,  30,  30,  30,  30,  30,  36,  36,  41,  52,  53,  53,  53,  53,  74,  33,  36,  41,  36,  41,  41,  36,  36,  36,  41,  36,  42,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36, 
+ 22,  30,  30,  30,  30,  30,  30,  30,  15,  36,  36,  41,  62,  41,  41,  41,  33,  33,  52,  53,  41,  41,  41,  36,  41,  41,  36,  41,  41,  42,  36,  36,  36,  41,  41,  41,  41,  42,  36,  36, 
+ 22,  30,  30,  30,  30,  30,  30,  30,  30,  30,  73,  73,  60,  53,  53,  53,  53,  53,  61,  36,  36,  41,  41,  41,  41,  41,  36,  36,  41,  36,  36,  36,  36,  41,  36,  36,  36,  41,  36,  36, 
+ 22,  30,  30,  30,  47,  13,  30,  30,  15,  36,  36,  41,  41,  41,  41,  41,  41,  41,  62,  36,  36,  42,  36,  41,  42,  36,  36,  36,  41,  36,  36,  36,  36,  41,  36,  36,  36,  41,  36,  36, 
+ 22,  30,  30,  30,  13,  47,  30,  30,  30,  36,  36,  41,  41,  41,  41,  41,  41,  41,  62,  36,  36,  42,  36,  36,  36,  42,  36,  41,  42,  41,  41,  41,  41,  41,  36,  36,  36,  36,  36,  36, 
+ 22,  30,  30,  30,  30,  30,  30,  30,  30,  36,  36,  41,  41,  41,  41,  41,  41,  41,  62,  36,  36,  42,  42,  36,  41,  41,  41,  41,  36,  36,  36,  36,  36,  41,  36,  36,  36,  36,  36,  36, 
+ 22,  30,  30,  30,  30,  30,  30,  30,  30,  36,  36,  41,  41,  41,  41,  41,  41,  41,  62,  36,  36,  42,  42,  36,  41,  41,  36,  41,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36, 
+ 22,  30,  30,  30,  30,  30,  30,  30,  30,  36,  36,  36,  36,  41,  41,  41,  41,  41,  62,  36,  36,  36,  42,  42,  42,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36, 
+ 22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36, 
 };
 
-static const uint8_t NUM_OBJECTS = 33;
+static const uint8_t NUM_OBJECTS = 31;
 
-Sconce sconce_17_3;
-Sconce sconce_13_5;
-Sconce sconce_11_0;
-MushroomsPickup mushroomspickup_11_16;
-MushroomsPickup mushroomspickup_12_16;
-MushroomsPickup mushroomspickup_13_16;
-MushroomsPickup mushroomspickup_14_16;
-MushroomsPickup mushroomspickup_15_16;
-MushroomsPickup mushroomspickup_15_17;
-MushroomsPickup mushroomspickup_14_17;
-MushroomsPickup mushroomspickup_13_17;
-MushroomsPickup mushroomspickup_12_17;
-MushroomsPickup mushroomspickup_11_17;
-MushroomsPickup mushroomspickup_12_15;
-MushroomsPickup mushroomspickup_11_15;
-MushroomsPickup mushroomspickup_13_15;
-MushroomsPickup mushroomspickup_14_15;
-MushroomsPickup mushroomspickup_15_15;
-MushroomsPickup mushroomspickup_15_14;
-MushroomsPickup mushroomspickup_13_14;
-MushroomsPickup mushroomspickup_14_14;
-MushroomsPickup mushroomspickup_11_14;
-MushroomsPickup mushroomspickup_12_14;
-Knight knight_10_13;
-Sconce sconce_1_0;
-Sconce sconce_8_0;
-Sconce sconce_1_9;
-Sconce sconce_8_9;
-Hut hut_5_5;
-Egg egg_18_18;
-Snake snake_24_1;
-Jukebox jukebox_5_8;
-FalseWall falsewall_9_6;
+Sconce sconce_17_13;
+Sconce sconce_13_15;
+Sconce sconce_11_10;
+MushroomsPickup mushroomspickup_11_26;
+MushroomsPickup mushroomspickup_12_26;
+MushroomsPickup mushroomspickup_13_26;
+MushroomsPickup mushroomspickup_14_26;
+MushroomsPickup mushroomspickup_15_26;
+MushroomsPickup mushroomspickup_15_27;
+MushroomsPickup mushroomspickup_14_27;
+MushroomsPickup mushroomspickup_13_27;
+MushroomsPickup mushroomspickup_12_27;
+MushroomsPickup mushroomspickup_11_27;
+MushroomsPickup mushroomspickup_12_25;
+MushroomsPickup mushroomspickup_11_25;
+MushroomsPickup mushroomspickup_13_25;
+MushroomsPickup mushroomspickup_14_25;
+MushroomsPickup mushroomspickup_15_25;
+MushroomsPickup mushroomspickup_15_24;
+MushroomsPickup mushroomspickup_13_24;
+MushroomsPickup mushroomspickup_14_24;
+MushroomsPickup mushroomspickup_11_24;
+MushroomsPickup mushroomspickup_12_24;
+Knight knight_10_23;
+Sconce sconce_1_10;
+Sconce sconce_8_10;
+Sconce sconce_1_19;
+Sconce sconce_8_19;
+Hut hut_5_15;
+Egg egg_18_28;
+Jukebox jukebox_5_18;
 
 static Object * const OBJECTS[]= {
-    &sconce_17_3,
-    &sconce_13_5,
-    &sconce_11_0,
-    &mushroomspickup_11_16,
-    &mushroomspickup_12_16,
-    &mushroomspickup_13_16,
-    &mushroomspickup_14_16,
-    &mushroomspickup_15_16,
-    &mushroomspickup_15_17,
-    &mushroomspickup_14_17,
-    &mushroomspickup_13_17,
-    &mushroomspickup_12_17,
-    &mushroomspickup_11_17,
-    &mushroomspickup_12_15,
-    &mushroomspickup_11_15,
-    &mushroomspickup_13_15,
-    &mushroomspickup_14_15,
-    &mushroomspickup_15_15,
-    &mushroomspickup_15_14,
-    &mushroomspickup_13_14,
-    &mushroomspickup_14_14,
-    &mushroomspickup_11_14,
-    &mushroomspickup_12_14,
-    &knight_10_13,
-    &sconce_1_0,
-    &sconce_8_0,
-    &sconce_1_9,
-    &sconce_8_9,
-    &hut_5_5,
-    &egg_18_18,
-    &snake_24_1,
-    &jukebox_5_8,
-    &falsewall_9_6,
+    &sconce_17_13,
+    &sconce_13_15,
+    &sconce_11_10,
+    &mushroomspickup_11_26,
+    &mushroomspickup_12_26,
+    &mushroomspickup_13_26,
+    &mushroomspickup_14_26,
+    &mushroomspickup_15_26,
+    &mushroomspickup_15_27,
+    &mushroomspickup_14_27,
+    &mushroomspickup_13_27,
+    &mushroomspickup_12_27,
+    &mushroomspickup_11_27,
+    &mushroomspickup_12_25,
+    &mushroomspickup_11_25,
+    &mushroomspickup_13_25,
+    &mushroomspickup_14_25,
+    &mushroomspickup_15_25,
+    &mushroomspickup_15_24,
+    &mushroomspickup_13_24,
+    &mushroomspickup_14_24,
+    &mushroomspickup_11_24,
+    &mushroomspickup_12_24,
+    &knight_10_23,
+    &sconce_1_10,
+    &sconce_8_10,
+    &sconce_1_19,
+    &sconce_8_19,
+    &hut_5_15,
+    &egg_18_28,
+    &jukebox_5_18,
 };
 
 void init() {
-    sconce_17_3.init(17, 3);
-    sconce_13_5.init(13, 5);
-    sconce_11_0.init(11, 0);
-    mushroomspickup_11_16.init(11, 16);
-    mushroomspickup_12_16.init(12, 16);
-    mushroomspickup_13_16.init(13, 16);
-    mushroomspickup_14_16.init(14, 16);
-    mushroomspickup_15_16.init(15, 16);
-    mushroomspickup_15_17.init(15, 17);
-    mushroomspickup_14_17.init(14, 17);
-    mushroomspickup_13_17.init(13, 17);
-    mushroomspickup_12_17.init(12, 17);
-    mushroomspickup_11_17.init(11, 17);
-    mushroomspickup_12_15.init(12, 15);
-    mushroomspickup_11_15.init(11, 15);
-    mushroomspickup_13_15.init(13, 15);
-    mushroomspickup_14_15.init(14, 15);
-    mushroomspickup_15_15.init(15, 15);
-    mushroomspickup_15_14.init(15, 14);
-    mushroomspickup_13_14.init(13, 14);
-    mushroomspickup_14_14.init(14, 14);
-    mushroomspickup_11_14.init(11, 14);
-    mushroomspickup_12_14.init(12, 14);
-    knight_10_13.init(10, 13);
-    sconce_1_0.init(1, 0);
-    sconce_8_0.init(8, 0);
-    sconce_1_9.init(1, 9);
-    sconce_8_9.init(8, 9);
-    hut_5_5.init(5, 5);
-    egg_18_18.init(18, 18);
-    snake_24_1.init(24, 1);
-    jukebox_5_8.init(5, 8);
-    falsewall_9_6.init(9, 6);
+    sconce_17_13.init(17, 13);
+    sconce_13_15.init(13, 15);
+    sconce_11_10.init(11, 10);
+    mushroomspickup_11_26.init(11, 26);
+    mushroomspickup_12_26.init(12, 26);
+    mushroomspickup_13_26.init(13, 26);
+    mushroomspickup_14_26.init(14, 26);
+    mushroomspickup_15_26.init(15, 26);
+    mushroomspickup_15_27.init(15, 27);
+    mushroomspickup_14_27.init(14, 27);
+    mushroomspickup_13_27.init(13, 27);
+    mushroomspickup_12_27.init(12, 27);
+    mushroomspickup_11_27.init(11, 27);
+    mushroomspickup_12_25.init(12, 25);
+    mushroomspickup_11_25.init(11, 25);
+    mushroomspickup_13_25.init(13, 25);
+    mushroomspickup_14_25.init(14, 25);
+    mushroomspickup_15_25.init(15, 25);
+    mushroomspickup_15_24.init(15, 24);
+    mushroomspickup_13_24.init(13, 24);
+    mushroomspickup_14_24.init(14, 24);
+    mushroomspickup_11_24.init(11, 24);
+    mushroomspickup_12_24.init(12, 24);
+    knight_10_23.init(10, 23);
+    sconce_1_10.init(1, 10);
+    sconce_8_10.init(8, 10);
+    sconce_1_19.init(1, 19);
+    sconce_8_19.init(8, 19);
+    hut_5_15.init(5, 15);
+    egg_18_28.init(18, 28);
+    jukebox_5_18.init(5, 18);
 }
 
 } // namespace map

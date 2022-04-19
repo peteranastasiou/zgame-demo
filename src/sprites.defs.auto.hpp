@@ -30,9 +30,25 @@ uint8_t const SCONCE_LIT1 = 24;
 uint8_t const JUKEBOX = 25;
 uint8_t const COBBLESTONE = 30;
 uint8_t const MUSHROOMS = 35;
+uint8_t const TREE = 36;
 uint8_t const HUT = 37;
 uint8_t const COBBLESTONE_DARK = 40;
 uint8_t const EGG1 = 47;
 uint8_t const EGG2 = 48;
+uint8_t const CELL_NW = 55;
+uint8_t const CELL_NE = 56;
+uint8_t const CELL_N = 57;
+uint8_t const CELL_W = 58;
+uint8_t const CELL_NESW = 59;
+uint8_t const CELL_SW = 65;
+uint8_t const CELL_SE = 66;
+uint8_t const CELL_S = 67;
+uint8_t const CELL_E = 68;
+uint8_t const CELL_NS = 69;
+uint8_t const CELL_ESW = 75;
+uint8_t const CELL_SWN = 76;
+uint8_t const CELL_NES = 77;
+uint8_t const CELL_WNE = 78;
+uint8_t const CELL_EW = 79;
 
 } // namespace sprites

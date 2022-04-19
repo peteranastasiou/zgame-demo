@@ -24,8 +24,8 @@ def load_tileset(path: str):
     for tiledata in j["tiles"]:
         # Get id
         i = tiledata["id"]
-        if i > 127:
-            raise ValueException("Too many tiles, only <= 127 supported")
+        if i > 255:
+            raise ValueException("Too many tiles, only <= 255 supported")
     
         # Get tile "type"
         ttype = None
@@ -120,11 +120,7 @@ if __name__ == "__main__":
         # Tile data (background layer)
         f.write("static const uint8_t TILES[] = {\n")
         for i, tile_id in enumerate(map_tiles):
-            # Lookup passability
-            passable = tileset[tile_id]["passable"]
-            # pack passability and sprite into 8 bits!
-            b = tile_id | (int(passable) << 7)
-            f.write(f"{b:3d}, ")
+            f.write(f"{tile_id:3d}, ")
             if (i+1) % map_w == 0:
                 f.write("\n")
         f.write("};\n\n")

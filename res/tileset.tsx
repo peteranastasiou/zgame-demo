@@ -220,7 +220,7 @@
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="36">
+ <tile id="36" type="TREE">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="false"/>
@@ -334,31 +334,31 @@
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="55">
+ <tile id="55" type="CELL_NW">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="56">
+ <tile id="56" type="CELL_NE">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="57">
+ <tile id="57" type="CELL_N">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="58">
+ <tile id="58" type="CELL_W">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="59">
+ <tile id="59" type="CELL_NESW">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="true"/>
@@ -394,31 +394,31 @@
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="65">
+ <tile id="65" type="CELL_SW">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="66">
+ <tile id="66" type="CELL_SE">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="67">
+ <tile id="67" type="CELL_S">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="68">
+ <tile id="68" type="CELL_E">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="69">
+ <tile id="69" type="CELL_NS">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="true"/>
@@ -454,31 +454,31 @@
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="75">
+ <tile id="75" type="CELL_ESW">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="76">
+ <tile id="76" type="CELL_SWN">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="77">
+ <tile id="77" type="CELL_NES">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="78">
+ <tile id="78" type="CELL_WNE">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="true"/>
   </properties>
  </tile>
- <tile id="79">
+ <tile id="79" type="CELL_EW">
   <properties>
    <property name="class" value=""/>
    <property name="passable" type="bool" value="true"/>
