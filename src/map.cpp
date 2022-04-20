@@ -47,15 +47,13 @@ void render(int sx, int sy, uint32_t tick) {
     int cycle = tick / 4;
 
     // draw foreground (objects)
-    for( int objIdx = 0; objIdx < NUM_OBJECTS; ++objIdx ){
-        Object * obj = OBJECTS[objIdx];
-        // check if on current screen  -- TODO make this better
-        if( obj->x < ox 
-         || obj->y < oy
-         || obj->x >= ox+SCREEN_WIDTH 
-         || obj->y >= oy+SCREEN_HEIGHT ) continue;
-
-        obj->render(cycle, ox, oy);
+    for( int tx = 0; tx < SCREEN_WIDTH; ++tx ){
+        for( int ty = 0; ty < SCREEN_HEIGHT; ++ty ){
+            Object * obj = getObject(ox + tx, oy + ty);
+            if( obj != nullptr ){
+                obj->render(cycle, tx, ty);
+            }
+        }
     }
 }
 
@@ -118,13 +116,12 @@ bool isTilePassable(uint8_t tileType, Dir dir) {
 }
 
 Object * getObject(int gx, int gy) {
-    // TODO Expand to array so this is O(1) not O(n)
-    for( Object * obj : OBJECTS ){
-        if( obj->x == gx && obj->y == gy ){
-            return obj;
-        }
+    if( gx < 0 || gy < 0 || gx >= MAP_WIDTH || gy >= MAP_HEIGHT){
+        // out of bounds
+        return nullptr;
     }
-    return nullptr;
+
+    return OBJECTS[gx + MAP_WIDTH * gy];
 }
 
 } // namespace map

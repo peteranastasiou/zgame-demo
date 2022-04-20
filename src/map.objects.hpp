@@ -97,10 +97,10 @@ class Hut : public SimpleObject {
         gameloop::pushWindow(&hutMsg);
     }
 
-    virtual void render(int cycle, int ox, int oy) override {
+    virtual void render(int cycle, int x, int y) override {
         (void) cycle;
         *DRAW_COLORS = 0x1234;
-        render_( sprites::HUT, ox, oy);
+        render_( sprites::HUT, x, y);
     }
 };
 
@@ -117,12 +117,12 @@ public:
         return true;
     }
 
-    virtual void render(int cycle, int ox, int oy) override {
+    virtual void render(int cycle, int x, int y) override {
         *DRAW_COLORS = 0x1204;
         if( triggered_ ){
-            render_( sprites::SCONCE_LIT1, ox, oy, cycle % 2 ? BLIT_FLIP_X : 0);
+            render_( sprites::SCONCE_LIT1, x, y, cycle % 2 ? BLIT_FLIP_X : 0);
         }else{
-            render_( sprites::SCONCE_UNLIT, ox, oy);
+            render_( sprites::SCONCE_UNLIT, x, y);
         }
     }
 };
@@ -133,17 +133,16 @@ public:
 
     virtual bool onInteraction() override {
         // TODO enqueue dialogue, add to inventory
-        trace("Pickup\n");
         return true;
     }
 
-    virtual void render(int cycle, int ox, int oy) override {
+    virtual void render(int cycle, int x, int y) override {
         (void) cycle;
         *DRAW_COLORS = 0x0234;
         if( !triggered_ ) {
             // dance
             uint32_t flags = 0;
-            render_( sprites::MUSHROOMS, ox, oy, flags);
+            render_( sprites::MUSHROOMS, x, y, flags);
         }
     }
 };
@@ -158,18 +157,16 @@ public:
     virtual bool onInteraction() override {
 
         //TODO enqueue battle screen
-        tracef("msg1 %x", (int)(&guardMsg));
-        tracef("msg2 %x", (int)(&guardMsg2));
         gameloop::pushWindow(&guardMsg);
         gameloop::pushWindow(&guardMsg2);
         return false;
     }
 
-    virtual void render(int cycle, int ox, int oy) override {
+    virtual void render(int cycle, int x, int y) override {
         (void) cycle;
         *DRAW_COLORS = 0x0234;
         if( !triggered_ ) {
-            render_( sprites::KNIGHT1, ox, oy, (cycle/2) % 2 ? BLIT_FLIP_X : 0);
+            render_( sprites::KNIGHT1, x, y, (cycle/2) % 2 ? BLIT_FLIP_X : 0);
         }
     }
 };
@@ -180,11 +177,10 @@ public:
 
     virtual bool onInteraction() override {
         // TODO enqueue battle screen
-        trace("Fight!\n");
         return false;
     }
 
-    virtual void render(int cycle, int ox, int oy) override {
+    virtual void render(int cycle, int x, int y) override {
         (void) cycle;
         *DRAW_COLORS = 0x0234;
         if( !triggered_ ) {
@@ -196,7 +192,7 @@ public:
                 case 2: sprite= sprites::SNAKE1; break;
                 case 3: sprite= sprites::SNAKE3; break;
             }
-            render_( sprite, ox, oy);
+            render_( sprite, x, y);
         }
     }
 };
@@ -209,11 +205,11 @@ public:
         return false;
     }
 
-    virtual void render(int cycle, int ox, int oy) override {
+    virtual void render(int cycle, int x, int y) override {
         (void) cycle;
         *DRAW_COLORS = 0x0234;
         if( !triggered_ ) {
-            render_( (cycle/2) % 2 ? sprites::EGG1 : sprites::EGG2, ox, oy);
+            render_( (cycle/2) % 2 ? sprites::EGG1 : sprites::EGG2, x, y);
         }
     }
 };
@@ -237,12 +233,12 @@ public:
         return true;
     }
 
-    virtual void render(int cycle, int ox, int oy) override {
+    virtual void render(int cycle, int x, int y) override {
         (void) cycle;
         *DRAW_COLORS = 0x1034;
         uint32_t flags = 0;
         if( triggered_ ) flags = cycle % 2 ? BLIT_FLIP_X : 0;
-        render_( sprites::JUKEBOX, ox, oy, flags);
+        render_( sprites::JUKEBOX, x, y, flags);
     }
 };
 
@@ -255,10 +251,10 @@ public:
         gameloop::pushWindow(&wallMsg1);
     }
 
-    virtual void render(int cycle, int ox, int oy) override {
+    virtual void render(int cycle, int x, int y) override {
         (void) cycle;
         *DRAW_COLORS = 0x1234;
-        render_( sprites::STONE_WALL, ox, oy);
+        render_( sprites::STONE_WALL, x, y);
     }
 };
 

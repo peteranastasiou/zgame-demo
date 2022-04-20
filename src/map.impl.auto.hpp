@@ -4,12 +4,12 @@
 #include "map.objects.hpp"
 
 namespace map {
-static const uint8_t MAP_WIDTH = 40;
-static const uint8_t MAP_HEIGHT = 30;
-static const uint8_t SCREEN_WIDTH = 10;
-static const uint8_t SCREEN_HEIGHT = 10;
+uint8_t const MAP_WIDTH = 40;
+uint8_t const MAP_HEIGHT = 30;
+uint8_t const SCREEN_WIDTH = 10;
+uint8_t const SCREEN_HEIGHT = 10;
 
-static const uint8_t TILES[] = {
+uint8_t const TILES[] = {
  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  22, 
@@ -42,7 +42,7 @@ static const uint8_t TILES[] = {
  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36, 
 };
 
-static const uint8_t NUM_OBJECTS = 31;
+uint8_t const NUM_OBJECTS = 31;
 
 Sconce sconce_17_13;
 Sconce sconce_13_15;
@@ -76,72 +76,45 @@ Hut hut_5_15;
 Egg egg_18_28;
 Jukebox jukebox_5_18;
 
-static Object * const OBJECTS[]= {
-    &sconce_17_13,
-    &sconce_13_15,
-    &sconce_11_10,
-    &mushroomspickup_11_26,
-    &mushroomspickup_12_26,
-    &mushroomspickup_13_26,
-    &mushroomspickup_14_26,
-    &mushroomspickup_15_26,
-    &mushroomspickup_15_27,
-    &mushroomspickup_14_27,
-    &mushroomspickup_13_27,
-    &mushroomspickup_12_27,
-    &mushroomspickup_11_27,
-    &mushroomspickup_12_25,
-    &mushroomspickup_11_25,
-    &mushroomspickup_13_25,
-    &mushroomspickup_14_25,
-    &mushroomspickup_15_25,
-    &mushroomspickup_15_24,
-    &mushroomspickup_13_24,
-    &mushroomspickup_14_24,
-    &mushroomspickup_11_24,
-    &mushroomspickup_12_24,
-    &knight_10_23,
-    &sconce_1_10,
-    &sconce_8_10,
-    &sconce_1_19,
-    &sconce_8_19,
-    &hut_5_15,
-    &egg_18_28,
-    &jukebox_5_18,
-};
+// Run-time expanded array of objects
+// Not done at compile time to save ROM
+// Note: Looks like BSS is copied in full at start up, so large static arrays are wasteful of ROM
+Object ** OBJECTS = nullptr;
 
 void init() {
-    sconce_17_13.init(17, 13);
-    sconce_13_15.init(13, 15);
-    sconce_11_10.init(11, 10);
-    mushroomspickup_11_26.init(11, 26);
-    mushroomspickup_12_26.init(12, 26);
-    mushroomspickup_13_26.init(13, 26);
-    mushroomspickup_14_26.init(14, 26);
-    mushroomspickup_15_26.init(15, 26);
-    mushroomspickup_15_27.init(15, 27);
-    mushroomspickup_14_27.init(14, 27);
-    mushroomspickup_13_27.init(13, 27);
-    mushroomspickup_12_27.init(12, 27);
-    mushroomspickup_11_27.init(11, 27);
-    mushroomspickup_12_25.init(12, 25);
-    mushroomspickup_11_25.init(11, 25);
-    mushroomspickup_13_25.init(13, 25);
-    mushroomspickup_14_25.init(14, 25);
-    mushroomspickup_15_25.init(15, 25);
-    mushroomspickup_15_24.init(15, 24);
-    mushroomspickup_13_24.init(13, 24);
-    mushroomspickup_14_24.init(14, 24);
-    mushroomspickup_11_24.init(11, 24);
-    mushroomspickup_12_24.init(12, 24);
-    knight_10_23.init(10, 23);
-    sconce_1_10.init(1, 10);
-    sconce_8_10.init(8, 10);
-    sconce_1_19.init(1, 19);
-    sconce_8_19.init(8, 19);
-    hut_5_15.init(5, 15);
-    egg_18_28.init(18, 28);
-    jukebox_5_18.init(5, 18);
+    OBJECTS = new Object*[MAP_WIDTH * MAP_HEIGHT];
+
+    OBJECTS[17 + MAP_WIDTH*13] = &sconce_17_13;
+    OBJECTS[13 + MAP_WIDTH*15] = &sconce_13_15;
+    OBJECTS[11 + MAP_WIDTH*10] = &sconce_11_10;
+    OBJECTS[11 + MAP_WIDTH*26] = &mushroomspickup_11_26;
+    OBJECTS[12 + MAP_WIDTH*26] = &mushroomspickup_12_26;
+    OBJECTS[13 + MAP_WIDTH*26] = &mushroomspickup_13_26;
+    OBJECTS[14 + MAP_WIDTH*26] = &mushroomspickup_14_26;
+    OBJECTS[15 + MAP_WIDTH*26] = &mushroomspickup_15_26;
+    OBJECTS[15 + MAP_WIDTH*27] = &mushroomspickup_15_27;
+    OBJECTS[14 + MAP_WIDTH*27] = &mushroomspickup_14_27;
+    OBJECTS[13 + MAP_WIDTH*27] = &mushroomspickup_13_27;
+    OBJECTS[12 + MAP_WIDTH*27] = &mushroomspickup_12_27;
+    OBJECTS[11 + MAP_WIDTH*27] = &mushroomspickup_11_27;
+    OBJECTS[12 + MAP_WIDTH*25] = &mushroomspickup_12_25;
+    OBJECTS[11 + MAP_WIDTH*25] = &mushroomspickup_11_25;
+    OBJECTS[13 + MAP_WIDTH*25] = &mushroomspickup_13_25;
+    OBJECTS[14 + MAP_WIDTH*25] = &mushroomspickup_14_25;
+    OBJECTS[15 + MAP_WIDTH*25] = &mushroomspickup_15_25;
+    OBJECTS[15 + MAP_WIDTH*24] = &mushroomspickup_15_24;
+    OBJECTS[13 + MAP_WIDTH*24] = &mushroomspickup_13_24;
+    OBJECTS[14 + MAP_WIDTH*24] = &mushroomspickup_14_24;
+    OBJECTS[11 + MAP_WIDTH*24] = &mushroomspickup_11_24;
+    OBJECTS[12 + MAP_WIDTH*24] = &mushroomspickup_12_24;
+    OBJECTS[10 + MAP_WIDTH*23] = &knight_10_23;
+    OBJECTS[1 + MAP_WIDTH*10] = &sconce_1_10;
+    OBJECTS[8 + MAP_WIDTH*10] = &sconce_8_10;
+    OBJECTS[1 + MAP_WIDTH*19] = &sconce_1_19;
+    OBJECTS[8 + MAP_WIDTH*19] = &sconce_8_19;
+    OBJECTS[5 + MAP_WIDTH*15] = &hut_5_15;
+    OBJECTS[18 + MAP_WIDTH*28] = &egg_18_28;
+    OBJECTS[5 + MAP_WIDTH*18] = &jukebox_5_18;
 }
 
 } // namespace map

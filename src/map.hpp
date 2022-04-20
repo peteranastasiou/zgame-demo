@@ -10,27 +10,9 @@ namespace map {
 
 // Map is made of a "tile" background layer and an "Object" foreground layer
 
-/**
-
-static Object * const ROOM0[]= {
-
-    {
-        &obj1,
-        nullptr
-    }
-
-// array of rooms
-
- */
-
 class Object
 {
 public:
-    int x;
-    int y;
-
-    void init(int nx, int ny) { x=nx; y=ny; }
-
     // called to check if can walk into this tile
     virtual bool passable()=0;
     
@@ -42,8 +24,8 @@ public:
 
     // called to check what sprite to draw. 
     // cycle is slower than ticks and defines animation speed
-    // ox, oy are origin coords of current screen
-    virtual void render(int cycle, int ox, int oy)=0;
+    // x, y are tile coordinates on the current screen
+    virtual void render(int cycle, int x, int y)=0;
 
     // place data into ptr and increment it
     virtual void store(uint8_t *& ptr)=0;
@@ -52,8 +34,8 @@ public:
     virtual void load(uint8_t *& ptr)=0;
 
 protected:
-    void render_(int sprite, int ox, int oy, uint32_t flags=0){
-        sprites::blit(sprite, 16*(x-ox), 16*(y-oy), flags);
+    void render_(int sprite, int x, int y, uint32_t flags=0){
+        sprites::blit(sprite, 16*x, 16*y, flags);
     }
 };
 

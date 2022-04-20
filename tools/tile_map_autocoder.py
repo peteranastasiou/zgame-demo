@@ -111,14 +111,14 @@ if __name__ == "__main__":
         f.write("#include <stdint.h>\n")
         f.write('#include "map.objects.hpp"\n\n')
         f.write("namespace map {\n")
-        f.write(f"static const uint8_t MAP_WIDTH = {map_w};\n")
-        f.write(f"static const uint8_t MAP_HEIGHT = {map_h};\n")
-        f.write(f"static const uint8_t SCREEN_WIDTH = {SCREEN_WIDTH};\n")
-        f.write(f"static const uint8_t SCREEN_HEIGHT = {SCREEN_HEIGHT};\n")
+        f.write(f"uint8_t const MAP_WIDTH = {map_w};\n")
+        f.write(f"uint8_t const MAP_HEIGHT = {map_h};\n")
+        f.write(f"uint8_t const SCREEN_WIDTH = {SCREEN_WIDTH};\n")
+        f.write(f"uint8_t const SCREEN_HEIGHT = {SCREEN_HEIGHT};\n")
         f.write("\n")
 
         # Tile data (background layer)
-        f.write("static const uint8_t TILES[] = {\n")
+        f.write("uint8_t const TILES[] = {\n")
         for i, tile_id in enumerate(map_tiles):
             f.write(f"{tile_id:3d}, ")
             if (i+1) % map_w == 0:
@@ -126,7 +126,7 @@ if __name__ == "__main__":
         f.write("};\n\n")
 
         # Write out objects
-        f.write(f"static const uint8_t NUM_OBJECTS = {len(objs)};\n\n")
+        f.write(f"uint8_t const NUM_OBJECTS = {len(objs)};\n\n")
 
         # Give objects names (in form: class_x_y)
         for obj in objs:
@@ -137,20 +137,19 @@ if __name__ == "__main__":
             f.write(f"{obj['class']} {obj['name']};\n")
         f.write("\n")
 
-        # Add objects to array
-        f.write("static Object * const OBJECTS[]= {\n")
-        for obj in objs:
-            f.write(f"    &{obj['name']},\n")
-        f.write("};\n\n")
+        # Object array
+        f.write("// Run-time expanded array of objects\n")
+        f.write("// Not done at compile time to save ROM\n")
+        f.write("// Note: Looks like BSS is copied in full at start up, so large static arrays are wasteful of ROM\n")
+        f.write("Object ** OBJECTS = nullptr;\n\n")
 
         # Init function to give them starting position
         f.write("void init() {\n")
+        f.write("    OBJECTS = new Object*[MAP_WIDTH * MAP_HEIGHT];\n\n")
         for obj in objs:
-            f.write(f"    {obj['name']}.init({obj['x']}, {obj['y']});\n")
+            f.write(f"    OBJECTS[{obj['x']} + MAP_WIDTH*{obj['y']}] = &{obj['name']};\n")
         f.write("}\n\n")
         f.write("} // namespace map\n\n")
 
     print(f"wrote {map_impl_path}")
 
-    #TODO write object layer
-    #print(objdata)
