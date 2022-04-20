@@ -77,8 +77,8 @@ bool interact(int gx, int gy, Dir dir) {
 
 uint8_t getTile(int gx, int gy) {
     if( gx < 0 || gy < 0 || gx >= MAP_WIDTH || gy >= MAP_HEIGHT){
-        // should never happen
-        return {};
+        // out of bounds
+        return sprites::STONE_WALL;
     }
 
     return TILES[gx + gy*MAP_WIDTH];

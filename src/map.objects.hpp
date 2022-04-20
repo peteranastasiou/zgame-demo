@@ -142,7 +142,7 @@ public:
         *DRAW_COLORS = 0x0234;
         if( !triggered_ ) {
             // dance
-            uint32_t flags = 0;// (((cycle/4) % 2) ^ (x % 2) ^ (y % 2)) ? BLIT_FLIP_X : 0;
+            uint32_t flags = 0;
             render_( sprites::MUSHROOMS, ox, oy, flags);
         }
     }
