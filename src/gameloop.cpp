@@ -2,6 +2,7 @@
 #include "gameloop.hpp"
 #include "wasm4.h"
 #include "audio.system.hpp"
+#include "window.menu.hpp"
 #include "hero.hpp"
 #include "config.hpp"
 #include "sprites.hpp"
@@ -16,10 +17,36 @@ enum class State {
 };
 
 static State state= State::RUNNING;
-static Hero hero(23, 14);
+static Hero hero(15, 18);
 static uint32_t tick= 0;
 static Queue<Window *, 8> windowQueue;
 static Window * currentWindow;
+
+// Main Menu
+class MainMenu : public Menu {
+public:
+    MainMenu(): Menu(items_) {}
+
+    bool selected(int idx) {
+        switch( idx ){
+            case 0: trace("stats"); break;
+            case 1: trace("inventory"); break;
+            case 2: trace("save/load"); break;
+            case 3: trace("instructions"); break;
+        }
+        return true;
+    }
+private:
+    static char const * const items_[];
+};
+char const * const MainMenu::items_[] = {
+    "stats",
+    "inventory",
+    "save/load",
+    "instructions",
+    nullptr
+};
+static MainMenu mainMenu;
 
 // Gamepad state
 static uint8_t previousGamepad= 0;
@@ -63,6 +90,11 @@ void update(){
         case State::RUNNING:{
             // Manage player character
             hero.update(tick);
+
+            // Open main menu
+            if( wasPressed(BUTTON_2) ){
+                pushWindow(&mainMenu);
+            }
             break;
         }
         case State::WINDOW:{

@@ -5,7 +5,7 @@
 
 namespace txt {
 
-int const TEXT_HEIGHT = 9;
+uint8_t const TEXT_HEIGHT = 9;
 
 /**
  * Draw text box with reflowed text
