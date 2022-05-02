@@ -54,11 +54,11 @@ void init();
 void render(int sx, int sy, uint32_t tick);
 
 /**
- * Call a customisable per-screen function
+ * Call a customisable per-room function
  * @param sx screen coord
  * @param sy screen coord
  */
-//void update(int sx, int sy, uint32_t tick);
+void update(int sx, int sy, uint32_t tick);
 
 /**
  *  first checks object list, then tile

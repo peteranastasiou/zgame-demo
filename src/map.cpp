@@ -3,6 +3,7 @@
 #include "map.hpp"
 #include "map.objects.hpp"
 #include "map.impl.auto.hpp"
+#include "map.rooms.hpp"
 #include "config.hpp"
 #include "sprites.hpp"
 
@@ -28,6 +29,10 @@
  */
 
 namespace map {
+
+void init() {
+    initObjects();
+}
 
 void render(int sx, int sy, uint32_t tick) {
     // origin (in tiles)

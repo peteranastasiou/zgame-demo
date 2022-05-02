@@ -14,10 +14,15 @@ public:
 
     void render(uint32_t tick);
     
+    int getSprite(uint8_t & flags);
+
     void update(uint32_t tick);
 
     int getX(){ return gxCurr_; }
     int getY(){ return gyCurr_; }
+
+    int getPX(){ return px_; }
+    int getPY(){ return py_; }
 
 private:
     // position

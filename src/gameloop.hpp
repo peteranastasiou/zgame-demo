@@ -2,9 +2,13 @@
 #pragma once
 
 #include "str.hpp"
+#include "hero.hpp"
 #include "window.hpp"
 
 namespace gameloop {
+
+// TODO work out where this lives
+extern Hero hero;
 
 // one tick of the game
 void update();

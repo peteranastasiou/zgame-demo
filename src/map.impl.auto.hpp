@@ -1,3 +1,6 @@
+
+#pragma once
+
 // Auto-generated from res/map.json
 
 #include <stdint.h>
@@ -81,7 +84,7 @@ Jukebox jukebox_5_18;
 // Note: Looks like BSS is copied in full at start up, so large static arrays are wasteful of ROM
 Object ** OBJECTS = nullptr;
 
-void init() {
+void initObjects() {
     OBJECTS = new Object*[MAP_WIDTH * MAP_HEIGHT];
 
     OBJECTS[17 + MAP_WIDTH*13] = &sconce_17_13;

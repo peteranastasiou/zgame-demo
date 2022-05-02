@@ -6,8 +6,7 @@
 #include "wasm4.h"
 
 
-Hero::Hero(int x, int y): gxCurr_(x), gyCurr_(y), gxNext_(x), gyNext_(y)
-{
+Hero::Hero(int x, int y): gxCurr_(x), gyCurr_(y), gxNext_(x), gyNext_(y) {
     px_ = gxCurr_ * TILE_SIZE;
     py_ = gyCurr_ * TILE_SIZE;
     dir_= Dir::S;
@@ -16,11 +15,8 @@ Hero::Hero(int x, int y): gxCurr_(x), gyCurr_(y), gxNext_(x), gyNext_(y)
     frame_= 0;
 }
 
-void Hero::render(uint32_t tick)
-{
-    (void) tick;
+int Hero::getSprite(uint8_t & flags) {
     int sprite;
-    uint8_t flags = 0;
     switch( dir_ ){
         case Dir::N:
             sprite= sprites::HOOD_BACK1;
@@ -36,7 +32,13 @@ void Hero::render(uint32_t tick)
             flags |= BLIT_FLIP_X;
             break;
     }
-    *DRAW_COLORS = 0x0234; // note: bg color of sprite is made transparent
+    return sprite + frame_;
+}
+
+void Hero::render(uint32_t tick) {
+    (void) tick;
+    uint8_t flags = 0;
+    int sprite = getSprite(flags);
 
     // get which screen we are on
     int sx = gxCurr_ / 10;
@@ -46,12 +48,11 @@ void Hero::render(uint32_t tick)
     int posx = px_ - sx * SCREEN_SIZE;
     int posy = py_ - sy * SCREEN_SIZE;
 
-    // convert global pixel to local screen pixel
-    sprites::blit(sprite + frame_, posx, posy, flags);
+    *DRAW_COLORS = 0x0234; // note: bg color of sprite is made transparent
+    sprites::blit(sprite, posx, posy, flags);
 }
 
-void Hero::update(uint32_t tick)
-{
+void Hero::update(uint32_t tick) {
     if( tick % updatePeriod_ != 0 ) return;
 
     // set point to walk towards
@@ -95,8 +96,7 @@ void Hero::update(uint32_t tick)
     }
 }
 
-void Hero::move_(int nx, int ny)
-{
+void Hero::move_(int nx, int ny) {
     // interact with new tile
     bool passable = map::interact(nx, ny, dir_);
 

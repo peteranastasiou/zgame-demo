@@ -104,9 +104,12 @@ if __name__ == "__main__":
     os.system(f"sed -i 's/sprites/SPRITES_/g' {spritesheet_path}")
     print(f"wrote {spritesheet_path}")
     
+    # TODO split into hpp and cpp
+
     # Write map data header
     map_impl_path = "src/map.impl.auto.hpp"
     with open(map_impl_path, "w") as f:
+        f.write("\n#pragma once\n\n")
         f.write(f"// Auto-generated from {map_path}\n\n")
         f.write("#include <stdint.h>\n")
         f.write('#include "map.objects.hpp"\n\n')
@@ -144,7 +147,7 @@ if __name__ == "__main__":
         f.write("Object ** OBJECTS = nullptr;\n\n")
 
         # Init function to give them starting position
-        f.write("void init() {\n")
+        f.write("void initObjects() {\n")
         f.write("    OBJECTS = new Object*[MAP_WIDTH * MAP_HEIGHT];\n\n")
         for obj in objs:
             f.write(f"    OBJECTS[{obj['x']} + MAP_WIDTH*{obj['y']}] = &{obj['name']};\n")

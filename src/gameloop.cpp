@@ -3,7 +3,6 @@
 #include "wasm4.h"
 #include "audio.system.hpp"
 #include "window.menu.hpp"
-#include "hero.hpp"
 #include "config.hpp"
 #include "sprites.hpp"
 #include "map.hpp"
@@ -16,8 +15,9 @@ enum class State {
     MENU, RUNNING, WINDOW
 };
 
+Hero hero(20, 15);
+
 static State state= State::RUNNING;
-static Hero hero(15, 18);
 static uint32_t tick= 0;
 static Queue<Window *, 8> windowQueue;
 static Window * currentWindow;
@@ -82,7 +82,7 @@ void update(){
     hero.render(tick);
 
     // Screen specific update function
-    // TODO map::update(screenX, screenY, tick);
+    map::update(screenX, screenY, tick);
 
     // Game state machine
     switch( state ){
