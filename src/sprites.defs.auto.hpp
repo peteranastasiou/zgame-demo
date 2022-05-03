@@ -28,6 +28,7 @@ uint8_t const STONE_WALL = 22;
 uint8_t const SCONCE_UNLIT = 23;
 uint8_t const SCONCE_LIT1 = 24;
 uint8_t const JUKEBOX = 25;
+uint8_t const GATE = 26;
 uint8_t const COBBLESTONE = 30;
 uint8_t const MUSHROOMS = 35;
 uint8_t const TREE = 36;

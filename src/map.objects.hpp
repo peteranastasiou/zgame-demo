@@ -43,6 +43,9 @@ public:
     // Implement this to customise interaction
     virtual bool onInteraction()=0;
 
+    void setTriggered(bool triggered){ triggered_= triggered; }
+    bool isTriggered(){ return triggered_; }
+
     virtual void update(int tick) override {
         (void) tick;
     }
@@ -255,6 +258,23 @@ public:
         (void) cycle;
         *DRAW_COLORS = 0x1234;
         render_( sprites::STONE_WALL, x, y);
+    }
+};
+
+class Gate : public TriggeredObject {
+public:
+    virtual bool passable() override { return triggered_; }
+
+    virtual bool onInteraction() override {
+        return false;
+    }
+
+    virtual void render(int cycle, int x, int y) override {
+        (void) cycle;
+        *DRAW_COLORS = 0x0234;
+        if( !triggered_ ) {
+            render_(sprites::GATE, x, y);
+        }
     }
 };
 

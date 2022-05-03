@@ -7,6 +7,23 @@
 
 namespace map {
 
+static Dialogue gateMsg("You hear a scraping, sliding noise.");
+void room4Update(int sx, int sy, uint32_t tick) {
+    (void) sx;
+    (void) sy;
+    (void) tick;
+    // Open gate when all sconces are lit
+    if( !gate_9_12.isTriggered() ){
+        if( sconce_1_10.isTriggered() && 
+            sconce_1_19.isTriggered() && 
+            sconce_8_10.isTriggered() && 
+            sconce_8_19.isTriggered() ){
+            gameloop::pushWindow(&gateMsg);
+            gate_9_12.setTriggered(true);
+        }
+    }
+}
+
 void room6Update(int sx, int sy, uint32_t tick) {
     (void) tick;
 
@@ -60,7 +77,7 @@ void update(int sx, int sy, uint32_t tick) {
         case 1: return;
         case 2: return;
         case 3: return;
-        case 4: return;
+        case 4: room4Update(sx, sy, tick); return;
         case 5: return;
         case 6: room6Update(sx, sy, tick); return;
         case 7: return;

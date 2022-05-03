@@ -15,7 +15,7 @@ enum class State {
     MENU, RUNNING, WINDOW
 };
 
-Hero hero(20, 15);
+Hero hero(2, 11);
 
 static State state= State::RUNNING;
 static uint32_t tick= 0;

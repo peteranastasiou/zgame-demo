@@ -160,9 +160,9 @@
    <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>
- <tile id="26">
+ <tile id="26" type="GATE">
   <properties>
-   <property name="class" value=""/>
+   <property name="class" value="Gate"/>
    <property name="passable" type="bool" value="false"/>
   </properties>
  </tile>

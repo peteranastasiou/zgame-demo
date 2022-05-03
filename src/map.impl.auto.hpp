@@ -45,7 +45,7 @@ uint8_t const TILES[] = {
  22,  22,  22,  22,  22,  22,  22,  22,  22,  22,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36,  36, 
 };
 
-uint8_t const NUM_OBJECTS = 31;
+uint8_t const NUM_OBJECTS = 32;
 
 Sconce sconce_17_13;
 Sconce sconce_13_15;
@@ -78,6 +78,7 @@ Sconce sconce_8_19;
 Hut hut_5_15;
 Egg egg_18_28;
 Jukebox jukebox_5_18;
+Gate gate_9_12;
 
 // Run-time expanded array of objects
 // Not done at compile time to save ROM
@@ -118,6 +119,7 @@ void initObjects() {
     OBJECTS[5 + MAP_WIDTH*15] = &hut_5_15;
     OBJECTS[18 + MAP_WIDTH*28] = &egg_18_28;
     OBJECTS[5 + MAP_WIDTH*18] = &jukebox_5_18;
+    OBJECTS[9 + MAP_WIDTH*12] = &gate_9_12;
 }
 
 } // namespace map

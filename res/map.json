@@ -736,6 +736,29 @@
                  "width":16,
                  "x":80,
                  "y":304
+                }, 
+                {
+                 "gid":27,
+                 "height":16,
+                 "id":73,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"class",
+                         "type":"string",
+                         "value":"Gate"
+                        }, 
+                        {
+                         "name":"passable",
+                         "type":"bool",
+                         "value":false
+                        }],
+                 "rotation":0,
+                 "type":"GATE",
+                 "visible":true,
+                 "width":16,
+                 "x":144,
+                 "y":208
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -744,7 +767,7 @@
          "y":0
         }],
  "nextlayerid":5,
- "nextobjectid":73,
+ "nextobjectid":74,
  "orientation":"orthogonal",
  "properties":[
         {

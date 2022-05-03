@@ -402,13 +402,14 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Gate"
                 }, 
                 {
                  "name":"passable",
                  "type":"bool",
                  "value":false
-                }]
+                }],
+         "type":"GATE"
         }, 
         {
          "id":27,

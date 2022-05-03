@@ -81,10 +81,11 @@ void Hero::update(uint32_t tick) {
 
     // walking animation
     walking_= true;
-    if( px_ < sx )      px_ ++;
-    else if( px_ > sx ) px_ --;
-    else if( py_ < sy ) py_ ++;
-    else if( py_ > sy ) py_ --;
+    int speed = 1;
+    if( px_ < sx )      px_ += speed;
+    else if( px_ > sx ) px_ -= speed;
+    else if( py_ < sy ) py_ += speed;
+    else if( py_ > sy ) py_ -= speed;
     else walking_= false;
 
     // manage animation steps
