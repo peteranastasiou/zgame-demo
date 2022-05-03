@@ -13,7 +13,7 @@ uint8_t reflow(char const * msg, int y, bool dryRun) {
     int const LINE_LENGTH = 19;
     char lineBuffer[LINE_LENGTH+1];
 
-    int const MAX_WORD_LEN_TO_KEEP = 5; // reflow words up to this length.
+    int const MAX_WORD_LEN_TO_KEEP = 10; // reflow words up to this length.
 
     uint8_t numLines = 1;
     int strIdx = 0;
@@ -55,10 +55,13 @@ uint8_t reflow(char const * msg, int y, bool dryRun) {
             }
             else {
                 // split word with '-'
-                lineBuffer[LINE_LENGTH-1] = '-';
-                lineBuffer[LINE_LENGTH] = '\0';
+                // we know word is at least MAX_WORD_LEN_TO_KEEP already, so rewind a little
+                // this is a simple way of ensuring at least >3 chars reflowed to the next line
+                int const REWIND = 3;
+                lineBuffer[LINE_LENGTH-REWIND] = '-';
+                lineBuffer[LINE_LENGTH-REWIND+1] = '\0';
                 // rewind before '-'
-                strIdx -= 2;
+                strIdx -= REWIND+1;
             }
             if( !dryRun ) render_(lineBuffer, numLines-1, y);
             lineIdx = 0;
