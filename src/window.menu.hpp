@@ -18,6 +18,10 @@ public:
         selectedIdx_ = 0;
     }
 
+    virtual void reset() override {
+        selectedIdx_ = 0;
+    }
+
     virtual bool update() override {
         // cancel button
         if( gameloop::wasPressed(BUTTON_2) ){

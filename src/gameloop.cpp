@@ -70,6 +70,7 @@ void update(){
     // If we are ready for it, and one is available: grab the next window to display
     if( state == State::RUNNING && !windowQueue.isEmpty() ){
         currentWindow = windowQueue.pop();
+        currentWindow->reset();
         state = State::WINDOW;
     }
 

@@ -9,7 +9,7 @@ void render_(char const * line, int lineNum, int y) {
     text(line, 4, y + lineNum * TEXT_HEIGHT);
 }
 
-uint8_t reflow(char const * msg, int y, bool dryRun) {
+uint8_t reflow(char const * msg, int y, int len, bool dryRun) {
     int const LINE_LENGTH = 19;
     char lineBuffer[LINE_LENGTH+1];
 
@@ -25,14 +25,14 @@ uint8_t reflow(char const * msg, int y, bool dryRun) {
         // next character
         char c = msg[strIdx];
 
-        if(c == '\0') {
+        if( c == '\0' || strIdx == len ) {
             // end of string
             // display remaining text in buffer
             lineBuffer[lineIdx]= '\0';
             if( !dryRun ) render_(lineBuffer, numLines-1, y);
             return numLines;
         }
-        else if(c == ' ') {
+        else if( c == ' ' ) {
             // record new word boundary
             lastSpaceInStr = strIdx;
             lastSpaceInLine = lineIdx;
