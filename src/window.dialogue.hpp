@@ -17,16 +17,26 @@ private:
     uint8_t charIdx_; // for animation
 
 public:
-    Dialogue(char const * msg): msg_(msg) {
+    Dialogue(char const * msg) {
+        setMessage(msg);
+    }
+
+    virtual void reset() override {
+        charIdx_ = 0;
+    }
+
+    void setMessage(char const * msg) {
+        msg_ = msg;
         msgLen_ = (uint8_t)strlen(msg);
+        charIdx_ = 0;
 
         // do a dry run to pre-calculate number of lines
         numLines_ = txt::reflow(msg_, 0, -1, true);
         textY_ = SCREEN_SIZE/2 - txt::TEXT_HEIGHT * numLines_ / 2;
     }
 
-    virtual void reset() override {
-        charIdx_ = 0;
+    void skipAnimation() {
+        charIdx_ = msgLen_;
     }
 
     virtual bool update() override {

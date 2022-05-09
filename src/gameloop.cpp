@@ -3,7 +3,7 @@
 #include "wasm4.h"
 #include "audio.system.hpp"
 #include "window.menu.hpp"
-#include "window.dynamicdialogue.hpp"
+#include "window.dialogue.hpp"
 #include "config.hpp"
 #include "sprites.hpp"
 #include "map.hpp"
@@ -24,9 +24,9 @@ static Queue<Window *, 8> windowQueue;
 static Window * currentWindow;
 
 // Stats window
-class StatsWindow : public DynamicDialogue {
+class StatsWindow : public Dialogue {
 public:
-    StatsWindow(): DynamicDialogue(4) {}
+    StatsWindow(): Dialogue("") {}
 
     virtual void reset() override {
         msg.clear();
@@ -38,11 +38,10 @@ public:
         msg.appendUint8(hero.agility);
         msg.append("\n    WISDOM: ");
         msg.appendUint8(hero.wisdom);
+        setMessage(msg.get());
+        skipAnimation();
     }
 
-    virtual char const * getMsg() override {
-        return msg.get();
-    }
 private:
     StrBuffer<64> msg;
 };
