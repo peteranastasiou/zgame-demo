@@ -37,6 +37,10 @@ private:
 
 public:
     StrBuffer(){
+        clear();
+    }
+
+    void clear() {
         idx_=0;
         buf_[0]= 0;
     }
@@ -51,7 +55,7 @@ public:
         buf_[idx_]= '\0';
     }
 
-    void append(char * str){
+    void append(char const * str){
         while( *str != '\0' ){
             if( idx_ == LEN-1 ){
                 buf_[idx_]= '\0';

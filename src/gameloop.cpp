@@ -3,6 +3,7 @@
 #include "wasm4.h"
 #include "audio.system.hpp"
 #include "window.menu.hpp"
+#include "window.dynamicdialogue.hpp"
 #include "config.hpp"
 #include "sprites.hpp"
 #include "map.hpp"
@@ -22,17 +23,43 @@ static uint32_t tick= 0;
 static Queue<Window *, 8> windowQueue;
 static Window * currentWindow;
 
+// Stats window
+class StatsWindow : public DynamicDialogue {
+public:
+    StatsWindow(): DynamicDialogue(4) {}
+
+    virtual void reset() override {
+        msg.clear();
+        msg.append("      LIFE: ");
+        msg.appendUint8(100);
+        msg.append("\n  STRENGTH: ");
+        msg.appendUint8(hero.strength);
+        msg.append("\n   AGILITY: ");
+        msg.appendUint8(hero.agility);
+        msg.append("\n    WISDOM: ");
+        msg.appendUint8(hero.wisdom);
+    }
+
+    virtual char const * getMsg() override {
+        return msg.get();
+    }
+private:
+    StrBuffer<64> msg;
+};
+static StatsWindow statsWindow;
+
 // Main Menu
 class MainMenu : public Menu {
 public:
     MainMenu(): Menu(items_) {}
 
-    bool selected(int idx) {
+    virtual bool selected(int idx) override {
         switch( idx ){
-            case 0: trace("stats"); break;
+            case 0: pushWindow(&statsWindow); break;
             case 1: trace("inventory"); break;
             case 2: trace("save/load"); break;
             case 3: trace("instructions"); break;
+            case 4: trace("story"); break;
         }
         return true;
     }
@@ -40,10 +67,11 @@ private:
     static char const * const items_[];
 };
 char const * const MainMenu::items_[] = {
-    "stats",
-    "inventory",
-    "save/load",
-    "instructions",
+    "STATS",
+    "INVENTORY",
+    "SAVE/LOAD",
+    "INSTRUCTIONS",
+    "STORY",
     nullptr
 };
 static MainMenu mainMenu;

@@ -24,6 +24,11 @@ public:
     int getPX(){ return px_; }
     int getPY(){ return py_; }
 
+    // stats:
+    uint8_t strength;
+    uint8_t agility;
+    uint8_t wisdom;
+
 private:
     // position
     int32_t gxCurr_, gyCurr_; // global tile coordinate (if walking: exiting this tile)

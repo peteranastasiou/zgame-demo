@@ -36,11 +36,13 @@ public:
         }
         bool up = gameloop::wasPressed(BUTTON_UP);
         bool down = gameloop::wasPressed(BUTTON_DOWN);
-        if( up && !down && selectedIdx_ > 0 ){
-            selectedIdx_--;
+        if( up && !down ){
+            if( selectedIdx_ > 0 ) selectedIdx_--;
+            else selectedIdx_ = numItems_-1;
         }
-        if( down && !up && selectedIdx_ < numItems_-1 ){
-            selectedIdx_++;
+        if( down && !up ){
+            if( selectedIdx_ < numItems_-1 ) selectedIdx_++;
+            else selectedIdx_ = 0;
         }
         return false;
     }
