@@ -6,14 +6,11 @@
 #include "wasm4.h"
 #include "txt.hpp"
 
+// TODO scrolling 
+
 class Menu : public Window {
 public:
-    Menu(char const * const * items): items_(items) {
-        // count items:
-        numItems_= 0;
-        for( int i= 0; items_[i] != nullptr; ++i ){
-            numItems_++;
-        }
+    Menu(uint8_t numItems): numItems_(numItems) {
         textY_ = SCREEN_SIZE/2 - txt::TEXT_HEIGHT * numItems_ / 2;
         selectedIdx_ = 0;
     }
@@ -65,9 +62,12 @@ public:
             }else{
                 *DRAW_COLORS = 0x0041;
             }
-            text(items_[i], 18, y);
+            text(getLabel(i), 18, y);
         }
     }
+
+    // Implement to define menu item strings
+    virtual char const * getLabel(int idx)= 0;
 
     // Implement to define functionality on selection:
     // return true means to close the window
@@ -77,6 +77,5 @@ private:
     uint8_t selectedIdx_;
     uint8_t numItems_;
     uint8_t textY_;
-    char const * const * items_;
 };
 
