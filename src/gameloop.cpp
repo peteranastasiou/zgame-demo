@@ -50,7 +50,7 @@ static StatsWindow statsWindow;
 // Main Menu
 class MainMenu : public Menu {
 public:
-    MainMenu(): Menu(5) {}
+    MainMenu() {}
 
     virtual char const * getLabel(int idx) override {
         switch( idx ){
@@ -60,7 +60,7 @@ public:
             case 3: return "INSTRUCTIONS";
             case 4: return "STORY";
         }
-        return "?";
+        return nullptr;
     }
 
     virtual bool selected(int idx) override {
@@ -80,10 +80,6 @@ char const * const MainMenu::items_[] = {
     nullptr
 };
 static MainMenu mainMenu;
-
-// INVENTORY MENU IDEAS:
-// \n separated string buffer, re-written in reset function
-// function which returns string per idx (wasteful)
 
 // Gamepad state
 static uint8_t previousGamepad= 0;
