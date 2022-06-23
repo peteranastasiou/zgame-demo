@@ -18,6 +18,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -29,6 +34,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -48,6 +58,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -59,6 +74,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -78,6 +98,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -89,6 +114,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -108,6 +138,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -119,6 +154,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -138,6 +178,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -149,6 +194,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -167,6 +217,11 @@
                  "value":"Snake"
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -178,6 +233,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -197,6 +257,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -208,6 +273,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -227,6 +297,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -240,6 +315,11 @@
                  "name":"class",
                  "type":"string",
                  "value":"Knight"
+                }, 
+                {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
                 }, 
                 {
                  "name":"passable",
@@ -257,6 +337,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -267,6 +352,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -286,6 +376,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -301,6 +396,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -311,6 +411,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -330,6 +435,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -342,7 +452,12 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":"FalseWall"
+                 "value":"Wall"
+                }, 
+                {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
                 }, 
                 {
                  "name":"passable",
@@ -360,6 +475,11 @@
                  "value":"Sconce"
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -371,6 +491,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -390,6 +515,11 @@
                  "value":"Jukebox"
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -405,6 +535,11 @@
                  "value":"Gate"
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -416,6 +551,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -434,6 +574,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -448,6 +593,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -458,6 +608,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -477,6 +632,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -487,6 +647,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -505,6 +670,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -515,6 +685,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -533,6 +708,11 @@
                  "value":"MushroomsPickup"
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -544,6 +724,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -563,6 +748,11 @@
                  "value":"Hut"
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -574,6 +764,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -592,6 +787,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -602,6 +802,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -621,6 +826,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -631,6 +841,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -646,6 +861,11 @@
                 {
                  "name":"class",
                  "type":"string",
+                 "value":"Npc"
+                }, 
+                {
+                 "name":"constructor",
+                 "type":"string",
                  "value":""
                 }, 
                 {
@@ -659,6 +879,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":"Npc"
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -674,6 +899,11 @@
                 {
                  "name":"class",
                  "type":"string",
+                 "value":"Npc"
+                }, 
+                {
+                 "name":"constructor",
+                 "type":"string",
                  "value":""
                 }, 
                 {
@@ -687,6 +917,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":"Npc"
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -705,6 +940,11 @@
                  "value":"Egg"
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -716,6 +956,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -735,6 +980,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":false
@@ -745,6 +995,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -763,6 +1018,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -773,6 +1033,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -791,6 +1056,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -805,6 +1075,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -815,6 +1090,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -834,6 +1114,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -845,6 +1130,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -864,6 +1154,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -875,6 +1170,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -894,6 +1194,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -904,6 +1209,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -922,6 +1232,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -932,6 +1247,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -950,6 +1270,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -960,6 +1285,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -979,6 +1309,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -990,6 +1325,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -1009,6 +1349,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -1020,6 +1365,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -1039,6 +1389,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -1049,6 +1404,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -1067,6 +1427,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -1077,6 +1442,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -1095,6 +1465,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -1105,6 +1480,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -1124,6 +1504,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -1135,6 +1520,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 
@@ -1154,6 +1544,11 @@
                  "value":""
                 }, 
                 {
+                 "name":"constructor",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
                  "name":"passable",
                  "type":"bool",
                  "value":true
@@ -1165,6 +1560,11 @@
          "properties":[
                 {
                  "name":"class",
+                 "type":"string",
+                 "value":""
+                }, 
+                {
+                 "name":"constructor",
                  "type":"string",
                  "value":""
                 }, 

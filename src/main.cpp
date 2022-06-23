@@ -4,7 +4,6 @@
  */
 
 #include "map.hpp"
-#include "audio.channel.hpp"
 #include "gameloop.hpp"
 
 void start() {
@@ -12,12 +11,15 @@ void start() {
 }
 
 void update() {
-    // Update audio channels
-    audio::Channel::pulse1.tick();
-    audio::Channel::pulse2.tick();
-    audio::Channel::triangle.tick();
-    audio::Channel::noise.tick();
-
     // Update game state
     gameloop::update();
 }
+
+
+/**
+ * TODO:
+ * - dialogue pagenation
+ * - object constructor arguments from tiled
+ * - first argument of constructor autopopulated from sprite
+ * - Npc construction with dialogue
+ */

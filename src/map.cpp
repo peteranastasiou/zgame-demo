@@ -7,26 +7,6 @@
 #include "config.hpp"
 #include "sprites.hpp"
 
-/**
- * puzzles to test system:
- * SINGLE OBJECT:
- *  - light sconce
- *  - 
- *  - pick up into inventory (todo)
- *  - obstacle e.g. mob or ability check - triggers screen, then changes object
- *  - interaction triggers "animation" e.g. moving obstacle
- *  - warps
- *  - picking up treasure causes mob to appear OR recorded in blackboard that a mob is hunting you
- * MANY TO ONE:
- *  - light all sconces to get a pickup appear, when get pickup, door is unlocked
- * ONE TO MANY:
- *  - destruction of statue causes cultists to flee
- *  - opening one sarcophagus causes all to open
- * 
- * 
- * TODO expand objects array out to a map at runtime to reduce comparisons?
- * 
- */
 
 namespace map {
 

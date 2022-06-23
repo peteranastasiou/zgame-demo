@@ -5,7 +5,6 @@
 #include "sprites.hpp"
 #include "gameloop.hpp"
 #include "window.dialogue.hpp"
-#include "audio.system.hpp"
 
 namespace map {
 
@@ -94,188 +93,78 @@ public:
 // Custom objects for the game
 // ------------------------------------------------------------------
 
-static Dialogue hutMsg("A tiny yurt is hidden in this alcove.\nYou may rest here.");
-class Hut : public SimpleObject {
-    virtual void interact() override {
-        gameloop::pushWindow(&hutMsg);
-    }
+// class Sconce : public TriggeredObject {
+// public:
+//     virtual bool passable() override { return false; }
 
-    virtual void render(int cycle, int x, int y) override {
-        (void) cycle;
-        *DRAW_COLORS = 0x1234;
-        render_( sprites::HUT, x, y);
-    }
-};
+//     virtual bool onInteraction() override {
+//         static bool doOnce = true;
+//         doOnce = false;
+//         return true;
+//     }
 
-static Dialogue sconceMsg("A spark leaps from your ELECTRIC CLOAK and sets the sconce ablaze.");
+//     virtual void render(int cycle, int x, int y) override {
+//         *DRAW_COLORS = 0x1204;
+//         if( triggered_ ){
+//             render_( sprites::SCONCE_LIT1, x, y, cycle % 2 ? BLIT_FLIP_X : 0);
+//         }else{
+//             render_( sprites::SCONCE_UNLIT, x, y);
+//         }
+//     }
+// };
 
-class Sconce : public TriggeredObject {
+class Npc : public Object {
 public:
-    virtual bool passable() override { return false; }
-
-    virtual bool onInteraction() override {
-        static bool doOnce = true;
-        if( doOnce ) gameloop::pushWindow(&sconceMsg);
-        doOnce = false;
-        return true;
-    }
-
-    virtual void render(int cycle, int x, int y) override {
-        *DRAW_COLORS = 0x1204;
-        if( triggered_ ){
-            render_( sprites::SCONCE_LIT1, x, y, cycle % 2 ? BLIT_FLIP_X : 0);
-        }else{
-            render_( sprites::SCONCE_UNLIT, x, y);
-        }
-    }
-};
-
-class MushroomsPickup : public TriggeredObject {
-public:
-    virtual bool passable() override { return true; }
-
-    virtual bool onInteraction() override {
-        // TODO enqueue dialogue, add to inventory
-        return true;
+    Npc(uint8_t sprite, Dialogue * dialogue){
+        sprite_ = sprite;
+        dialogue_ = dialogue;
     }
 
     virtual void render(int cycle, int x, int y) override {
         (void) cycle;
         *DRAW_COLORS = 0x0234;
-        if( !triggered_ ) {
-            // dance
-            uint32_t flags = 0;
-            render_( sprites::MUSHROOMS, x, y, flags);
-        }
+        render_(sprite_, x, y, 0);
     }
-};
 
-static Dialogue guardMsg("The guard blocks your passage.");
-static Dialogue guardMsg2("10 STR required");
+    virtual void update(int tick) override {
+        (void) tick;
+    }
 
-class Knight : public TriggeredObject {
-public:
-    virtual bool passable() override { return triggered_; }
-
-    virtual bool onInteraction() override {
-
-        //TODO enqueue battle screen
-        gameloop::pushWindow(&guardMsg);
-        gameloop::pushWindow(&guardMsg2);
+    virtual bool passable() override {
         return false;
     }
-
-    virtual void render(int cycle, int x, int y) override {
-        (void) cycle;
-        *DRAW_COLORS = 0x0234;
-        if( !triggered_ ) {
-            render_( sprites::KNIGHT1, x, y, (cycle/2) % 2 ? BLIT_FLIP_X : 0);
-        }
-    }
-};
-
-class Snake : public TriggeredObject {
-public:
-    virtual bool passable() override { return triggered_; }
-
-    virtual bool onInteraction() override {
-        // TODO enqueue battle screen
-        return false;
-    }
-
-    virtual void render(int cycle, int x, int y) override {
-        (void) cycle;
-        *DRAW_COLORS = 0x0234;
-        if( !triggered_ ) {
-            // sequence
-            int sprite=0;
-            switch( (cycle/2) % 4 ){
-                case 0: sprite= sprites::SNAKE1; break;
-                case 1: sprite= sprites::SNAKE2; break;
-                case 2: sprite= sprites::SNAKE1; break;
-                case 3: sprite= sprites::SNAKE3; break;
-            }
-            render_( sprite, x, y);
-        }
-    }
-};
-
-class Egg : public TriggeredObject {
-public:
-    virtual bool passable() override { return triggered_; }
-
-    virtual bool onInteraction() override {
-        return false;
-    }
-
-    virtual void render(int cycle, int x, int y) override {
-        (void) cycle;
-        *DRAW_COLORS = 0x0234;
-        if( !triggered_ ) {
-            render_( (cycle/2) % 2 ? sprites::EGG1 : sprites::EGG2, x, y);
-        }
-    }
-};
-
-static Dialogue jukeMsg1("You turn the jukebox on. The developer's attempt at a tune assalts your senses.");
-static Dialogue jukeMsg2("You turn that mess off.");
-class Jukebox : public ToggledObject {
-public:
-    virtual bool passable() override { return false; }
-
-    virtual bool onInteraction() override {
-        if( triggered_ ){
-            // turn off
-            gameloop::pushWindow(&jukeMsg2);
-            audio::demoStop();
-        }else{
-            // turn on
-            audio::demo();
-            gameloop::pushWindow(&jukeMsg1);
-        }
-        return true;
-    }
-
-    virtual void render(int cycle, int x, int y) override {
-        (void) cycle;
-        *DRAW_COLORS = 0x1034;
-        uint32_t flags = 0;
-        if( triggered_ ) flags = cycle % 2 ? BLIT_FLIP_X : 0;
-        render_( sprites::JUKEBOX, x, y, flags);
-    }
-};
-
-static Dialogue wallMsg1("Pressing a concealed button, you slip through the false wall.");
-class FalseWall : public SimpleObject {
-public:
-    virtual bool passable() override { return true; }
 
     virtual void interact() override {
-        gameloop::pushWindow(&wallMsg1);
+        gameloop::pushWindow(dialogue_);
     }
 
-    virtual void render(int cycle, int x, int y) override {
-        (void) cycle;
-        *DRAW_COLORS = 0x1234;
-        render_( sprites::STONE_WALL, x, y);
+    virtual void store(uint8_t *& ptr) override {
+        (void) ptr;
     }
+
+    virtual void load(uint8_t *& ptr) override {
+        (void) ptr;
+    }
+private:
+    uint8_t sprite_;
+    Dialogue * dialogue_;
 };
 
-class Gate : public TriggeredObject {
-public:
-    virtual bool passable() override { return triggered_; }
+// class Gate : public TriggeredObject {
+// public:
+//     virtual bool passable() override { return triggered_; }
 
-    virtual bool onInteraction() override {
-        return false;
-    }
+//     virtual bool onInteraction() override {
+//         return false;
+//     }
 
-    virtual void render(int cycle, int x, int y) override {
-        (void) cycle;
-        *DRAW_COLORS = 0x0234;
-        if( !triggered_ ) {
-            render_(sprites::GATE, x, y);
-        }
-    }
-};
+//     virtual void render(int cycle, int x, int y) override {
+//         (void) cycle;
+//         *DRAW_COLORS = 0x0234;
+//         if( !triggered_ ) {
+//             render_(sprites::GATE, x, y);
+//         }
+//     }
+// };
 
 } // namespace map

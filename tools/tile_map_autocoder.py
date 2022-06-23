@@ -46,6 +46,7 @@ def load_map(path: str):
         j = json.load(f)
         mapdata = j["layers"]
         first_gid = j["tilesets"][0]["firstgid"]
+        print(f"{first_gid=}")
 
     # Extract objects:
     objs = []
@@ -53,7 +54,8 @@ def load_map(path: str):
         d = {}
         d['x'] = int(obj['x'] / TILE_SIZE)
         d['y'] = int(obj['y'] / TILE_SIZE) - 1   # Not sure why Tiled is off by one
-        d['type'] = obj["type"]
+        d['name'] = obj['name'].strip()
+        d['sprite'] = obj['gid'] - first_gid
 
         # Convert properties from {name: N, value: V} to {N: V}
         for prop in obj["properties"]:
@@ -112,7 +114,8 @@ if __name__ == "__main__":
         f.write("\n#pragma once\n\n")
         f.write(f"// Auto-generated from {map_path}\n\n")
         f.write("#include <stdint.h>\n")
-        f.write('#include "map.objects.hpp"\n\n')
+        f.write('#include "map.objects.hpp"\n')
+        f.write('#include "map.dialogue.hpp"\n\n')
         f.write("namespace map {\n")
         f.write(f"uint8_t const MAP_WIDTH = {map_w};\n")
         f.write(f"uint8_t const MAP_HEIGHT = {map_h};\n")
@@ -133,11 +136,19 @@ if __name__ == "__main__":
 
         # Give objects names (in form: class_x_y)
         for obj in objs:
-            obj['name'] = f"{obj['class'].lower()}_{obj['x']}_{obj['y']}"
+            # if it has been given a name, use that, else generate a name:
+            print(obj)
+            instance_name = obj['name'].strip()
+            if len(instance_name) == 0:
+                instance_name = f"{obj['class'].lower()}_{obj['x']}_{obj['y']}"
+            obj['name'] = instance_name
 
         # Object declarations
         for obj in objs:
-            f.write(f"{obj['class']} {obj['name']};\n")
+            args = ""
+            if len(obj['constructor']) > 0:
+                args = ", "+obj['constructor']  # append additional arguments
+                f.write(f"{obj['class']} {obj['name']}({obj['sprite']}{args});\n")
         f.write("\n")
 
         # Object array

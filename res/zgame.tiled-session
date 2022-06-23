@@ -32,8 +32,8 @@
             "scale": 4.0323,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 171.36621779133495,
-                "y": 253.94935892666714
+                "x": 70.67926493564467,
+                "y": 71.91925203977878
             }
         },
         "test.tmx": {
@@ -70,7 +70,7 @@
         "tileset.tsx",
         "map.tmx"
     ],
-    "project": "xipe.tiled-project",
+    "project": "zgame.tiled-project",
     "recentFiles": [
         "tileset.tsx",
         "map.tmx",
