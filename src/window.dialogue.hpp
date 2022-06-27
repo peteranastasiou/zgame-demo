@@ -10,29 +10,36 @@
 
 class Dialogue: public Window {
 private:
+    static uint8_t const MAX_LINES_ON_PAGE = 15;
     char const * msg_;
-    uint8_t msgLen_;
-    uint8_t numLines_;
-    int16_t textY_;  // position to display text to be centred vertically
-    uint8_t charIdx_; // for animation
+    char const * msgPtr_;
+    int16_t msgLen_;
+    int16_t numLinesOnPage_;
+    int16_t numCharsOnPage_;
+    uint16_t textY_;  // position to display text to be centred vertically
+    int16_t charIdx_; // for animation
+
+    void setMessage(char const * msg) {
+        msgPtr_ = msg;
+        charIdx_ = 0;
+
+        // do a dry run to pre-calculate number of lines on first page
+        numLinesOnPage_ = txt::reflow(numCharsOnPage_, msgPtr_, 0, -1, MAX_LINES_ON_PAGE, true);
+        tracef("Dialogue %d lines", numLinesOnPage_);
+        tracef("Dialogue %d chars", numCharsOnPage_);
+        tracef("Last char '%c'\n", msgPtr_[numCharsOnPage_]);
+        textY_ = SCREEN_SIZE/2 - txt::TEXT_HEIGHT * (uint16_t)numLinesOnPage_ / 2;
+    }
 
 public:
     Dialogue(char const * msg) {
-        setMessage(msg);
+        msg_ = msg;
+        msgLen_ = (int16_t)strlen(msg);
+        setMessage(msg_);
     }
 
     virtual void reset() override {
-        charIdx_ = 0;
-    }
-
-    void setMessage(char const * msg) {
-        msg_ = msg;
-        msgLen_ = (uint8_t)strlen(msg);
-        charIdx_ = 0;
-
-        // do a dry run to pre-calculate number of lines
-        numLines_ = txt::reflow(msg_, 0, -1, true);
-        textY_ = SCREEN_SIZE/2 - txt::TEXT_HEIGHT * numLines_ / 2;
+        setMessage(msg_);
     }
 
     void skipAnimation() {
@@ -41,11 +48,14 @@ public:
 
     virtual bool update() override {
         if( gameloop::wasPressed(BUTTON_1 | BUTTON_2) ){
-            if( charIdx_ < msgLen_ ){
+            if( charIdx_ < numCharsOnPage_ ){
                 // skip to end of animation
-                charIdx_ = msgLen_;
+                charIdx_ = numCharsOnPage_;
+            }else if( msgPtr_[charIdx_] != '\0' ){
+                // skip to next page of message
+                setMessage( msgPtr_ + numCharsOnPage_ );
             }else{
-                // exit
+                // end of message, exit
                 return true;
             }
         }
@@ -56,12 +66,19 @@ public:
         (void) tick;
         // display text box
         *DRAW_COLORS = 0x0014;
-        rect(1, textY_ - 6, SCREEN_SIZE - 2, txt::TEXT_HEIGHT * numLines_ + 11);
-
-        if( charIdx_ < msgLen_ ) charIdx_ ++;
+        int32_t h = txt::TEXT_HEIGHT * numLinesOnPage_ + 11;
+        rect(1, textY_ - 6, SCREEN_SIZE - 2, (uint32_t)h);
 
         // reflow text within the box
         *DRAW_COLORS = 0x0041;
-        txt::reflow(msg_, textY_, charIdx_);
+        int16_t nChars;
+        txt::reflow(nChars, msgPtr_, textY_, charIdx_, MAX_LINES_ON_PAGE);
+
+        // unless on last page, show ... 
+        if( charIdx_ < numCharsOnPage_ ){
+            charIdx_ ++;
+        }else if( msgPtr_[charIdx_] != '\0' ){
+            text("->", SCREEN_SIZE - 20, textY_ + h - 2*txt::TEXT_HEIGHT);
+        }
     }
 };

@@ -9,27 +9,28 @@ void render_(char const * line, int lineNum, int y) {
     text(line, 4, y + lineNum * TEXT_HEIGHT);
 }
 
-uint8_t reflow(char const * msg, int y, int len, bool dryRun) {
-    int const LINE_LENGTH = 19;
+int16_t reflow(int16_t &numChars, char const * msg, int y, int maxLen, int maxLines, bool dryRun) {
+    int16_t const LINE_LENGTH = 19;
     char lineBuffer[LINE_LENGTH+1];
 
-    int const MAX_WORD_LEN_TO_KEEP = 10; // reflow words up to this length.
+    int16_t const MAX_WORD_LEN_TO_KEEP = 10; // reflow words up to this length.
 
-    uint8_t numLines = 1;
-    int strIdx = 0;
-    int lastSpaceInLine = 0;
-    int lastSpaceInStr = 0;
-    int lineStart = 0;
-    int lineIdx = 0;
+    int16_t numLines = 1;
+    int16_t strIdx = 0;
+    int16_t lastSpaceInLine = 0;
+    int16_t lastSpaceInStr = 0;
+    int16_t lineStart = 0;
+    int16_t lineIdx = 0;
     while(true){
         // next character
         char c = msg[strIdx];
 
-        if( c == '\0' || strIdx == len ) {
+        if( c == '\0' || strIdx == maxLen || numLines == maxLines ) {
             // end of string
             // display remaining text in buffer
             lineBuffer[lineIdx]= '\0';
             if( !dryRun ) render_(lineBuffer, numLines-1, y);
+            numChars = strIdx;
             return numLines;
         }
         else if( c == ' ' ) {
@@ -37,7 +38,7 @@ uint8_t reflow(char const * msg, int y, int len, bool dryRun) {
             lastSpaceInStr = strIdx;
             lastSpaceInLine = lineIdx;
         }
-        
+
         lineBuffer[lineIdx] = c;
         strIdx ++;
 
