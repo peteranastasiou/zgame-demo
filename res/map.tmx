@@ -42,15 +42,15 @@
 </data>
  </layer>
  <objectgroup id="4" name="Object Layer 1">
-  <object id="74" name="testWoman" gid="44" x="48" y="64" width="16" height="16">
+  <object id="74" name="becR" gid="44" x="48" y="64" width="16" height="16">
    <properties>
     <property name="class" value="Npc"/>
-    <property name="constructor" value="&amp;dialogue::test"/>
+    <property name="constructor" value="&quot;Bec Rowe&quot;, &amp;dialogue::becRMsg"/>
    </properties>
   </object>
   <object id="75" name="testMan" gid="46" x="64" y="64" width="16" height="16">
    <properties>
-    <property name="constructor" value="&amp;dialogue::test2"/>
+    <property name="constructor" value="&quot;TestNPC&quot;, &amp;dialogue::test"/>
    </properties>
   </object>
  </objectgroup>

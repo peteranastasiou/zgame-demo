@@ -23,7 +23,7 @@
                  "gid":44,
                  "height":16,
                  "id":74,
-                 "name":"testWoman",
+                 "name":"becR",
                  "properties":[
                         {
                          "name":"class",
@@ -33,7 +33,7 @@
                         {
                          "name":"constructor",
                          "type":"string",
-                         "value":"&dialogue::test"
+                         "value":"\"Bec Rowe\", &dialogue::becRMsg"
                         }, 
                         {
                          "name":"passable",
@@ -61,7 +61,7 @@
                         {
                          "name":"constructor",
                          "type":"string",
-                         "value":"&dialogue::test2"
+                         "value":"\"TestNPC\", &dialogue::test"
                         }, 
                         {
                          "name":"passable",

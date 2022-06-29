@@ -25,9 +25,6 @@ private:
 
         // do a dry run to pre-calculate number of lines on first page
         numLinesOnPage_ = txt::reflow(numCharsOnPage_, msgPtr_, 0, -1, MAX_LINES_ON_PAGE, true);
-        tracef("Dialogue %d lines", numLinesOnPage_);
-        tracef("Dialogue %d chars", numCharsOnPage_);
-        tracef("Last char '%c'\n", msgPtr_[numCharsOnPage_]);
         textY_ = SCREEN_SIZE/2 - txt::TEXT_HEIGHT * (uint16_t)numLinesOnPage_ / 2;
     }
 

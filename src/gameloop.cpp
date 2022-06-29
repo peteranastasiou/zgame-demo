@@ -86,6 +86,10 @@ void update(){
         str.appendUint8((uint8_t)hero.getY());
         text(str.get(), 0, 1);
     }
+
+    // HUD for facing objects
+    
+
     tick ++;
 }
 

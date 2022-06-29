@@ -5,6 +5,7 @@
 #include "sprites.hpp"
 #include "gameloop.hpp"
 #include "window.dialogue.hpp"
+#include "map.dialogue.hpp"
 
 namespace map {
 
@@ -19,6 +20,10 @@ public:
     }
     
     virtual void interact() override {
+    }
+
+    virtual char const * getLabel() override {
+        return "";
     }
 
     virtual void update(int tick) override {
@@ -115,15 +120,20 @@ public:
 
 class Npc : public Object {
 public:
-    Npc(uint8_t sprite, Dialogue * dialogue){
+    Npc(uint8_t sprite, char const * name, Dialogue * dialogue){
         sprite_ = sprite;
         dialogue_ = dialogue;
+        name_ = name;
     }
 
     virtual void render(int cycle, int x, int y) override {
         (void) cycle;
         *DRAW_COLORS = 0x0234;
         render_(sprite_, x, y, 0);
+    }
+
+    virtual char const * getLabel() override {
+        return name_;
     }
 
     virtual void update(int tick) override {
@@ -147,6 +157,7 @@ public:
     }
 private:
     uint8_t sprite_;
+    char const * name_;
     Dialogue * dialogue_;
 };
 

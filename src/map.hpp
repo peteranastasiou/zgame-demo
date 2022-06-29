@@ -19,6 +19,9 @@ public:
     // called when entering the tile (if passable) or bumping (if not passable)
     virtual void interact()=0;
 
+    // label
+    virtual char const * getLabel()=0;
+
     // called once a while (how often?)
     virtual void update(int tick)=0;
 

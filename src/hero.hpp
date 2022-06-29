@@ -24,6 +24,8 @@ public:
     int getPX(){ return px_; }
     int getPY(){ return py_; }
 
+    Dir getDir(){ return dir_; }
+
     // stats:
     uint8_t strength;
     uint8_t agility;

@@ -48,8 +48,8 @@ uint8_t const TILES[] = {
 
 uint8_t const NUM_OBJECTS = 2;
 
-Npc testWoman(43, &dialogue::test);
-Npc testMan(45, &dialogue::test2);
+Npc becR(43, "Bec Rowe", &dialogue::becRMsg);
+Npc testMan(45, "TestNPC", &dialogue::test);
 
 // Run-time expanded array of objects
 // Not done at compile time to save ROM
@@ -59,7 +59,7 @@ Object ** OBJECTS = nullptr;
 void initObjects() {
     OBJECTS = new Object*[MAP_WIDTH * MAP_HEIGHT];
 
-    OBJECTS[3 + MAP_WIDTH*3] = &testWoman;
+    OBJECTS[3 + MAP_WIDTH*3] = &becR;
     OBJECTS[4 + MAP_WIDTH*3] = &testMan;
 }
 
