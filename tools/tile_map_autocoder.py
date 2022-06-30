@@ -163,7 +163,7 @@ if __name__ == "__main__":
             args = ""
             if len(obj['constructor']) > 0:
                 args = ", "+obj['constructor']  # append additional arguments
-            f.write(f"{obj['class']} {obj['name']}({obj['sprite']}{args});\n")
+            f.write(f"{obj['class']} {obj['name']}({obj['sprite']}, \"{obj['name']}\"{args});\n")
         f.write("\n")
 
         # Object array

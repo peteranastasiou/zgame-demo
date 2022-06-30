@@ -6,8 +6,8 @@
 
 namespace map {
 
-Npc becR(43, "Bec Rowe", &dialogue::becRMsg);
-Npc testMan(45, "TestNPC", &dialogue::test);
+Npc becR(22, "becR", &dialogue::becRMsg);
+Npc testMan(20, "testMan", &dialogue::test);
 
 // Run-time expanded array of objects
 // Not done at compile time to save ROM
@@ -17,8 +17,8 @@ Object ** OBJECTS = nullptr;
 void initObjects() {
     OBJECTS = new Object*[MAP_WIDTH * MAP_HEIGHT];
 
-    OBJECTS[3 + MAP_WIDTH*3] = &becR;
-    OBJECTS[4 + MAP_WIDTH*3] = &testMan;
+    OBJECTS[2 + MAP_WIDTH*3] = &becR;
+    OBJECTS[5 + MAP_WIDTH*3] = &testMan;
 }
 
 } // namespace map

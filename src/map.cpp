@@ -61,40 +61,19 @@ bool interact(int gx, int gy, Dir dir) {
 uint8_t getTile(int gx, int gy) {
     if( gx < 0 || gy < 0 || gx >= MAP_WIDTH || gy >= MAP_HEIGHT){
         // out of bounds
-        return sprites::STONE_WALL;
+        return sprites::WALL;
     }
 
     return TILES[gx + gy*MAP_WIDTH];
 }
 
 bool isTilePassable(uint8_t tileType, Dir dir) {
+    (void) dir;
     switch( tileType ){
         // solid which cannot be entered from any side:
-        case sprites::STONE_WALL:
-        case sprites::STONE_WALL_LIGHT:
-        case sprites::STONE_WALL_DARK:
-        case sprites::TREE:
-        case sprites::CELL_NESW:
+        case sprites::WALL:
+        case sprites::WINDOW:
             return false;
-
-        // "Cells" are thin walled tiles which may be entered from some sides:
-        // Note that dir is the approach direction, which is opposite to the side of the cell!
-        case sprites::CELL_N:  return dir != Dir::S;
-        case sprites::CELL_E:  return dir != Dir::W;
-        case sprites::CELL_S:  return dir != Dir::N;
-        case sprites::CELL_W:  return dir != Dir::E;
-
-        case sprites::CELL_NE:  return dir != Dir::S && dir != Dir::W;
-        case sprites::CELL_NW:  return dir != Dir::S && dir != Dir::E;
-        case sprites::CELL_SE:  return dir != Dir::N && dir != Dir::W;
-        case sprites::CELL_SW:  return dir != Dir::N && dir != Dir::E;
-        case sprites::CELL_NS:  return dir != Dir::N && dir != Dir::S;
-        case sprites::CELL_EW:  return dir != Dir::E && dir != Dir::W;
-
-        case sprites::CELL_ESW:  return dir == Dir::S;
-        case sprites::CELL_SWN:  return dir == Dir::W;
-        case sprites::CELL_WNE:  return dir == Dir::N;
-        case sprites::CELL_NES:  return dir == Dir::E;
 
         default:  return true;
     }

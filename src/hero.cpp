@@ -109,7 +109,6 @@ void Hero::update(uint32_t tick) {
     if( walking_ ){
         if( step_++ % animationPeriod_ == 0 ){
             if( ++frame_ > 3) frame_= 0;
-            tracef("frame %d\n", frame_);
         }
     }else{
         step_= 0;
