@@ -37,7 +37,14 @@ int Hero::getSprite(uint8_t & flags) {
             flags |= BLIT_FLIP_X;
             break;
     }
-    return sprite + frame_;
+    // walking animation:
+    switch( frame_ ){
+        default:
+        case 0: return sprite;
+        case 1: return sprite + 1;
+        case 2: return sprite;
+        case 3: return sprite + 2;
+    }
 }
 
 void Hero::render(uint32_t tick) {
@@ -100,7 +107,10 @@ void Hero::update(uint32_t tick) {
 
     // manage animation steps
     if( walking_ ){
-        if( step_++ % animationPeriod_ == 0 && ++frame_ > 2) frame_= 1;
+        if( step_++ % animationPeriod_ == 0 ){
+            if( ++frame_ > 3) frame_= 0;
+            tracef("frame %d\n", frame_);
+        }
     }else{
         step_= 0;
         frame_= 0;
