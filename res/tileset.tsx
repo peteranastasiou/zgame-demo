@@ -9,6 +9,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="1" type="HOOD_FWD2">
@@ -16,6 +17,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="2" type="HOOD_FWD3">
@@ -23,6 +25,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="3" type="HOOD_SIDE1">
@@ -30,6 +33,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="4" type="HOOD_SIDE2">
@@ -37,6 +41,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="5" type="HOOD_SIDE3">
@@ -44,6 +49,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="6" type="HOOD_BACK1">
@@ -51,6 +57,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="7" type="HOOD_BACK2">
@@ -58,6 +65,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="8" type="HOOD_BACK3">
@@ -65,6 +73,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="9">
@@ -72,6 +81,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="10" type="SNAKE1">
@@ -79,6 +89,7 @@
    <property name="class" value="Snake"/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="11" type="SNAKE2">
@@ -86,6 +97,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="12" type="SNAKE3">
@@ -93,6 +105,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="13" type="SHROOM1">
@@ -100,6 +113,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="14" type="SHROOM2">
@@ -107,6 +121,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="15" type="KNIGHT1">
@@ -114,6 +129,7 @@
    <property name="class" value="Knight"/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="16">
@@ -121,6 +137,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="17" type="SKELETON1">
@@ -128,6 +145,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="18" type="SKELETON2">
@@ -135,6 +153,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="19">
@@ -142,6 +161,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="20" type="STONE_WALL_LIGHT">
@@ -149,6 +169,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="21" type="STONE_WALL_DARK">
@@ -156,6 +177,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="22" type="STONE_WALL">
@@ -163,6 +185,7 @@
    <property name="class" value="Wall"/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="23" type="SCONCE_UNLIT">
@@ -170,6 +193,7 @@
    <property name="class" value="Sconce"/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="24" type="SCONCE_LIT1">
@@ -177,6 +201,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="25" type="JUKEBOX">
@@ -184,6 +209,7 @@
    <property name="class" value="Jukebox"/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="26" type="GATE">
@@ -191,6 +217,7 @@
    <property name="class" value="Gate"/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="27">
@@ -198,6 +225,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="28">
@@ -205,6 +233,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="29">
@@ -212,6 +241,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="30" type="COBBLESTONE">
@@ -219,6 +249,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="31">
@@ -226,6 +257,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="32">
@@ -233,6 +265,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="33">
@@ -240,6 +273,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="34">
@@ -247,6 +281,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="35" type="MUSHROOMS">
@@ -254,6 +289,7 @@
    <property name="class" value="MushroomsPickup"/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="36" type="TREE">
@@ -261,6 +297,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="37" type="HUT">
@@ -268,6 +305,7 @@
    <property name="class" value="Hut"/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="38">
@@ -275,6 +313,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="39">
@@ -282,6 +321,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="40" type="COBBLESTONE_DARK">
@@ -289,6 +329,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="41">
@@ -296,6 +337,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="42">
@@ -303,6 +345,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="43">
@@ -310,6 +353,7 @@
    <property name="class" value="Npc"/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="44">
@@ -317,6 +361,7 @@
    <property name="class" value="Npc"/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="45">
@@ -324,6 +369,7 @@
    <property name="class" value="Npc"/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="46">
@@ -331,6 +377,7 @@
    <property name="class" value="Npc"/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="47" type="EGG1">
@@ -338,6 +385,7 @@
    <property name="class" value="Egg"/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="48" type="EGG2">
@@ -345,6 +393,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="49">
@@ -352,6 +401,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="false"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="50">
@@ -359,6 +409,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="51">
@@ -366,6 +417,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="52">
@@ -373,6 +425,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="53">
@@ -380,6 +433,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="54">
@@ -387,6 +441,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="55" type="CELL_NW">
@@ -394,6 +449,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="56" type="CELL_NE">
@@ -401,6 +457,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="57" type="CELL_N">
@@ -408,6 +465,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="58" type="CELL_W">
@@ -415,6 +473,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="59" type="CELL_NESW">
@@ -422,6 +481,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="60">
@@ -429,6 +489,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="61">
@@ -436,6 +497,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="62">
@@ -443,6 +505,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="63">
@@ -450,6 +513,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="64">
@@ -457,6 +521,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="65" type="CELL_SW">
@@ -464,6 +529,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="66" type="CELL_SE">
@@ -471,6 +537,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="67" type="CELL_S">
@@ -478,6 +545,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="68" type="CELL_E">
@@ -485,6 +553,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="69" type="CELL_NS">
@@ -492,6 +561,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="70">
@@ -499,6 +569,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="71">
@@ -506,6 +577,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="72">
@@ -513,6 +585,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="73">
@@ -520,6 +593,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="74">
@@ -527,6 +601,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="75" type="CELL_ESW">
@@ -534,6 +609,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="76" type="CELL_SWN">
@@ -541,6 +617,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="77" type="CELL_NES">
@@ -548,6 +625,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="78" type="CELL_WNE">
@@ -555,6 +633,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
  <tile id="79" type="CELL_EW">
@@ -562,6 +641,7 @@
    <property name="class" value=""/>
    <property name="constructor" value=""/>
    <property name="passable" type="bool" value="true"/>
+   <property name="rotate_ccw" type="bool" value="false"/>
   </properties>
  </tile>
 </tileset>

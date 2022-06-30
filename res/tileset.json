@@ -26,6 +26,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"HOOD_FWD1"
         }, 
@@ -44,6 +49,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }],
@@ -66,6 +76,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"HOOD_FWD3"
         }, 
@@ -84,6 +99,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }],
@@ -106,6 +126,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"HOOD_SIDE2"
         }, 
@@ -124,6 +149,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }],
@@ -146,6 +176,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"HOOD_BACK1"
         }, 
@@ -164,6 +199,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }],
@@ -186,6 +226,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"HOOD_BACK3"
         }, 
@@ -206,6 +251,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -223,6 +273,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }],
@@ -245,6 +300,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"SNAKE2"
         }, 
@@ -263,6 +323,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }],
@@ -285,6 +350,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"SHROOM1"
         }, 
@@ -303,6 +373,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }],
@@ -325,6 +400,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"KNIGHT1"
         }, 
@@ -345,6 +425,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -362,6 +447,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }],
@@ -384,6 +474,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"SKELETON2"
         }, 
@@ -404,6 +499,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -421,6 +521,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }],
@@ -443,6 +548,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"STONE_WALL_DARK"
         }, 
@@ -461,6 +571,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }],
@@ -483,6 +598,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"SCONCE_UNLIT"
         }, 
@@ -501,6 +621,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }],
@@ -523,6 +648,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"JUKEBOX"
         }, 
@@ -541,6 +671,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }],
@@ -563,6 +698,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -580,6 +720,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }]
@@ -601,6 +746,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -620,6 +770,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"COBBLESTONE"
         }, 
@@ -638,6 +793,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }]
@@ -659,6 +819,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -676,6 +841,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }]
@@ -697,6 +867,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -716,6 +891,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"MUSHROOMS"
         }, 
@@ -734,6 +914,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }],
@@ -756,6 +941,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"HUT"
         }, 
@@ -774,6 +964,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }]
@@ -795,6 +990,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -814,6 +1014,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"COBBLESTONE_DARK"
         }, 
@@ -834,6 +1039,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -853,6 +1063,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -870,6 +1085,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }]
@@ -891,6 +1111,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -908,6 +1133,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }]
@@ -929,6 +1159,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -946,6 +1181,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }],
@@ -968,6 +1208,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"EGG2"
         }, 
@@ -986,6 +1231,11 @@
                 }, 
                 {
                  "name":"passable",
+                 "type":"bool",
+                 "value":false
+                }, 
+                {
+                 "name":"rotate_ccw",
                  "type":"bool",
                  "value":false
                 }]
@@ -1007,6 +1257,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -1026,6 +1281,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -1045,6 +1305,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -1064,6 +1329,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -1083,6 +1353,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -1102,6 +1377,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"CELL_NW"
         }, 
@@ -1122,6 +1402,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"CELL_NE"
         }, 
@@ -1142,6 +1427,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"CELL_N"
         }, 
@@ -1162,6 +1452,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"CELL_W"
         }, 
@@ -1182,6 +1477,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"CELL_NESW"
         }, 
@@ -1202,6 +1502,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -1221,6 +1526,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -1240,6 +1550,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -1259,6 +1574,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -1278,6 +1598,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -1297,6 +1622,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"CELL_SW"
         }, 
@@ -1317,6 +1647,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"CELL_SE"
         }, 
@@ -1337,6 +1672,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"CELL_S"
         }, 
@@ -1357,6 +1697,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"CELL_E"
         }, 
@@ -1377,6 +1722,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"CELL_NS"
         }, 
@@ -1397,6 +1747,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -1416,6 +1771,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -1435,6 +1795,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -1454,6 +1819,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -1473,6 +1843,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }]
         }, 
         {
@@ -1492,6 +1867,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"CELL_ESW"
         }, 
@@ -1512,6 +1892,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"CELL_SWN"
         }, 
@@ -1532,6 +1917,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"CELL_NES"
         }, 
@@ -1552,6 +1942,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"CELL_WNE"
         }, 
@@ -1572,6 +1967,11 @@
                  "name":"passable",
                  "type":"bool",
                  "value":true
+                }, 
+                {
+                 "name":"rotate_ccw",
+                 "type":"bool",
+                 "value":false
                 }],
          "type":"CELL_EW"
         }],

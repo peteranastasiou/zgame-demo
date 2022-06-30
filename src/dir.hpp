@@ -4,5 +4,9 @@
 // Cardinal directions
 
 enum class Dir {
-    N, E, S, W
+    NONE, N, E, S, W
 };
+
+int dirGetX(Dir d);
+
+int dirGetY(Dir d);

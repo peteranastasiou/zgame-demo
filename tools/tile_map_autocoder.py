@@ -105,17 +105,22 @@ if __name__ == "__main__":
     os.system(f"w4 png2src res/{image_file} --c >> {spritesheet_path}")
     os.system(f"sed -i 's/sprites/SPRITES_/g' {spritesheet_path}")
     print(f"wrote {spritesheet_path}")
-    
-    # TODO split into hpp and cpp
+
+    # Give objects names (in form: class_x_y)
+    for obj in objs:
+        # if it has been given a name, use that, else generate a name:
+        instance_name = obj['name'].strip()
+        if len(instance_name) == 0:
+            instance_name = f"{obj['class'].lower()}_{obj['x']}_{obj['y']}"
+        obj['name'] = instance_name
 
     # Write map data header
-    map_impl_path = "src/map.impl.auto.hpp"
-    with open(map_impl_path, "w") as f:
+    map_impl_header = "src/map.impl.auto.hpp"
+    with open(map_impl_header, "w") as f:
         f.write("\n#pragma once\n\n")
         f.write(f"// Auto-generated from {map_path}\n\n")
         f.write("#include <stdint.h>\n")
-        f.write('#include "map.objects.hpp"\n')
-        f.write('#include "map.dialogue.hpp"\n\n')
+        f.write('#include "map.objects.hpp"\n\n')
         f.write("namespace map {\n")
         f.write(f"uint8_t const MAP_WIDTH = {map_w};\n")
         f.write(f"uint8_t const MAP_HEIGHT = {map_h};\n")
@@ -134,21 +139,31 @@ if __name__ == "__main__":
         # Write out objects
         f.write(f"uint8_t const NUM_OBJECTS = {len(objs)};\n\n")
 
-        # Give objects names (in form: class_x_y)
-        for obj in objs:
-            # if it has been given a name, use that, else generate a name:
-            print(obj)
-            instance_name = obj['name'].strip()
-            if len(instance_name) == 0:
-                instance_name = f"{obj['class'].lower()}_{obj['x']}_{obj['y']}"
-            obj['name'] = instance_name
-
         # Object declarations
+        for obj in objs:
+            f.write(f"extern {obj['class']} {obj['name']};\n")
+        f.write("\n")
+
+        # Object array declaration
+        f.write("extern Object ** OBJECTS;\n\n")
+        f.write("void initObjects();\n\n")
+        f.write("} // namespace map\n\n")
+
+        # 
+    print(f"wrote {map_impl_header}")
+
+    map_impl_source = "src/map.impl.auto.cpp"
+    with open(map_impl_source, "w") as f:
+        f.write(f"// Auto-generated from {map_path}\n\n")
+        f.write('#include "map.impl.auto.hpp"\n\n')
+        f.write('#include "map.dialogue.hpp"\n\n')
+        f.write("namespace map {\n\n")
+        # Object definitions:
         for obj in objs:
             args = ""
             if len(obj['constructor']) > 0:
                 args = ", "+obj['constructor']  # append additional arguments
-                f.write(f"{obj['class']} {obj['name']}({obj['sprite']}{args});\n")
+            f.write(f"{obj['class']} {obj['name']}({obj['sprite']}{args});\n")
         f.write("\n")
 
         # Object array
@@ -165,5 +180,5 @@ if __name__ == "__main__":
         f.write("}\n\n")
         f.write("} // namespace map\n\n")
 
-    print(f"wrote {map_impl_path}")
+    print(f"wrote {map_impl_source}")
 

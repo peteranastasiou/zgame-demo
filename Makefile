@@ -48,6 +48,12 @@ all: auto build/cart.wasm
 auto:
 	python3 tools/tile_map_autocoder.py
 
+run: all
+	w4 run -n build/cart.wasm
+
+html: all
+	w4 bundle --html build/wasm.html
+
 # Link cart.wasm from all object files and run wasm-opt
 build/cart.wasm: $(OBJECTS)
 	$(CXX) -o $@ $(OBJECTS) $(LDFLAGS)

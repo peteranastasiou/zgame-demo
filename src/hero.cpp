@@ -22,6 +22,7 @@ Hero::Hero(int x, int y): gxCurr_(x), gyCurr_(y), gxNext_(x), gyNext_(y) {
 int Hero::getSprite(uint8_t & flags) {
     int sprite;
     switch( dir_ ){
+        default:
         case Dir::N:
             sprite= sprites::HOOD_BACK1;
             break;
@@ -74,10 +75,15 @@ void Hero::update(uint32_t tick) {
 
         // mask the d pad so that pressing multiple keys stops movement
         gamepad &= BUTTON_RIGHT | BUTTON_LEFT | BUTTON_UP | BUTTON_DOWN;
-        if( gamepad == BUTTON_RIGHT ){ dir_= Dir::E; move_(gxCurr_+1, gyCurr_); }
-        if( gamepad == BUTTON_LEFT  ){ dir_= Dir::W; move_(gxCurr_-1, gyCurr_); }
-        if( gamepad == BUTTON_DOWN  ){ dir_= Dir::S; move_(gxCurr_, gyCurr_+1); }
-        if( gamepad == BUTTON_UP    ){ dir_= Dir::N; move_(gxCurr_, gyCurr_-1); }
+        Dir newDir = Dir::NONE;
+        if( gamepad == BUTTON_RIGHT ){ newDir= Dir::E; }
+        if( gamepad == BUTTON_LEFT  ){ newDir= Dir::W; }
+        if( gamepad == BUTTON_DOWN  ){ newDir= Dir::S; }
+        if( gamepad == BUTTON_UP    ){ newDir= Dir::N; }
+        if( newDir != Dir::NONE ){
+            dir_ = newDir;
+            move_(gxCurr_ + dirGetX(dir_), gyCurr_ + dirGetY(dir_));
+        }
     }
     // update set point post movement:
     sx = gxNext_*TILE_SIZE;

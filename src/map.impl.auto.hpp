@@ -5,7 +5,6 @@
 
 #include <stdint.h>
 #include "map.objects.hpp"
-#include "map.dialogue.hpp"
 
 namespace map {
 uint8_t const MAP_WIDTH = 40;
@@ -48,20 +47,12 @@ uint8_t const TILES[] = {
 
 uint8_t const NUM_OBJECTS = 2;
 
-Npc becR(43, "Bec Rowe", &dialogue::becRMsg);
-Npc testMan(45, "TestNPC", &dialogue::test);
+extern Npc becR;
+extern Npc testMan;
 
-// Run-time expanded array of objects
-// Not done at compile time to save ROM
-// Note: Looks like BSS is copied in full at start up, so large static arrays are wasteful of ROM
-Object ** OBJECTS = nullptr;
+extern Object ** OBJECTS;
 
-void initObjects() {
-    OBJECTS = new Object*[MAP_WIDTH * MAP_HEIGHT];
-
-    OBJECTS[3 + MAP_WIDTH*3] = &becR;
-    OBJECTS[4 + MAP_WIDTH*3] = &testMan;
-}
+void initObjects();
 
 } // namespace map
 

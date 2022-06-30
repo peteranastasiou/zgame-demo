@@ -5,7 +5,6 @@
 #include "sprites.hpp"
 #include "gameloop.hpp"
 #include "window.dialogue.hpp"
-#include "map.dialogue.hpp"
 
 namespace map {
 

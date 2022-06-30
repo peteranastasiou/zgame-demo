@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "map.tmx",
+    "activeFile": "tileset.tsx",
     "expandedProjectPaths": [
         "."
     ],
@@ -32,7 +32,7 @@
             "scale": 4.0323,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 70.67926493564467,
+                "x": 69.06728170027031,
                 "y": 71.91925203977878
             }
         },
@@ -72,8 +72,8 @@
     ],
     "project": "zgame.tiled-project",
     "recentFiles": [
-        "tileset.tsx",
         "map.tmx",
+        "tileset.tsx",
         "tileset.json",
         "map.tmj",
         "xipe.tsx",

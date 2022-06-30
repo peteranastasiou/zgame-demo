@@ -10,7 +10,7 @@
 
 class Dialogue: public Window {
 private:
-    static uint8_t const MAX_LINES_ON_PAGE = 15;
+    static uint8_t const MAX_LINES_ON_PAGE = 14;
     char const * msg_;
     char const * msgPtr_;
     int16_t msgLen_;

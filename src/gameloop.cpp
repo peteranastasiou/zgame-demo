@@ -6,6 +6,7 @@
 #include "config.hpp"
 #include "sprites.hpp"
 #include "map.hpp"
+#include "map.rooms.hpp"
 #include "str.hpp"
 #include "queue.hpp"
 
@@ -15,7 +16,7 @@ enum class State {
     MENU, RUNNING, WINDOW
 };
 
-Hero hero(2, 11);
+Hero hero(2, 5);
 
 static State state= State::RUNNING;
 static uint32_t tick= 0;
@@ -88,7 +89,23 @@ void update(){
     }
 
     // HUD for facing objects
-    
+    Dir dir = hero.getDir();
+    int facingTileX = hero.getX() + dirGetX(dir);
+    int facingTileY = hero.getY() + dirGetY(dir);
+    map::Object * obj = map::getObject(facingTileX, facingTileY);
+
+    if( obj ){
+        *DRAW_COLORS = 0x0044;
+        rect(0, 0, SCREEN_SIZE, 9);
+        *DRAW_COLORS = 0x0041;
+        text(obj->getLabel(), 1, 1);
+    }
+    // TODO do this on room change only, and disappear after a few frames
+    //else{
+    //     rect(0, 0, SCREEN_SIZE, 9);
+    //     *DRAW_COLORS = 0x0041;
+    //     text(map::getRoomLabel(screenX, screenY), 1, 1);
+    // }
 
     tick ++;
 }
