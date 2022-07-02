@@ -20,6 +20,14 @@
             "scaleInDock": 2,
             "scaleInEditor": 3
         },
+        "map.json": {
+            "scale": 1.331484375,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 320.3191926304055,
+                "y": 240.33327465821748
+            }
+        },
         "map.tmj": {
             "scale": 1.3656249999999999,
             "selectedLayer": 0,
@@ -29,11 +37,11 @@
             }
         },
         "map.tmx": {
-            "scale": 4.0323,
-            "selectedLayer": 1,
+            "scale": 4,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 69.06728170027031,
-                "y": 71.91925203977878
+                "x": 82.875,
+                "y": 377.75
             }
         },
         "test.tmx": {
@@ -46,11 +54,11 @@
         },
         "tileset.json": {
             "scaleInDock": 1,
-            "scaleInEditor": 1
+            "scaleInEditor": 3.1377
         },
         "tileset.tsx": {
-            "scaleInDock": 4.3099,
-            "scaleInEditor": 5.09
+            "scaleInDock": 2,
+            "scaleInEditor": 4
         },
         "xipe.tsx": {
             "scaleInDock": 3,
@@ -74,6 +82,7 @@
     "recentFiles": [
         "map.tmx",
         "tileset.tsx",
+        "map.json",
         "tileset.json",
         "map.tmj",
         "xipe.tsx",

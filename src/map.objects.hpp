@@ -49,6 +49,10 @@ public:
     void setTriggered(bool triggered){ triggered_= triggered; }
     bool isTriggered(){ return triggered_; }
 
+    virtual char const * getLabel() override {
+        return "";
+    }
+
     virtual void update(int tick) override {
         (void) tick;
     }
@@ -116,6 +120,82 @@ public:
 //         }
 //     }
 // };
+
+static Dialogue doorMsg("You can't leave yet!");
+class Door : public TriggeredObject {
+public:
+    Door(uint8_t sprite, char const * name){
+        sprite_ = sprite;
+        name_= name;
+    }
+    virtual bool passable() override { return triggered_; }
+
+    virtual bool onInteraction() override {
+        gameloop::pushWindow(&doorMsg);
+        return false;
+    }
+    virtual void render(int cycle, int x, int y) override {
+        (void) cycle;
+        if( triggered_ ) return;
+        *DRAW_COLORS = 0x1234;
+        render_(sprite_, x, y, 0);
+    }
+private:
+    uint8_t sprite_;
+    char const * name_;
+};
+
+class TreeGate : public TriggeredObject {
+public:
+    TreeGate(uint8_t sprite, char const * name){
+        sprite_ = sprite;
+        name_= name;
+    }
+    virtual bool passable() override { return triggered_; }
+
+    virtual bool onInteraction() override {
+        return false;
+    }
+    virtual void render(int cycle, int x, int y) override {
+        (void) cycle;
+        if( triggered_ ) return;
+        *DRAW_COLORS = 0x1234;
+        render_(sprite_, x, y, 0);
+    }
+private:
+    uint8_t sprite_;
+    char const * name_;
+};
+
+static Dialogue phoneMsg("You are invited to Thomas' 21st Birthday Party!");
+class Phone : public SimpleObject {
+public:
+    Phone(uint8_t sprite, char const * name){
+        sprite_ = sprite;
+        name_= name;
+        triggered_= false;
+    }
+
+    bool isTriggered(){
+        return triggered_;
+    }
+
+    virtual void render(int cycle, int x, int y) override {
+        *DRAW_COLORS = 0x0234;
+        uint8_t sprite = triggered_ ? sprite_ : sprite_ + (cycle % 3);
+        render_(sprite, x, y, 0);
+    }
+
+    virtual void interact() override {
+        gameloop::pushWindow(&phoneMsg);
+        triggered_= true;
+    }
+
+private:
+    uint8_t sprite_;
+    char const * name_;
+    bool triggered_;
+};
 
 class Npc : public Object {
 public:

@@ -61,7 +61,7 @@ bool interact(int gx, int gy, Dir dir) {
 uint8_t getTile(int gx, int gy) {
     if( gx < 0 || gy < 0 || gx >= MAP_WIDTH || gy >= MAP_HEIGHT){
         // out of bounds
-        return sprites::WALL;
+        return sprites::WALL1;
     }
 
     return TILES[gx + gy*MAP_WIDTH];
@@ -71,8 +71,38 @@ bool isTilePassable(uint8_t tileType, Dir dir) {
     (void) dir;
     switch( tileType ){
         // solid which cannot be entered from any side:
-        case sprites::WALL:
-        case sprites::WINDOW:
+        case sprites::WALL1:
+        case sprites::WALL2:
+        case sprites::WALL3:
+        case sprites::WALL4:
+        case sprites::WALL5:
+        case sprites::WALL6:
+        case sprites::WALL7:
+        case sprites::WALL8:
+        case sprites::WALL9:
+        case sprites::WALL10:
+        case sprites::WALL11:
+        case sprites::WALL12:
+        case sprites::WALL13:
+        case sprites::FURN1:
+        case sprites::FURN2:
+        case sprites::FURN3:
+        case sprites::FURN4:
+        case sprites::FURN5:
+        case sprites::FURN6:
+        case sprites::FURN7:
+        case sprites::FURN8:
+        case sprites::FURN9:
+        case sprites::FURN10:
+        case sprites::FURN11:
+        case sprites::FURN12:
+        case sprites::FURN13:
+        case sprites::FURN14:
+        case sprites::FURN15:
+        case sprites::FURN16:
+        case sprites::FURN17:
+        case sprites::FURN18:
+        case sprites::PINETREE:
             return false;
 
         default:  return true;

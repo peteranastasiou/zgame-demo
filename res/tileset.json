@@ -21,16 +21,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }],
          "type":"HOOD_FWD1"
         }, 
@@ -44,16 +34,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }],
@@ -71,16 +51,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }],
          "type":"HOOD_FWD3"
         }, 
@@ -94,16 +64,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }],
@@ -121,16 +81,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }],
          "type":"HOOD_SIDE2"
         }, 
@@ -144,16 +94,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }],
@@ -171,16 +111,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }],
          "type":"HOOD_BACK1"
         }, 
@@ -194,16 +124,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }],
@@ -221,16 +141,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }],
          "type":"HOOD_BACK3"
         }, 
@@ -244,16 +154,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -270,16 +170,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -292,16 +182,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -318,16 +198,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -340,16 +210,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -366,16 +226,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -390,16 +240,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -408,20 +248,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Npc"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -432,20 +262,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Npc"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -456,20 +276,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Npc"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -480,20 +290,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Npc"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -504,20 +304,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Npc"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -528,20 +318,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Npc"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -552,20 +332,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Npc"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -576,20 +346,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Npc"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -606,17 +366,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN1"
         }, 
         {
          "id":25,
@@ -630,17 +381,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN2"
         }, 
         {
          "id":26,
@@ -652,16 +394,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -678,16 +410,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -700,16 +422,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -726,16 +438,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -748,16 +450,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -774,16 +466,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -798,17 +480,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":false
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"WALL1"
         }, 
         {
          "id":33,
@@ -822,18 +495,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":false
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }],
-         "type":"WALL"
+         "type":"WALL2"
         }, 
         {
          "id":34,
@@ -847,18 +510,7 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":false
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }],
-         "type":"WINDOW"
+                }]
         }, 
         {
          "id":35,
@@ -866,20 +518,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Npc"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -890,20 +532,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Npc"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -914,20 +546,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Npc"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -938,20 +560,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Npc"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -962,20 +574,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Npc"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -992,17 +594,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN3"
         }, 
         {
          "id":41,
@@ -1016,17 +609,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN4"
         }, 
         {
          "id":42,
@@ -1040,17 +624,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN5"
         }, 
         {
          "id":43,
@@ -1064,17 +639,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN6"
         }, 
         {
          "id":44,
@@ -1088,17 +654,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN7"
         }, 
         {
          "id":45,
@@ -1110,16 +667,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -1136,16 +683,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -1158,16 +695,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -1184,17 +711,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"WALL3"
         }, 
         {
          "id":49,
@@ -1208,17 +726,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"WALL4"
         }, 
         {
          "id":50,
@@ -1230,16 +739,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -1256,16 +755,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -1280,17 +769,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"WALL13"
         }, 
         {
          "id":53,
@@ -1302,16 +782,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -1328,17 +798,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"PINETREE"
         }, 
         {
          "id":55,
@@ -1352,17 +813,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN8"
         }, 
         {
          "id":56,
@@ -1376,17 +828,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN9"
         }, 
         {
          "id":57,
@@ -1398,16 +841,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -1424,16 +857,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -1446,16 +869,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -1472,16 +885,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -1494,16 +897,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -1520,16 +913,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -1542,16 +925,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -1568,17 +941,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"WALL5"
         }, 
         {
          "id":65,
@@ -1592,17 +956,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"WALL6"
         }, 
         {
          "id":66,
@@ -1616,17 +971,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"WALL7"
         }, 
         {
          "id":67,
@@ -1640,17 +986,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"WALL8"
         }, 
         {
          "id":68,
@@ -1658,20 +995,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Door"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -1688,16 +1015,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -1712,17 +1029,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":false
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN10"
         }, 
         {
          "id":71,
@@ -1736,17 +1044,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":false
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN11"
         }, 
         {
          "id":72,
@@ -1760,17 +1059,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN12"
         }, 
         {
          "id":73,
@@ -1778,20 +1068,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Phone"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -1802,20 +1082,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Phone"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -1826,20 +1096,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Phone"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -1856,16 +1116,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -1878,16 +1128,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -1904,16 +1144,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -1926,16 +1156,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -1952,17 +1172,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"WALL9"
         }, 
         {
          "id":81,
@@ -1976,17 +1187,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"WALL10"
         }, 
         {
          "id":82,
@@ -2000,17 +1202,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"WALL11"
         }, 
         {
          "id":83,
@@ -2024,17 +1217,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"WALL12"
         }, 
         {
          "id":84,
@@ -2042,20 +1226,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Door"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -2072,16 +1246,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -2096,17 +1260,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":false
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN13"
         }, 
         {
          "id":87,
@@ -2120,17 +1275,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":false
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN14"
         }, 
         {
          "id":88,
@@ -2144,17 +1290,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":false
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN15"
         }, 
         {
          "id":89,
@@ -2166,16 +1303,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":false
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -2192,16 +1319,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":false
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -2216,17 +1333,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"PHONE1"
         }, 
         {
          "id":92,
@@ -2240,17 +1348,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"PHONE2"
         }, 
         {
          "id":93,
@@ -2264,17 +1363,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"PHONE3"
         }, 
         {
          "id":94,
@@ -2286,16 +1376,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -2312,16 +1392,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -2334,16 +1404,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -2360,16 +1420,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -2382,16 +1432,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -2408,16 +1448,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -2426,20 +1456,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Door"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -2456,16 +1476,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -2480,17 +1490,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN16"
         }, 
         {
          "id":103,
@@ -2504,17 +1505,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN17"
         }, 
         {
          "id":104,
@@ -2528,17 +1520,8 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
-                }]
+                }],
+         "type":"FURN18"
         }, 
         {
          "id":105,
@@ -2550,16 +1533,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -2576,16 +1549,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -2598,16 +1561,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -2624,16 +1577,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -2646,16 +1589,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -2672,16 +1605,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -2694,16 +1617,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -2720,16 +1633,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -2742,16 +1645,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -2768,16 +1661,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -2792,16 +1675,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -2810,20 +1683,10 @@
                 {
                  "name":"class",
                  "type":"string",
-                 "value":""
+                 "value":"Door"
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -2840,16 +1703,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -2862,16 +1715,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -2888,16 +1731,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -2910,16 +1743,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -2936,16 +1759,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -2958,16 +1771,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -2984,16 +1787,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3006,16 +1799,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3032,16 +1815,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3054,16 +1827,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3080,16 +1843,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3102,16 +1855,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3128,16 +1871,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3150,16 +1883,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3176,16 +1899,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3198,16 +1911,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3224,16 +1927,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3246,16 +1939,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3272,16 +1955,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3294,16 +1967,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3320,16 +1983,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3342,16 +1995,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3368,16 +2011,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3390,16 +2023,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3416,16 +2039,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3438,16 +2051,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3464,16 +2067,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3486,16 +2079,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3512,16 +2095,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3534,16 +2107,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3560,16 +2123,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3582,16 +2135,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3608,16 +2151,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3630,16 +2163,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3656,16 +2179,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3678,16 +2191,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3704,16 +2207,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3726,16 +2219,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3752,16 +2235,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3774,16 +2247,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3800,16 +2263,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3822,16 +2275,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3848,16 +2291,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3870,16 +2303,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3896,16 +2319,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3918,16 +2331,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3944,16 +2347,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -3966,16 +2359,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -3992,16 +2375,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4014,16 +2387,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4040,16 +2403,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4062,16 +2415,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4088,16 +2431,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4110,16 +2443,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4136,16 +2459,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4158,16 +2471,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4184,16 +2487,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4206,16 +2499,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4232,16 +2515,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4254,16 +2527,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4280,16 +2543,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4302,16 +2555,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4328,16 +2571,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4350,16 +2583,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4376,16 +2599,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4398,16 +2611,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4424,16 +2627,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4446,16 +2639,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4472,16 +2655,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4494,16 +2667,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4520,16 +2683,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4542,16 +2695,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4568,16 +2711,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4590,16 +2723,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4616,16 +2739,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4638,16 +2751,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4664,16 +2767,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4686,16 +2779,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4712,16 +2795,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4734,16 +2807,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4760,16 +2823,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4782,16 +2835,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4808,16 +2851,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4830,16 +2863,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4856,16 +2879,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4878,16 +2891,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4904,16 +2907,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4926,16 +2919,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -4952,16 +2935,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -4974,16 +2947,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5000,16 +2963,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5022,16 +2975,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5048,16 +2991,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5070,16 +3003,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5096,16 +3019,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5118,16 +3031,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5144,16 +3047,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5166,16 +3059,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5192,16 +3075,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5214,16 +3087,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5240,16 +3103,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5262,16 +3115,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5288,16 +3131,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5310,16 +3143,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5336,16 +3159,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5358,16 +3171,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5384,16 +3187,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5406,16 +3199,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5432,16 +3215,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5454,16 +3227,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5480,16 +3243,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5502,16 +3255,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5528,16 +3271,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5550,16 +3283,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5576,16 +3299,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5598,16 +3311,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5624,16 +3327,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5646,16 +3339,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5672,16 +3355,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5694,16 +3367,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5720,16 +3383,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5742,16 +3395,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5768,16 +3411,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5790,16 +3423,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5816,16 +3439,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5838,16 +3451,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5864,16 +3467,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5886,16 +3479,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5912,16 +3495,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5934,16 +3507,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -5960,16 +3523,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -5982,16 +3535,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -6008,16 +3551,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -6030,16 +3563,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -6056,16 +3579,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -6078,16 +3591,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]
@@ -6104,16 +3607,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -6128,16 +3621,6 @@
                  "name":"constructor",
                  "type":"string",
                  "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
-                 "type":"string",
-                 "value":""
                 }]
         }, 
         {
@@ -6150,16 +3633,6 @@
                 }, 
                 {
                  "name":"constructor",
-                 "type":"string",
-                 "value":""
-                }, 
-                {
-                 "name":"passable",
-                 "type":"bool",
-                 "value":true
-                }, 
-                {
-                 "name":"rotate_ccw",
                  "type":"string",
                  "value":""
                 }]

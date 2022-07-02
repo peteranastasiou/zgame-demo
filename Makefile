@@ -52,7 +52,7 @@ run: all
 	w4 run -n build/cart.wasm
 
 html: all
-	w4 bundle --html build/wasm.html
+	w4 bundle --html build/wasm.html build/cart.wasm
 
 # Link cart.wasm from all object files and run wasm-opt
 build/cart.wasm: $(OBJECTS)

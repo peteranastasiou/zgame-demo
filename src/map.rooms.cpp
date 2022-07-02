@@ -9,25 +9,19 @@ namespace map {
 
 static int const NUM_ROOMS_ACROSS = MAP_WIDTH / SCREEN_WIDTH;
 
-// static Dialogue gateMsg("You hear a scraping, sliding noise.");
-// void room4Update(int sx, int sy, uint32_t tick) {
-//     (void) sx;
-//     (void) sy;
-//     (void) tick;
-//     // Open gate when all sconces are lit
-//     if( !gate_9_12.isTriggered() ){
-//         if( sconce_1_10.isTriggered() && 
-//             sconce_1_19.isTriggered() && 
-//             sconce_8_10.isTriggered() && 
-//             sconce_8_19.isTriggered() ){
-//             gameloop::pushWindow(&gateMsg);
-//             gate_9_12.setTriggered(true);
-//         }
-//     }
-// }
+void ashbyUpdate(int sx, int sy, uint32_t tick) {
+    (void) sx;
+    (void) sy;
+    (void) tick;
+    // Open gate when all sconces are lit
+    if( !ashbyFrontDoor.isTriggered() ){
+        if( phone.isTriggered() ){
+            ashbyFrontDoor.setTriggered(true);
+        }
+    }
+}
 
 void update(int sx, int sy, uint32_t tick) {
-    (void) tick;
     // linear room number (L->R, top->bot):
     int roomIdx = sy * NUM_ROOMS_ACROSS + sx;
 
@@ -40,7 +34,7 @@ void update(int sx, int sy, uint32_t tick) {
         case 5: return;
         case 6: return;
         case 7: return;
-        case 8: return;
+        case 8: ashbyUpdate(sx, sy, tick); return;
         case 9: return;
         case 10: return;
         default: return;
@@ -52,7 +46,7 @@ char const * getRoomLabel(int sx, int sy){
     int roomIdx = sy * NUM_ROOMS_ACROSS + sx;
 
     switch( roomIdx ){
-        case 0: return "10 Ashby Avenue";
+        case 0: return "<0>";
         case 1: return "<1>";
         case 2: return "<2>";
         case 3: return "<3>";
@@ -60,7 +54,7 @@ char const * getRoomLabel(int sx, int sy){
         case 5: return "<5>";
         case 6: return "<6>";
         case 7: return "<7>";
-        case 8: return "<8>";
+        case 8: return "10 Ashby Avenue";
         case 9: return "<9>";
         case 10: return "<10>";
         default: return "???";

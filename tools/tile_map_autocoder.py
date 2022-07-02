@@ -110,6 +110,7 @@ if __name__ == "__main__":
     for obj in objs:
         # if it has been given a name, use that, else generate a name:
         instance_name = obj['name'].strip()
+        instance_name = instance_name.replace(" ", "");
         if len(instance_name) == 0:
             instance_name = f"{obj['class'].lower()}_{obj['x']}_{obj['y']}"
         obj['name'] = instance_name
