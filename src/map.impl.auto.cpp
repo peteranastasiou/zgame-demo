@@ -11,7 +11,7 @@ Npc Warren(20, "Warren", &dialogue::test);
 Npc Barbara(18, "Barbara", &dialogue::test);
 Phone phone(73, "phone");
 Door ashbyFrontDoor(68, "ashbyFrontDoor");
-Npc PeterBday(17, "PeterBday", &dialogue::test);
+OneTimeNpc PeterBday(17, "PeterBday", &dialogue::test);
 Npc Jacinta(38, "Jacinta", &dialogue::test);
 Npc Meg(39, "Meg", &dialogue::test);
 Npc Adam(19, "Adam", &dialogue::test);

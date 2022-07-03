@@ -16,11 +16,21 @@ enum class State {
     MENU, RUNNING, WINDOW
 };
 
-Hero hero(7, 26);
+enum class EventType {
+    WINDOW,
+    TRIGGER_OBJECT
+};
+
+struct Event {
+    EventType type;
+    void * object;  // Window or map::Object
+};
+
+Hero hero(7, 27);
 
 static State state= State::RUNNING;
 static uint32_t tick= 0;
-static Queue<Window *, 8> windowQueue;
+static Queue<Event, 8> eventQueue;
 static Window * currentWindow;
 
 // Gamepad state
@@ -43,10 +53,16 @@ void update(){
     previousGamepad = currentGamepad;
 
     // If we are ready for it, and one is available: grab the next window to display
-    if( state == State::RUNNING && !windowQueue.isEmpty() ){
-        currentWindow = windowQueue.pop();
-        currentWindow->reset();
-        state = State::WINDOW;
+    if( state == State::RUNNING && !eventQueue.isEmpty() ){
+        Event evt = eventQueue.pop();
+        if( evt.type == EventType::WINDOW ){
+            currentWindow = (Window *)evt.object;
+            currentWindow->reset();
+            state = State::WINDOW;
+        }else if( evt.type == EventType::TRIGGER_OBJECT ) {
+            map::Object * obj = (map::Object *)evt.object;
+            obj->setTriggered(true);
+        }
     }
 
     // What map screen are we on:
@@ -77,17 +93,6 @@ void update(){
         }
     }
 
-    // Debug info
-    if( isPressed(BUTTON_LEFT) && isPressed(BUTTON_RIGHT) ){
-        // show player position on screen:
-        *DRAW_COLORS = 0x0041;
-        StrBuffer<8> str;
-        str.appendUint8((uint8_t)hero.getX());
-        str.append(',');
-        str.appendUint8((uint8_t)hero.getY());
-        text(str.get(), 0, 1);
-    }
-
     // HUD for facing objects
     Dir dir = hero.getDir();
     int facingTileX = hero.getX() + dirGetX(dir);
@@ -100,18 +105,50 @@ void update(){
     //     *DRAW_COLORS = 0x0041;
     //     text(obj->getLabel(), 1, 1);
     // }
-    // TODO do this on room change only, and disappear after a few frames
     
     *DRAW_COLORS = 0x0044;
-    rect(0, SCREEN_SIZE-16, SCREEN_SIZE, 16);
+    rect(0, 0, SCREEN_SIZE, 16);
     *DRAW_COLORS = 0x0041;
-    text(map::getRoomLabel(screenX, screenY), 2, SCREEN_SIZE-12);
+    text(map::getRoomLabel(screenX, screenY), 2, 3);
+
+    // Debug info
+    if( isPressed(BUTTON_LEFT) && isPressed(BUTTON_RIGHT) ){
+        // show player position on screen:
+        *DRAW_COLORS = 0x0041;
+        StrBuffer<8> str;
+        str.appendUint8((uint8_t)hero.getX());
+        str.append(',');
+        str.appendUint8((uint8_t)hero.getY());
+        text(str.get(), 0, 1);
+    }
 
     tick ++;
 }
 
 void pushWindow(Window * window) {
-    windowQueue.push(window);
+    Event evt;
+    evt.type = EventType::WINDOW;
+    evt.object = window;
+    eventQueue.push(evt);
 }
+
+void pushObjectToTrigger(map::Object * object) {
+    Event evt;
+    evt.type = EventType::TRIGGER_OBJECT;
+    evt.object = object;
+
+    // check if already in queue to be triggered:
+    for(int i = 0; i < eventQueue.getSize(); i++){
+        Event e = eventQueue.at(i);
+        if( e.type == evt.type && e.object == evt.object ){
+            // already in queue, don't double up!
+            return;
+        }
+    }
+
+    tracef("Push to trigger '%s'", object->getLabel());
+    eventQueue.push(evt);
+}
+
 
 } // namespace gameloop

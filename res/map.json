@@ -143,7 +143,7 @@
                         {
                          "name":"class",
                          "type":"string",
-                         "value":"Npc"
+                         "value":"OneTimeNpc"
                         }, 
                         {
                          "name":"constructor",

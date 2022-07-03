@@ -27,6 +27,11 @@ public:
         return size_ == BUFFER_SIZE;
     }
 
+    Type at(int i){
+        int idx = (head_ + i) % BUFFER_SIZE;
+        return buffer_[idx];
+    }
+
     bool push(Type elm){
         if( size_ == BUFFER_SIZE ) return false;
 

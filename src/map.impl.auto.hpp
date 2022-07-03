@@ -52,7 +52,7 @@ extern Npc Warren;
 extern Npc Barbara;
 extern Phone phone;
 extern Door ashbyFrontDoor;
-extern Npc PeterBday;
+extern OneTimeNpc PeterBday;
 extern Npc Jacinta;
 extern Npc Meg;
 extern Npc Adam;

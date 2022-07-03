@@ -9,16 +9,27 @@ namespace map {
 
 static int const NUM_ROOMS_ACROSS = MAP_WIDTH / SCREEN_WIDTH;
 
+static void triggerOn(Object * o1, Object * o2) {
+    if( o1->isTriggered() && !o2->isTriggered() ){
+        // do once!
+        gameloop::pushObjectToTrigger(o2);
+    }
+}
+
 void ashbyUpdate(int sx, int sy, uint32_t tick) {
     (void) sx;
     (void) sy;
     (void) tick;
-    // Open gate when all sconces are lit
-    if( !ashbyFrontDoor.isTriggered() ){
-        if( phone.isTriggered() ){
-            ashbyFrontDoor.setTriggered(true);
-        }
-    }
+    if(tick %60==0)
+    tracef("'phone':%d, 'door':%d\n", phone.isTriggered(), ashbyFrontDoor.isTriggered());
+    triggerOn(&phone, &ashbyFrontDoor);
+}
+
+void thomasBdayUpdate(int sx, int sy, uint32_t tick) {
+    (void) sx;
+    (void) sy;
+    (void) tick;
+    triggerOn(&PeterBday, &backyardTree);
 }
 
 void update(int sx, int sy, uint32_t tick) {
@@ -26,7 +37,7 @@ void update(int sx, int sy, uint32_t tick) {
     int roomIdx = sy * NUM_ROOMS_ACROSS + sx;
 
     switch( roomIdx ){
-        case 0: return;
+        case 0: thomasBdayUpdate(sx, sy, tick); return;
         case 1: return;
         case 2: return;
         case 3: return;
@@ -46,7 +57,7 @@ char const * getRoomLabel(int sx, int sy){
     int roomIdx = sy * NUM_ROOMS_ACROSS + sx;
 
     switch( roomIdx ){
-        case 0: return "<0>";
+        case 0: return "Thomas' Party";
         case 1: return "<1>";
         case 2: return "<2>";
         case 3: return "<3>";

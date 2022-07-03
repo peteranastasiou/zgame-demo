@@ -9,120 +9,11 @@
 namespace map {
 
 // ------------------------------------------------------------------
-// Some partially-complete object super classes which should be handy:
-// ------------------------------------------------------------------
-
-class SimpleObject : public Object {
-public:
-    virtual bool passable() override {
-        return false;
-    }
-    
-    virtual void interact() override {
-    }
-
-    virtual char const * getLabel() override {
-        return "";
-    }
-
-    virtual void update(int tick) override {
-        (void) tick;
-    }
-
-    virtual void store(uint8_t *& ptr) override {
-        (void) ptr;
-    }
-
-    virtual void load(uint8_t *& ptr) override {
-        (void) ptr;
-    }
-};
-
-class TriggeredObject : public Object {
-protected:
-    bool triggered_= false;
-
-public:
-    // Implement this to customise interaction
-    virtual bool onInteraction()=0;
-
-    void setTriggered(bool triggered){ triggered_= triggered; }
-    bool isTriggered(){ return triggered_; }
-
-    virtual char const * getLabel() override {
-        return "";
-    }
-
-    virtual void update(int tick) override {
-        (void) tick;
-    }
-
-    virtual void interact() override {
-        if( triggered_ ) return;
-
-        if( onInteraction() ) triggered_= true;
-    }
-
-    virtual void store(uint8_t *& ptr) override {
-        *ptr++ = (uint8_t)triggered_;
-    }
-
-    virtual void load(uint8_t *& ptr) override {
-        triggered_= (uint8_t)*ptr++;
-    }
-};
-
-class ToggledObject : public Object {
-protected:
-    bool triggered_= false;
-
-public:
-    // Implement this to customise interaction
-    virtual bool onInteraction()=0;
-
-    virtual void update(int tick) override {
-        (void) tick;
-    }
-
-    virtual void interact() override {
-        if( onInteraction() ) triggered_= !triggered_;
-    }
-
-    virtual void store(uint8_t *& ptr) override {
-        *ptr++ = (uint8_t)triggered_;
-    }
-
-    virtual void load(uint8_t *& ptr) override {
-        triggered_= (uint8_t)*ptr++;
-    }
-};
-
-// ------------------------------------------------------------------
 // Custom objects for the game
 // ------------------------------------------------------------------
 
-// class Sconce : public TriggeredObject {
-// public:
-//     virtual bool passable() override { return false; }
-
-//     virtual bool onInteraction() override {
-//         static bool doOnce = true;
-//         doOnce = false;
-//         return true;
-//     }
-
-//     virtual void render(int cycle, int x, int y) override {
-//         *DRAW_COLORS = 0x1204;
-//         if( triggered_ ){
-//             render_( sprites::SCONCE_LIT1, x, y, cycle % 2 ? BLIT_FLIP_X : 0);
-//         }else{
-//             render_( sprites::SCONCE_UNLIT, x, y);
-//         }
-//     }
-// };
-
 static Dialogue doorMsg("You can't leave yet!");
-class Door : public TriggeredObject {
+class Door : public Object {
 public:
     Door(uint8_t sprite, char const * name){
         sprite_ = sprite;
@@ -130,10 +21,10 @@ public:
     }
     virtual bool passable() override { return triggered_; }
 
-    virtual bool onInteraction() override {
-        gameloop::pushWindow(&doorMsg);
-        return false;
+    virtual void interact() override {
+        if( !triggered_ ) gameloop::pushWindow(&doorMsg);
     }
+
     virtual void render(int cycle, int x, int y) override {
         (void) cycle;
         if( triggered_ ) return;
@@ -145,7 +36,7 @@ private:
     char const * name_;
 };
 
-class TreeGate : public TriggeredObject {
+class TreeGate : public Object {
 public:
     TreeGate(uint8_t sprite, char const * name){
         sprite_ = sprite;
@@ -153,9 +44,8 @@ public:
     }
     virtual bool passable() override { return triggered_; }
 
-    virtual bool onInteraction() override {
-        return false;
-    }
+    virtual void interact() override { }
+
     virtual void render(int cycle, int x, int y) override {
         (void) cycle;
         if( triggered_ ) return;
@@ -168,17 +58,14 @@ private:
 };
 
 static Dialogue phoneMsg("You are invited to Thomas' 21st Birthday Party!");
-class Phone : public SimpleObject {
+class Phone : public Object {
 public:
     Phone(uint8_t sprite, char const * name){
         sprite_ = sprite;
         name_= name;
-        triggered_= false;
     }
 
-    bool isTriggered(){
-        return triggered_;
-    }
+    virtual bool passable() override { return false; }
 
     virtual void render(int cycle, int x, int y) override {
         *DRAW_COLORS = 0x0234;
@@ -188,13 +75,13 @@ public:
 
     virtual void interact() override {
         gameloop::pushWindow(&phoneMsg);
+
         triggered_= true;
     }
 
 private:
     uint8_t sprite_;
     char const * name_;
-    bool triggered_;
 };
 
 class Npc : public Object {
@@ -204,6 +91,8 @@ public:
         dialogue_ = dialogue;
         name_ = name;
     }
+
+    virtual bool passable() override { return false; }
 
     virtual void render(int cycle, int x, int y) override {
         (void) cycle;
@@ -215,46 +104,49 @@ public:
         return name_;
     }
 
-    virtual void update(int tick) override {
-        (void) tick;
-    }
-
-    virtual bool passable() override {
-        return false;
-    }
-
     virtual void interact() override {
         gameloop::pushWindow(dialogue_);
+        triggered_= true;
     }
 
-    virtual void store(uint8_t *& ptr) override {
-        (void) ptr;
-    }
-
-    virtual void load(uint8_t *& ptr) override {
-        (void) ptr;
-    }
 private:
     uint8_t sprite_;
     char const * name_;
     Dialogue * dialogue_;
 };
 
-// class Gate : public TriggeredObject {
-// public:
-//     virtual bool passable() override { return triggered_; }
+class OneTimeNpc : public Object {
+public:
+    OneTimeNpc(uint8_t sprite, char const * name, Dialogue * dialogue){
+        sprite_ = sprite;
+        dialogue_ = dialogue;
+        name_ = name;
+    }
 
-//     virtual bool onInteraction() override {
-//         return false;
-//     }
+    virtual bool passable() override { return triggered_; }
 
-//     virtual void render(int cycle, int x, int y) override {
-//         (void) cycle;
-//         *DRAW_COLORS = 0x0234;
-//         if( !triggered_ ) {
-//             render_(sprites::GATE, x, y);
-//         }
-//     }
-// };
+    virtual void render(int cycle, int x, int y) override {
+        (void) cycle;
+        if( triggered_ ) return; // invisible after first chat
+        *DRAW_COLORS = 0x0234;
+        render_(sprite_, x, y, 0);
+    }
+
+    virtual char const * getLabel() override {
+        return name_;
+    }
+
+    virtual void interact() override {
+        if( !triggered_ ){
+            gameloop::pushWindow(dialogue_);
+            gameloop::pushObjectToTrigger(this); // trigger self after displaying message
+        }
+    }
+
+private:
+    uint8_t sprite_;
+    char const * name_;
+    Dialogue * dialogue_;
+};
 
 } // namespace map

@@ -68,6 +68,7 @@
   </object>
   <object id="82" name="Peter Bday" gid="18" x="128" y="64" width="16" height="16">
    <properties>
+    <property name="class" value="OneTimeNpc"/>
     <property name="constructor" value="&amp;dialogue::test"/>
    </properties>
   </object>

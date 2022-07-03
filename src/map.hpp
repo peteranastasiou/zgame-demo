@@ -10,9 +10,12 @@ namespace map {
 
 // Map is made of a "tile" background layer and an "Object" foreground layer
 
-class Object
-{
+class Object {
 public:
+    void setTriggered(bool triggered){ triggered_= triggered; }
+
+    bool isTriggered(){ return triggered_; }
+
     // called to check if can walk into this tile
     virtual bool passable()=0;
     
@@ -20,28 +23,22 @@ public:
     virtual void interact()=0;
 
     // label
-    virtual char const * getLabel()=0;
-
-    // called once a while (how often?)
-    virtual void update(int tick)=0;
+    virtual char const * getLabel(){
+        return "";
+    }
 
     // called to check what sprite to draw. 
     // cycle is slower than ticks and defines animation speed
     // x, y are tile coordinates on the current screen
     virtual void render(int cycle, int x, int y)=0;
 
-    // place data into ptr and increment it
-    virtual void store(uint8_t *& ptr)=0;
-
-    // load data from ptr and increment it
-    virtual void load(uint8_t *& ptr)=0;
-
 protected:
     void render_(int sprite, int x, int y, uint32_t flags=0){
         sprites::blit(sprite, 16*x, 16*y, flags);
     }
-};
 
+    bool triggered_= false;
+};
 
 // ----------------------------------------------
 // Map Functions
