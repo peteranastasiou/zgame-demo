@@ -7,15 +7,15 @@
 namespace map {
 
 Npc BecRowe(22, "BecRowe", &dialogue::becRMsg);
-Npc Warren(20, "Warren", &dialogue::test);
-Npc Barbara(18, "Barbara", &dialogue::test);
+Npc Warren(20, "Warren", &dialogue::warrenMsg);
+Npc Barbara(18, "Barbara", &dialogue::barbaraMsg);
 Phone phone(73, "phone");
 Door ashbyFrontDoor(68, "ashbyFrontDoor");
 OneTimeNpc PeterBday(17, "PeterBday", &dialogue::test);
 Npc Jacinta(38, "Jacinta", &dialogue::test);
-Npc Meg(39, "Meg", &dialogue::test);
-Npc Adam(19, "Adam", &dialogue::test);
-Npc Bec(22, "Bec", &dialogue::test);
+Npc MegF(39, "MegF", &dialogue::megFMsg);
+Npc AdamL(19, "AdamL", &dialogue::test);
+Npc BecL(22, "BecL", &dialogue::test);
 TreeGate backyardTree(54, "backyardTree");
 Door pickleDoor(84, "pickleDoor");
 Npc Peterjervois(16, "Peterjervois", &dialogue::test);
@@ -24,13 +24,13 @@ PickleMan pickleMan(20, "pickleMan");
 Npc Peterwedding(16, "Peterwedding", &dialogue::test);
 Npc PeterPropose(62, "PeterPropose", &dialogue::test);
 Door ki_exit(100, "ki_exit");
-Npc anne(22, "anne", &dialogue::test);
-Npc roger(21, "roger", &dialogue::test);
+Npc anne(22, "anne", &dialogue::anneMsg);
+Npc roger(21, "roger", &dialogue::rogerMsg);
 Npc kim(96, "kim", &dialogue::test);
-Npc richard(35, "richard", &dialogue::test);
-Npc Kathryn(38, "Kathryn", &dialogue::test);
+Npc richard(35, "richard", &dialogue::richardMsg);
+Npc Kathryn(38, "Kathryn", &dialogue::kathrynMsg);
 Npc Kahla(22, "Kahla", &dialogue::test);
-Npc Thomas(21, "Thomas", &dialogue::test);
+Npc Thomas(21, "Thomas", &dialogue::thomasMsg);
 Npc George(36, "George", &dialogue::test);
 
 // Run-time expanded array of objects
@@ -48,9 +48,9 @@ void initObjects() {
     OBJECTS[2 + MAP_WIDTH*21] = &ashbyFrontDoor;
     OBJECTS[8 + MAP_WIDTH*3] = &PeterBday;
     OBJECTS[8 + MAP_WIDTH*6] = &Jacinta;
-    OBJECTS[8 + MAP_WIDTH*7] = &Meg;
-    OBJECTS[6 + MAP_WIDTH*2] = &Adam;
-    OBJECTS[7 + MAP_WIDTH*2] = &Bec;
+    OBJECTS[8 + MAP_WIDTH*7] = &MegF;
+    OBJECTS[6 + MAP_WIDTH*2] = &AdamL;
+    OBJECTS[7 + MAP_WIDTH*2] = &BecL;
     OBJECTS[9 + MAP_WIDTH*3] = &backyardTree;
     OBJECTS[17 + MAP_WIDTH*5] = &pickleDoor;
     OBJECTS[12 + MAP_WIDTH*13] = &Peterjervois;

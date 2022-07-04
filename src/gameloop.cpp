@@ -117,51 +117,37 @@ void update(){
     map::update(screenX, screenY, tick);
 
     // Game state machine
-    switch( state ){
-        default:
-        case State::RUNNING:{
-            // Manage player character
-            hero.update(tick);
-            break;
-        }
-        case State::WINDOW:{
-            currentWindow->render(tick);
-
-            // close the window if done
-            if( currentWindow->update() ) state= State::RUNNING;
-            break;
-        }
-    }
-
-    // // Debug info
-    // if( isPressed(BUTTON_LEFT) && isPressed(BUTTON_RIGHT) ){
-    //     // show player position on screen:
-    //     *DRAW_COLORS = 0x0041;
-    //     StrBuffer<8> str;
-    //     str.appendUint8((uint8_t)hero.getX());
-    //     str.append(',');
-    //     str.appendUint8((uint8_t)hero.getY());
-    //     text(str.get(), 0, 1);
-    // }
-
-    // HUD for facing objects
-    Dir dir = hero.getDir();
-    int facingTileX = hero.getX() + dirGetX(dir);
-    int facingTileY = hero.getY() + dirGetY(dir);
-    map::Object * obj = map::getObject(facingTileX, facingTileY);
-
-    // if( obj ){
-    //     *DRAW_COLORS = 0x0044;
-    //     rect(0, 0, SCREEN_SIZE, 9);
-    //     *DRAW_COLORS = 0x0041;
-    //     text(obj->getLabel(), 1, 1);
-    // }
-    if( gameStarted_ ){
+    if( state == State::RUNNING ){
+        // Manage player character
+        hero.update(tick);
         *DRAW_COLORS = 0x0044;
         rect(0, 0, SCREEN_SIZE, 16);
         *DRAW_COLORS = 0x0041;
         text(map::getRoomLabel(screenX, screenY), 3, 3);
+
+    }else if( state == State::WINDOW ){
+        // Label the facing object
+        Dir dir = hero.getDir();
+        int facingTileX = hero.getX() + dirGetX(dir);
+        int facingTileY = hero.getY() + dirGetY(dir);
+        map::Object * obj = map::getObject(facingTileX, facingTileY);
+
+        if( obj ){
+            *DRAW_COLORS = 0x0044;
+            rect(0, 0, SCREEN_SIZE, 16);
+            *DRAW_COLORS = 0x0041;
+            
+            text(obj->getLabel(), 3, 3);
+            // TODO centre ^^
+        }
+
+        // render the window
+        currentWindow->render(tick);
+
+        // close the window if done
+        if( currentWindow->update() ) state= State::RUNNING;
     }
+
     tick ++;
 }
 
