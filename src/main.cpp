@@ -8,6 +8,7 @@
 
 void start() {
     map::init();
+    gameloop::init();
 }
 
 void update() {

@@ -10,9 +10,6 @@
 #include "str.hpp"
 #include "queue.hpp"
 
-// TODO intro screen
-// 
-
 namespace gameloop {
 
 enum class State {
@@ -28,6 +25,42 @@ struct Event {
     EventType type;
     void * object;  // Window or map::Object
 };
+
+// hack!
+static bool gameStarted_ = false;
+
+class Title : public Window {
+public:
+    Title() {}
+
+    virtual void reset() override {}
+
+    // true means window is closing
+    virtual bool update() override {
+        if( gameloop::wasPressed(BUTTON_1) ){
+            gameStarted_ = true;
+            return true;
+        }
+        return false;
+    }
+
+    virtual void render(uint32_t tick) override {
+        (void) tick;
+        // origin of title hidden in the map data (in tiles)
+        int ox = 30;
+        int oy = 0;
+
+        // draw background
+        *DRAW_COLORS = 0x1234;
+        for( int tx = 0; tx < 10; ++tx ){
+            for( int ty = 0; ty < 10; ++ty ){
+                uint8_t tile = map::getTile(ox + tx, oy + ty);
+                sprites::blit(tile, 16*tx, 16*ty);
+            }
+        }
+    }
+};
+static Title title;
 
 Hero hero(7, 27);
 
@@ -47,6 +80,10 @@ bool wasPressed(uint8_t btn){
 
 bool isPressed(uint8_t btn){
     return currentGamepad & btn;
+}
+
+void init(){
+    pushWindow(&title);
 }
 
 void update(){
@@ -96,6 +133,17 @@ void update(){
         }
     }
 
+    // // Debug info
+    // if( isPressed(BUTTON_LEFT) && isPressed(BUTTON_RIGHT) ){
+    //     // show player position on screen:
+    //     *DRAW_COLORS = 0x0041;
+    //     StrBuffer<8> str;
+    //     str.appendUint8((uint8_t)hero.getX());
+    //     str.append(',');
+    //     str.appendUint8((uint8_t)hero.getY());
+    //     text(str.get(), 0, 1);
+    // }
+
     // HUD for facing objects
     Dir dir = hero.getDir();
     int facingTileX = hero.getX() + dirGetX(dir);
@@ -108,23 +156,12 @@ void update(){
     //     *DRAW_COLORS = 0x0041;
     //     text(obj->getLabel(), 1, 1);
     // }
-    
-    *DRAW_COLORS = 0x0044;
-    rect(0, 0, SCREEN_SIZE, 16);
-    *DRAW_COLORS = 0x0041;
-    text(map::getRoomLabel(screenX, screenY), 3, 3);
-
-    // Debug info
-    if( isPressed(BUTTON_LEFT) && isPressed(BUTTON_RIGHT) ){
-        // show player position on screen:
+    if( gameStarted_ ){
+        *DRAW_COLORS = 0x0044;
+        rect(0, 0, SCREEN_SIZE, 16);
         *DRAW_COLORS = 0x0041;
-        StrBuffer<8> str;
-        str.appendUint8((uint8_t)hero.getX());
-        str.append(',');
-        str.appendUint8((uint8_t)hero.getY());
-        text(str.get(), 0, 1);
+        text(map::getRoomLabel(screenX, screenY), 3, 3);
     }
-
     tick ++;
 }
 

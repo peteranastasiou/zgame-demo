@@ -11,6 +11,8 @@ namespace gameloop {
 // TODO work out where this lives
 extern Hero hero;
 
+void init();
+
 // one tick of the game
 void update();
 

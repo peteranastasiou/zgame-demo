@@ -37,11 +37,11 @@
             }
         },
         "map.tmx": {
-            "scale": 1.5264,
-            "selectedLayer": 1,
+            "scale": 2,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 313.1551362683438,
-                "y": 188.0241090146751
+                "x": 55,
+                "y": 158.5
             }
         },
         "test.tmx": {
@@ -58,7 +58,7 @@
         },
         "tileset.tsx": {
             "scaleInDock": 2,
-            "scaleInEditor": 4
+            "scaleInEditor": 3
         },
         "xipe.tsx": {
             "scaleInDock": 3,
@@ -80,8 +80,8 @@
     ],
     "project": "zgame.tiled-project",
     "recentFiles": [
-        "map.tmx",
         "tileset.tsx",
+        "map.tmx",
         "map.json",
         "tileset.json",
         "map.tmj",
