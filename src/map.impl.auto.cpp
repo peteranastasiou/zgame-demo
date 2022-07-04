@@ -17,9 +17,17 @@ Npc Meg(39, "Meg", &dialogue::test);
 Npc Adam(19, "Adam", &dialogue::test);
 Npc Bec(22, "Bec", &dialogue::test);
 TreeGate backyardTree(54, "backyardTree");
-Npc pickleMan(35, "pickleMan", &dialogue::test);
 Door pickleDoor(84, "pickleDoor");
 Npc Peterjervois(16, "Peterjervois", &dialogue::test);
+CampFire campFire(58, "campFire");
+PickleMan pickleMan(20, "pickleMan");
+Npc Peterwedding(16, "Peterwedding", &dialogue::test);
+Npc PeterPropose(62, "PeterPropose", &dialogue::test);
+Door ki_exit(100, "ki_exit");
+Npc anne(22, "anne", &dialogue::test);
+Npc roger(21, "roger", &dialogue::test);
+Npc kim(96, "kim", &dialogue::test);
+Npc richard(35, "richard", &dialogue::test);
 
 // Run-time expanded array of objects
 // Not done at compile time to save ROM
@@ -40,9 +48,17 @@ void initObjects() {
     OBJECTS[6 + MAP_WIDTH*2] = &Adam;
     OBJECTS[7 + MAP_WIDTH*2] = &Bec;
     OBJECTS[9 + MAP_WIDTH*3] = &backyardTree;
-    OBJECTS[16 + MAP_WIDTH*4] = &pickleMan;
     OBJECTS[17 + MAP_WIDTH*5] = &pickleDoor;
     OBJECTS[12 + MAP_WIDTH*13] = &Peterjervois;
+    OBJECTS[25 + MAP_WIDTH*15] = &campFire;
+    OBJECTS[15 + MAP_WIDTH*3] = &pickleMan;
+    OBJECTS[13 + MAP_WIDTH*23] = &Peterwedding;
+    OBJECTS[21 + MAP_WIDTH*24] = &PeterPropose;
+    OBJECTS[25 + MAP_WIDTH*9] = &ki_exit;
+    OBJECTS[22 + MAP_WIDTH*3] = &anne;
+    OBJECTS[23 + MAP_WIDTH*3] = &roger;
+    OBJECTS[21 + MAP_WIDTH*6] = &kim;
+    OBJECTS[24 + MAP_WIDTH*6] = &richard;
 }
 
 } // namespace map

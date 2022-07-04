@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "tileset.tsx",
+    "activeFile": "map.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -37,11 +37,11 @@
             }
         },
         "map.tmx": {
-            "scale": 4,
-            "selectedLayer": 0,
+            "scale": 1.5264,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 82.875,
-                "y": 377.75
+                "x": 313.1551362683438,
+                "y": 188.0241090146751
             }
         },
         "test.tmx": {

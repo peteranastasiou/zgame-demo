@@ -5,6 +5,7 @@
 #include "sprites.hpp"
 #include "gameloop.hpp"
 #include "window.dialogue.hpp"
+#include "window.menu.hpp"
 
 namespace map {
 
@@ -12,25 +13,12 @@ namespace map {
 // Custom objects for the game
 // ------------------------------------------------------------------
 
-static Dialogue doorMsg("You can't leave yet!");
 class Door : public Object {
 public:
-    Door(uint8_t sprite, char const * name){
-        sprite_ = sprite;
-        name_= name;
-    }
-    virtual bool passable() override { return triggered_; }
-
-    virtual void interact() override {
-        if( !triggered_ ) gameloop::pushWindow(&doorMsg);
-    }
-
-    virtual void render(int cycle, int x, int y) override {
-        (void) cycle;
-        if( triggered_ ) return;
-        *DRAW_COLORS = 0x1234;
-        render_(sprite_, x, y, 0);
-    }
+    Door(uint8_t sprite, char const * name);
+    virtual bool passable() override;
+    virtual void interact() override;
+    virtual void render(int cycle, int x, int y) override;
 private:
     uint8_t sprite_;
     char const * name_;
@@ -57,7 +45,6 @@ private:
     char const * name_;
 };
 
-static Dialogue phoneMsg("You are invited to Thomas' 21st Birthday Party!");
 class Phone : public Object {
 public:
     Phone(uint8_t sprite, char const * name){
@@ -67,17 +54,9 @@ public:
 
     virtual bool passable() override { return false; }
 
-    virtual void render(int cycle, int x, int y) override {
-        *DRAW_COLORS = 0x0234;
-        uint8_t sprite = triggered_ ? sprite_ : sprite_ + (cycle % 3);
-        render_(sprite, x, y, 0);
-    }
+    virtual void render(int cycle, int x, int y) override;
 
-    virtual void interact() override {
-        gameloop::pushWindow(&phoneMsg);
-
-        triggered_= true;
-    }
+    virtual void interact() override;
 
 private:
     uint8_t sprite_;
@@ -147,6 +126,59 @@ private:
     uint8_t sprite_;
     char const * name_;
     Dialogue * dialogue_;
+};
+
+
+class PickleMan : public Object {
+public:
+    PickleMan(uint8_t sprite, char const * name){
+        sprite_ = sprite;
+        name_ = name;
+    }
+
+    virtual bool passable() override { return false; }
+
+    virtual void render(int cycle, int x, int y) override {
+        (void) cycle;
+        *DRAW_COLORS = 0x0234;
+        render_(sprite_, x, y, 0);
+    }
+
+    virtual char const * getLabel() override {
+        return name_;
+    }
+
+    virtual void interact() override;
+
+private:
+    uint8_t sprite_;
+    char const * name_;
+};
+
+class CampFire : public Object {
+public:
+    CampFire(uint8_t sprite, char const * name){
+        sprite_ = sprite;
+        name_ = name;
+    }
+
+    virtual bool passable() override { return false; }
+
+    virtual void render(int cycle, int x, int y) override {
+        *DRAW_COLORS = 0x0234;
+        render_(sprite_ + cycle % 3, x, y, 0);
+    }
+
+    virtual char const * getLabel() override {
+        return name_;
+    }
+
+    virtual void interact() override {
+    }
+
+private:
+    uint8_t sprite_;
+    char const * name_;
 };
 
 } // namespace map

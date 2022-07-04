@@ -6,7 +6,6 @@
 #include "wasm4.h"
 #include "txt.hpp"
 
-// TODO title and message
 
 class Menu : public Window {
 public:

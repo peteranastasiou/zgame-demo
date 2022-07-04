@@ -1,7 +1,6 @@
 
 #include "dir.hpp"
 #include "map.hpp"
-#include "map.objects.hpp"
 #include "map.impl.auto.hpp"
 #include "map.rooms.hpp"
 #include "config.hpp"
