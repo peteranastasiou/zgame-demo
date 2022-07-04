@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="118">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="123">
  <editorsettings>
   <export target="map.json" format="json"/>
  </editorsettings>
@@ -143,6 +143,26 @@
    </properties>
   </object>
   <object id="115" name="richard" gid="36" x="384" y="112" width="16" height="16">
+   <properties>
+    <property name="constructor" value="&amp;dialogue::test"/>
+   </properties>
+  </object>
+  <object id="118" name="Kathryn" gid="39" x="432" y="256" width="16" height="16">
+   <properties>
+    <property name="constructor" value="&amp;dialogue::test"/>
+   </properties>
+  </object>
+  <object id="119" name="Kahla" gid="23" x="368" y="240" width="16" height="16">
+   <properties>
+    <property name="constructor" value="&amp;dialogue::Kahla"/>
+   </properties>
+  </object>
+  <object id="121" name="Thomas" gid="22" x="352" y="256" width="16" height="16">
+   <properties>
+    <property name="constructor" value="&amp;dialogue::test"/>
+   </properties>
+  </object>
+  <object id="122" name="George" gid="37" x="432" y="272" width="16" height="16">
    <properties>
     <property name="constructor" value="&amp;dialogue::test"/>
    </properties>

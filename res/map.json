@@ -524,6 +524,29 @@
                  "width":16,
                  "x":384,
                  "y":112
+                }, 
+                {
+                 "gid":39,
+                 "height":16,
+                 "id":118,
+                 "name":"Kathryn",
+                 "properties":[
+                        {
+                         "name":"class",
+                         "type":"string",
+                         "value":"Npc"
+                        }, 
+                        {
+                         "name":"constructor",
+                         "type":"string",
+                         "value":"&dialogue::test"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":432,
+                 "y":256
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -532,7 +555,7 @@
          "y":0
         }],
  "nextlayerid":5,
- "nextobjectid":118,
+ "nextobjectid":119,
  "orientation":"orthogonal",
  "properties":[
         {

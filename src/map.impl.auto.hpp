@@ -45,7 +45,7 @@ uint8_t const TILES[] = {
  82,  80,  80,  80,  80,  80,  80,  80,  80,  83,  54,  54,  54,  54,  54,  54,  54,  54,  54,  54,   9,   9,   9,   9,   9,   9,   9,   9,   9,   9,  34,  53,  53,  53,  53,  53,  53,  53,  53,  53, 
 };
 
-uint8_t const NUM_OBJECTS = 22;
+uint8_t const NUM_OBJECTS = 23;
 
 extern Npc BecRowe;
 extern Npc Warren;
@@ -69,6 +69,7 @@ extern Npc anne;
 extern Npc roger;
 extern Npc kim;
 extern Npc richard;
+extern Npc Kathryn;
 
 extern Object ** OBJECTS;
 

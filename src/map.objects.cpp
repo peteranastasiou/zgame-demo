@@ -27,7 +27,8 @@ void Door::render(int cycle, int x, int y) {
 
 // Phone
 
-static Dialogue phoneMsg("You are invited to Thomas' 21st Birthday Party!");
+static Dialogue phoneMsg1("     ITEM GET!\n    *Invitation");
+static Dialogue phoneMsg2("You are invited to Thomas' 21st Birthday Party!");
 void Phone::render(int cycle, int x, int y) {
     *DRAW_COLORS = 0x0234;
     uint8_t sprite = triggered_ ? sprite_ : sprite_ + (cycle % 3);
@@ -35,7 +36,8 @@ void Phone::render(int cycle, int x, int y) {
 }
 
 void Phone::interact() {
-    gameloop::pushWindow(&phoneMsg);
+    if( !triggered_) gameloop::pushWindow(&phoneMsg1);
+    gameloop::pushWindow(&phoneMsg2);
 
     triggered_= true;
 }

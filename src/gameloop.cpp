@@ -10,6 +10,9 @@
 #include "str.hpp"
 #include "queue.hpp"
 
+// TODO intro screen
+// 
+
 namespace gameloop {
 
 enum class State {
@@ -109,7 +112,7 @@ void update(){
     *DRAW_COLORS = 0x0044;
     rect(0, 0, SCREEN_SIZE, 16);
     *DRAW_COLORS = 0x0041;
-    text(map::getRoomLabel(screenX, screenY), 2, 3);
+    text(map::getRoomLabel(screenX, screenY), 3, 3);
 
     // Debug info
     if( isPressed(BUTTON_LEFT) && isPressed(BUTTON_RIGHT) ){

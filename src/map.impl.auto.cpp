@@ -28,6 +28,7 @@ Npc anne(22, "anne", &dialogue::test);
 Npc roger(21, "roger", &dialogue::test);
 Npc kim(96, "kim", &dialogue::test);
 Npc richard(35, "richard", &dialogue::test);
+Npc Kathryn(38, "Kathryn", &dialogue::test);
 
 // Run-time expanded array of objects
 // Not done at compile time to save ROM
@@ -59,6 +60,7 @@ void initObjects() {
     OBJECTS[23 + MAP_WIDTH*3] = &roger;
     OBJECTS[21 + MAP_WIDTH*6] = &kim;
     OBJECTS[24 + MAP_WIDTH*6] = &richard;
+    OBJECTS[27 + MAP_WIDTH*15] = &Kathryn;
 }
 
 } // namespace map

@@ -28,6 +28,11 @@ static void thomasBdayUpdate() {
     triggerOn(&PeterBday, &backyardTree);
 }
 
+static void kiUpdate() {
+    // TODO
+    ki_exit.setTriggered(true);
+}
+
 void update(int sx, int sy, uint32_t tick) {
     (void) tick;
     // linear room number (L->R, top->bot):
@@ -36,7 +41,7 @@ void update(int sx, int sy, uint32_t tick) {
     switch( roomIdx ){
         case 0: thomasBdayUpdate(); return;
         case 1: usaUpdate(); return;
-        case 2: return;
+        case 2: kiUpdate(); return;
         case 3: return;
         case 4: return;
         case 5: return;
@@ -53,18 +58,19 @@ char const * getRoomLabel(int sx, int sy){
     // linear room number (L->R, top->bot):
     int roomIdx = sy * NUM_ROOMS_ACROSS + sx;
 
+    //                 "--------------------"
     switch( roomIdx ){
-        case 0: return "Thomas' Party";
-        case 1: return "USA";
-        case 2: return "Kangaroo Island";
+        case 0: return "   Thomas' Party";
+        case 1: return "        USA";
+        case 2: return "  Kangaroo Island";
         case 3: return "-";
-        case 4: return "Blackwood";
-        case 5: return "Home";
-        case 6: return "Camping";
+        case 4: return "     Blackwood";
+        case 5: return "  Home Sweet Home";
+        case 6: return "      Camping";
         case 7: return "-";
-        case 8: return "10 Ashby Avenue";
-        case 9: return "Kuitpo Forest";
-        case 10: return "Amidee Island";
+        case 8: return "  10 Ashby Avenue";
+        case 9: return "   Kuitpo Forest";
+        case 10: return "   Amidee Island";
         default: return "???";
     }
 }
