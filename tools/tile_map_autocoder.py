@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 # Autocode tileset and map data from Tiled export files
 
 import json
@@ -112,8 +112,10 @@ if __name__ == "__main__":
         instance_name = obj['name'].strip()
         instance_name = instance_name.replace(" ", "");
         if len(instance_name) == 0:
-            instance_name = f"{obj['class'].lower()}_{obj['x']}_{obj['y']}"
-        obj['name'] = instance_name
+            instance_name = f"{obj['class']}_{obj['x']}_{obj['y']}"
+        
+        instance_name = instance_name[0].lower() + instance_name[1:]
+        obj['instance_name'] = instance_name
 
     # Write map data header
     map_impl_header = "src/map.impl.auto.hpp"
@@ -142,7 +144,7 @@ if __name__ == "__main__":
 
         # Object declarations
         for obj in objs:
-            f.write(f"extern {obj['class']} {obj['name']};\n")
+            f.write(f"extern {obj['class']} {obj['instance_name']};\n")
         f.write("\n")
 
         # Object array declaration
@@ -164,7 +166,8 @@ if __name__ == "__main__":
             args = ""
             if len(obj['constructor']) > 0:
                 args = ", "+obj['constructor']  # append additional arguments
-            f.write(f"{obj['class']} {obj['name']}({obj['sprite']}, \"{obj['name']}\"{args});\n")
+            print(obj['instance_name'])
+            f.write(f"{obj['class']} {obj['instance_name']}({obj['sprite']}, \"{obj['name']}\"{args});\n")
         f.write("\n")
 
         # Object array
@@ -177,7 +180,7 @@ if __name__ == "__main__":
         f.write("void initObjects() {\n")
         f.write("    OBJECTS = new Object*[MAP_WIDTH * MAP_HEIGHT];\n\n")
         for obj in objs:
-            f.write(f"    OBJECTS[{obj['x']} + MAP_WIDTH*{obj['y']}] = &{obj['name']};\n")
+            f.write(f"    OBJECTS[{obj['x']} + MAP_WIDTH*{obj['y']}] = &{obj['instance_name']};\n")
         f.write("}\n\n")
         f.write("} // namespace map\n\n")
 

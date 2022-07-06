@@ -13,10 +13,6 @@ Hero::Hero(int x, int y): gxCurr_(x), gyCurr_(y), gxNext_(x), gyNext_(y) {
     walking_= false;
     step_= 0;
     frame_= 0;
-    // stats:
-    strength = 0;
-    agility = 0;
-    wisdom = 0;
 }
 
 int Hero::getSprite(uint8_t & flags) {

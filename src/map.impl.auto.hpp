@@ -47,32 +47,32 @@ uint8_t const TILES[] = {
 
 uint8_t const NUM_OBJECTS = 26;
 
-extern Npc BecRowe;
-extern Npc Warren;
-extern Npc Barbara;
+extern Npc becRowe;
+extern Npc warren;
+extern Npc barbara;
 extern Phone phone;
 extern Door ashbyFrontDoor;
-extern OneTimeNpc PeterBday;
-extern Npc Jacinta;
-extern Npc MegF;
-extern Npc AdamL;
-extern Npc BecL;
+extern OneTimeNpc peterBday;
+extern Npc jacinta;
+extern Npc megF;
+extern Npc adamL;
+extern Npc becL;
 extern TreeGate backyardTree;
 extern Door pickleDoor;
-extern Npc Peterjervois;
+extern Npc peterjervois;
 extern CampFire campFire;
 extern PickleMan pickleMan;
-extern Npc Peterwedding;
-extern Npc PeterPropose;
+extern Npc peterwedding;
+extern Npc peterPropose;
 extern Door ki_exit;
 extern Npc anne;
 extern Npc roger;
 extern Npc kim;
 extern Npc richard;
-extern Npc Kathryn;
-extern Npc Kahla;
-extern Npc Thomas;
-extern Npc George;
+extern Npc kathryn;
+extern Npc kahla;
+extern Npc thomas;
+extern Npc george;
 
 extern Object ** OBJECTS;
 

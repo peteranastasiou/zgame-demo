@@ -25,7 +25,7 @@ static void ashbyUpdate() {
 }
 
 static void thomasBdayUpdate() {
-    triggerOn(&PeterBday, &backyardTree);
+    triggerOn(&peterBday, &backyardTree);
 }
 
 static void kiUpdate() {
