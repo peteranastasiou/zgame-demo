@@ -33,6 +33,10 @@ static void kiUpdate() {
     ki_exit.setTriggered(true);
 }
 
+static void beachUpdate() {
+    triggerOn(&peterProp, &snake);
+}
+
 void update(int sx, int sy, uint32_t tick) {
     (void) tick;
     // linear room number (L->R, top->bot):
@@ -49,7 +53,7 @@ void update(int sx, int sy, uint32_t tick) {
         case 7: return;
         case 8: ashbyUpdate(); return;
         case 9: return;
-        case 10: return;
+        case 10: beachUpdate(); return;
         default: return;
     }
 }

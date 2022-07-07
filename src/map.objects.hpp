@@ -181,4 +181,54 @@ private:
     char const * name_;
 };
 
+class PeterProp : public Object {
+public:
+    PeterProp(uint8_t sprite, char const * name){
+        sprite_ = sprite;
+        (void) name;
+    }
+
+    virtual bool passable() override { return false; }
+
+    virtual void render(int cycle, int x, int y) override {
+        *DRAW_COLORS = 0x0234;
+        render_(sprite_ + (int)triggered_, x, y, 0);
+    }
+
+    virtual char const * getLabel() override {
+        return "Peter";
+    }
+
+    virtual void interact() override;
+
+private:
+    uint8_t sprite_;
+};
+
+class Snake : public Object {
+public:
+    Snake(uint8_t sprite, char const * name){
+        sprite_ = sprite;
+        (void) name;
+    }
+
+    virtual bool passable() override { return false; }
+
+    virtual void render(int cycle, int x, int y) override {
+        *DRAW_COLORS = 0x0234;
+        if(triggered_) render_(sprite_ + cycle % 2, x, y, 0);
+    }
+
+    virtual char const * getLabel() override {
+        return "Sea snake";
+    }
+
+    virtual void interact() {
+    }
+
+private:
+    uint8_t sprite_;
+};
+}
+
 } // namespace map

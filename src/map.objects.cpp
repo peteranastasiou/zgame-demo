@@ -76,4 +76,14 @@ void PickleMan::interact() {
     }
 }
 
+static Dialogue peterPropMsg1("TODO");
+static Dialogue peterPropMsg2("     ITEM GET!\n    *Ring");
+void PeterProp::interact() {
+    if( !triggered_ ){
+        gameloop::pushWindow(&peterPropMsg1);
+        gameloop::pushWindow(&peterPropMsg2);
+        gameloop::pushObjectToTrigger(this); // trigger self after displaying message
+    }
+}
+
 } // namespace map

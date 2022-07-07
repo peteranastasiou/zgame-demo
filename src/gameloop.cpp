@@ -37,7 +37,7 @@ public:
 
     // true means window is closing
     virtual bool update() override {
-        if( gameloop::wasPressed(BUTTON_1) ){
+        if( gameloop::wasPressed(BUTTON_2) ){
             gameStarted_ = true;
             return true;
         }
