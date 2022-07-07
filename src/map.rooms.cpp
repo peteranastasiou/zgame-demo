@@ -30,7 +30,6 @@ static void thomasBdayUpdate() {
 
 static void kiUpdate() {
     // TODO
-    ki_exit.setTriggered(true);
 }
 
 static void beachUpdate() {

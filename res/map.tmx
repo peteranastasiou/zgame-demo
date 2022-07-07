@@ -120,7 +120,6 @@
     <property name="constructor" value=""/>
    </properties>
   </object>
-  <object id="110" name="ki_exit" gid="101" x="400" y="160" width="16" height="16"/>
   <object id="112" name="Anne" gid="23" x="352" y="64" width="16" height="16">
    <properties>
     <property name="constructor" value="&amp;dialogue::anneMsg"/>
