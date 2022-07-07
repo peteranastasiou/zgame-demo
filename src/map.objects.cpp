@@ -107,13 +107,9 @@ void Alfie::interact() {
     }
 }
 
-static Dialogue exitMsg1("THE END?");
-static Dialogue exitMsg2("SCORE: 9999999\nMade with love by Peter!");
-static Dialogue exitMsg3("Happy Birthday :)");
+static Dialogue exitMsg1("THE END?\rSCORE: 9999999\nMade with love by Peter!\rHappy Birthday :)");
 void Exit::interact() {
     gameloop::pushWindow(&exitMsg1);
-    gameloop::pushWindow(&exitMsg2);
-    gameloop::pushWindow(&exitMsg3);
 }
 
 } // namespace map
