@@ -116,30 +116,32 @@ void update(){
     // Screen specific update function
     map::update(screenX, screenY, tick);
 
+    // overlay the screen name
+    *DRAW_COLORS = 0x0044;
+    rect(0, 0, SCREEN_SIZE, 16);
+    *DRAW_COLORS = 0x0041;
+    text(map::getRoomLabel(screenX, screenY), 3, 3);
+
     // Game state machine
     if( state == State::RUNNING ){
         // Manage player character
         hero.update(tick);
-        *DRAW_COLORS = 0x0044;
-        rect(0, 0, SCREEN_SIZE, 16);
-        *DRAW_COLORS = 0x0041;
-        text(map::getRoomLabel(screenX, screenY), 3, 3);
 
     }else if( state == State::WINDOW ){
         // Label the facing object
-        Dir dir = hero.getDir();
-        int facingTileX = hero.getX() + dirGetX(dir);
-        int facingTileY = hero.getY() + dirGetY(dir);
-        map::Object * obj = map::getObject(facingTileX, facingTileY);
+        // Dir dir = hero.getDir();
+        // int facingTileX = hero.getX() + dirGetX(dir);
+        // int facingTileY = hero.getY() + dirGetY(dir);
+        // map::Object * obj = map::getObject(facingTileX, facingTileY);
 
-        if( obj ){
-            *DRAW_COLORS = 0x0044;
-            rect(0, 0, SCREEN_SIZE, 16);
-            *DRAW_COLORS = 0x0041;
+        // if( obj ){
+        //     *DRAW_COLORS = 0x0044;
+        //     rect(0, 0, SCREEN_SIZE, 16);
+        //     *DRAW_COLORS = 0x0041;
             
-            text(obj->getLabel(), 3, 3);
-            // TODO centre ^^
-        }
+        //     text(obj->getLabel(), 3, 3);
+        //     // TODO centre ^^
+        // }
 
         // render the window
         currentWindow->render(tick);

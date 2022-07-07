@@ -65,7 +65,8 @@ private:
 
 class Npc : public Object {
 public:
-    Npc(uint8_t sprite, char const * name, Dialogue * dialogue){
+    Npc(uint8_t sprite, char const * name, Dialogue * dialogue): 
+        title_(name) {
         sprite_ = sprite;
         dialogue_ = dialogue;
         name_ = name;
@@ -84,6 +85,8 @@ public:
     }
 
     virtual void interact() override {
+        // underscore supresses name
+        if( name_[0] != '_' ) gameloop::pushWindow(&title_);
         gameloop::pushWindow(dialogue_);
         triggered_= true;
     }
@@ -92,11 +95,13 @@ private:
     uint8_t sprite_;
     char const * name_;
     Dialogue * dialogue_;
+    Dialogue title_;
 };
 
 class OneTimeNpc : public Object {
 public:
-    OneTimeNpc(uint8_t sprite, char const * name, Dialogue * dialogue){
+    OneTimeNpc(uint8_t sprite, char const * name, Dialogue * dialogue): 
+        title_(name) {
         sprite_ = sprite;
         dialogue_ = dialogue;
         name_ = name;
@@ -117,6 +122,7 @@ public:
 
     virtual void interact() override {
         if( !triggered_ ){
+            gameloop::pushWindow(&title_);
             gameloop::pushWindow(dialogue_);
             gameloop::pushObjectToTrigger(this); // trigger self after displaying message
         }
@@ -126,6 +132,7 @@ private:
     uint8_t sprite_;
     char const * name_;
     Dialogue * dialogue_;
+    Dialogue title_;
 };
 
 
@@ -191,6 +198,7 @@ public:
     virtual bool passable() override { return false; }
 
     virtual void render(int cycle, int x, int y) override {
+        (void) cycle;
         *DRAW_COLORS = 0x0234;
         render_(sprite_ + (int)triggered_, x, y, 0);
     }
@@ -223,12 +231,11 @@ public:
         return "Sea snake";
     }
 
-    virtual void interact() {
+    virtual void interact() override {
     }
 
 private:
     uint8_t sprite_;
 };
-}
 
 } // namespace map

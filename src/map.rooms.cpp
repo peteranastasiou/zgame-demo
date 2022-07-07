@@ -34,7 +34,7 @@ static void kiUpdate() {
 }
 
 static void beachUpdate() {
-    triggerOn(&peterProp, &snake);
+    triggerOn(&peterPropose, &snake);
 }
 
 void update(int sx, int sy, uint32_t tick) {
