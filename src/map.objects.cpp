@@ -1,5 +1,6 @@
 
 #include "map.objects.hpp"
+#include "inventory.hpp"
 
 namespace map {
 
@@ -36,7 +37,10 @@ void Phone::render(int cycle, int x, int y) {
 }
 
 void Phone::interact() {
-    if( !triggered_) gameloop::pushWindow(&phoneMsg1);
+    if( !triggered_){
+        gameloop::pushWindow(&phoneMsg1);
+        inventory::invite = true;
+    }
     gameloop::pushWindow(&phoneMsg2);
 
     triggered_= true;
@@ -60,6 +64,9 @@ public:
             default: return nullptr;
         }
     }
+    virtual char const * getTitle() override {
+        return "Guess a number:";
+    }
 
     virtual bool selected(int idx) override {
         (void) idx;
@@ -82,6 +89,7 @@ void PeterProp::interact() {
     if( !triggered_ ){
         gameloop::pushWindow(&peterPropMsg1);
         gameloop::pushWindow(&peterPropMsg2);
+        inventory::ring = true;
         gameloop::pushObjectToTrigger(this); // trigger self after displaying message
     }
 }
@@ -92,6 +100,7 @@ void PeterParty::interact() {
         gameloop::pushWindow(&title_);
         gameloop::pushWindow(dialogue_);
         gameloop::pushWindow(&peterItemMsg);
+        inventory::date = true;
         gameloop::pushObjectToTrigger(this); // trigger self after displaying message
     }
 }
@@ -100,10 +109,12 @@ static Dialogue alfieMsg("Alfie");
 static Dialogue alfieMsg1("Woof!\nHappy Birthday!\nI love you mum!");
 static Dialogue alfieMsg2("     ITEM GET!\n*Unconditional Love");
 void Alfie::interact() {
+    gameloop::pushWindow(&alfieMsg);
+    gameloop::pushWindow(&alfieMsg1);
     if( !triggered_ ){
-        gameloop::pushWindow(&alfieMsg);
-        gameloop::pushWindow(&alfieMsg1);
         gameloop::pushWindow(&alfieMsg2);
+        triggered_=true;
+        inventory::love = true;
     }
 }
 
@@ -112,15 +123,67 @@ void Exit::interact() {
     gameloop::pushWindow(&exitMsg1);
 }
 
-static Dialogue trunkMsg("     ITEM GET!\n*Unforgettable Memory");
+static Dialogue trunkMsg("     ITEM GET!\n*Wedding Photo");
 void Trunk::interact() {
-    gameloop::pushWindow(&trunkMsg);
+    if(!triggered_){
+        gameloop::pushWindow(&trunkMsg);
+        triggered_= true;
+        inventory::photo = true;
+    }
 }
 
 static Dialogue pickleJarMsg("     ITEM GET!\n       *Pickle");
 void Pickle::interact() {
     if( !triggered_ ){
         gameloop::pushWindow(&pickleJarMsg);
+        triggered_= true;
+        inventory::pickle = true;
     }
 }
+
+static Dialogue lambyMsg("     ITEM GET!\n       *Lamby");
+void Lamby::interact() {
+    if( !triggered_ ){
+        gameloop::pushWindow(&lambyMsg);
+        triggered_= true;
+        inventory::lamby = true;
+    }
+}
+
+static Dialogue batWingMsg("     ITEM GET!\n       *Bat Wing");
+void BatWing::interact() {
+    if( !triggered_ ){
+        inventory::batWing = true;
+        gameloop::pushWindow(&batWingMsg);
+        triggered_= true;
+    }
+}
+
+static Dialogue charadesMsg("     ITEM GET!\n *Charades Prompt");
+void Charades::interact() {
+    if( !triggered_ ){
+        gameloop::pushWindow(&charadesMsg);
+        triggered_= true;
+        inventory::charades = true;
+    }
+}
+
+static Dialogue tentMsg("     ITEM GET!\n       *Tent Peg");
+void Tent::interact() {
+    if( !triggered_ ){
+        gameloop::pushWindow(&tentMsg);
+        triggered_= true;
+        inventory::tent = true;
+    }
+}
+
+static Dialogue catanMsg("     ITEM GET!\n       *Catan");
+void Catan::interact() {
+    if( !triggered_ ){
+        inventory::catan = true;
+        gameloop::pushWindow(&catanMsg);
+        triggered_= true;
+    }
+}
+
 } // namespace map

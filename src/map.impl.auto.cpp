@@ -22,7 +22,6 @@ CampFire campFire(58, "campFire");
 PickleMan _pickleMan(20, "_pickleMan");
 Npc peter__(16, "Peter__", &dialogue::peterWedding);
 PeterProp peterPropose(62, "PeterPropose");
-Door ki_exit(100, "ki_exit");
 Npc anne(22, "Anne", &dialogue::anneMsg);
 Npc roger(21, "Roger", &dialogue::rogerMsg);
 Npc kim(96, "Kim", &dialogue::kimMsg);
@@ -43,8 +42,13 @@ Npc grahamandBarb(19, "Graham and Barb", &dialogue::grahamMsg);
 Npc leanneandNeil(22, "Leanne and Neil", &dialogue::leanne);
 Trunk trunk(94, "Trunk");
 Pickle pickle(76, "pickle");
-Npc batRichard(113, "BatRichard", &dialogue::batRichard);
-Npc batKim(114, "BatKim", &dialogue::batKim);
+Npc batRichard(113, "Bat Richard", &dialogue::batRichard);
+Npc batKim(114, "Bat Kim", &dialogue::batKim);
+BatWing batWing(107, "BatWing");
+Lamby lamby(34, "Lamby");
+Catan catan(34, "Catan");
+Tent tent(110, "Tent");
+Charades charades(120, "Charades");
 
 // Run-time expanded array of objects
 // Not done at compile time to save ROM
@@ -70,7 +74,6 @@ void initObjects() {
     OBJECTS[13 + MAP_WIDTH*6] = &_pickleMan;
     OBJECTS[15 + MAP_WIDTH*23] = &peter__;
     OBJECTS[22 + MAP_WIDTH*24] = &peterPropose;
-    OBJECTS[25 + MAP_WIDTH*9] = &ki_exit;
     OBJECTS[22 + MAP_WIDTH*3] = &anne;
     OBJECTS[23 + MAP_WIDTH*3] = &roger;
     OBJECTS[21 + MAP_WIDTH*6] = &kim;
@@ -93,6 +96,11 @@ void initObjects() {
     OBJECTS[16 + MAP_WIDTH*3] = &pickle;
     OBJECTS[33 + MAP_WIDTH*13] = &batRichard;
     OBJECTS[36 + MAP_WIDTH*13] = &batKim;
+    OBJECTS[36 + MAP_WIDTH*17] = &batWing;
+    OBJECTS[8 + MAP_WIDTH*28] = &lamby;
+    OBJECTS[18 + MAP_WIDTH*16] = &catan;
+    OBJECTS[22 + MAP_WIDTH*14] = &tent;
+    OBJECTS[21 + MAP_WIDTH*8] = &charades;
 }
 
 } // namespace map

@@ -12,11 +12,13 @@ public:
     Menu() {
         selectedIdx_ = 0;
         numItems_= 0;
+        firstIdx_ = 0;
         screenLines_= 0;
     }
 
     virtual void reset() override {
         selectedIdx_ = 0;
+        firstIdx_ = 0;
         numItems_= 0;
         for( int i= 0; getLabel(i) != nullptr; ++i ){
             numItems_++;
@@ -69,6 +71,9 @@ public:
         *DRAW_COLORS = 0x0014;
         rect(5, textY_ - 6, SCREEN_SIZE - 10, (txt::TEXT_HEIGHT+1) * (screenLines_+1) - 1);
 
+        *DRAW_COLORS = 0x0041;
+        text(getTitle(), 2, 2);
+
         // text options
         for( int i= 0; i < screenLines_; ++i ){
             int itemIdx = firstIdx_ + i;
@@ -87,6 +92,8 @@ public:
 
     // Implement to define menu item strings
     virtual char const * getLabel(int idx)= 0;
+
+    virtual char const * getTitle()= 0;
 
     // Implement to define functionality on selection:
     // return true means to close the window

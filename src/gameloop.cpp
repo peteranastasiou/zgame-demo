@@ -9,6 +9,7 @@
 #include "map.rooms.hpp"
 #include "str.hpp"
 #include "queue.hpp"
+#include "inventory.hpp"
 
 namespace gameloop {
 
@@ -128,6 +129,10 @@ void update(){
 
         // Manage player character
         hero.update(tick);
+
+        if( wasPressed(BUTTON_1) ){
+            inventory::show();
+        }
 
     }else if( state == State::WINDOW ){
         // Label the facing object

@@ -45,7 +45,7 @@ uint8_t const TILES[] = {
  82,  80,  80, 100,  80,  80,  80,  80,  80,  83,  54,  54,  54,  54,  54,  54,  54,  54,  54,  54, 129, 129, 129, 129, 129, 129, 129, 129, 129, 129,  34, 145, 145, 145, 145, 145, 145, 145, 145, 145, 
 };
 
-uint8_t const NUM_OBJECTS = 39;
+uint8_t const NUM_OBJECTS = 43;
 
 extern Npc bec;
 extern Npc warren;
@@ -63,7 +63,6 @@ extern CampFire campFire;
 extern PickleMan _pickleMan;
 extern Npc peter__;
 extern PeterProp peterPropose;
-extern Door ki_exit;
 extern Npc anne;
 extern Npc roger;
 extern Npc kim;
@@ -86,6 +85,11 @@ extern Trunk trunk;
 extern Pickle pickle;
 extern Npc batRichard;
 extern Npc batKim;
+extern BatWing batWing;
+extern Lamby lamby;
+extern Catan catan;
+extern Tent tent;
+extern Charades charades;
 
 extern Object ** OBJECTS;
 
