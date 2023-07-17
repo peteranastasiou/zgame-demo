@@ -5,53 +5,53 @@
 
 namespace dialogue {
 
-Dialogue peterBday("Sample Text");
+Dialogue peterBday("Happy Birthday");
 
 Dialogue batKim("Happy Batday Zoe!");
 Dialogue batRichard("Come be a bat with us!");
 
-Dialogue peterJervois("Sample Text");
+Dialogue peterJervois("Happy Birthday");
 
-Dialogue suthanMsg("Sample Text");
+Dialogue suthanMsg("Happy Birthday");
 
-Dialogue sophieMsg("Sample Text");
+Dialogue sophieMsg("Happy Birthday");
 
-Dialogue renMsg("Sample Text");
+Dialogue renMsg("Happy Birthday");
 
-Dialogue grahamMsg("Sample Text");
+Dialogue grahamMsg("Happy Birthday");
 
-Dialogue leanne("Sample Text");
+Dialogue leanne("Happy Birthday");
 
-Dialogue kateMsg("Sample Text");
+Dialogue kateMsg("Happy Birthday");
 
 Dialogue evieMsg("Happy Birthday Zoe!");
 
-Dialogue peterWedding("Sample Text");
+Dialogue peterWedding("Happy Birthday");
 
-Dialogue jacintaMsg("Sample Text");
+Dialogue jacintaMsg("Happy Birthday");
 
-Dialogue becRMsg("Sample Text");
+Dialogue becRMsg("Happy Birthday");
 
-Dialogue kimMsg("Sample Text");
+Dialogue kimMsg("Happy Birthday");
 
-Dialogue richardMsg("Sample Text");
+Dialogue richardMsg("Happy Birthday");
 
-Dialogue kathrynMsg("Sample Text");
+Dialogue kathrynMsg("Happy Birthday");
 
-Dialogue megFMsg("Sample Text");
+Dialogue megFMsg("Happy Birthday");
 
-Dialogue thomasMsg("Sample Text");
+Dialogue thomasMsg("Happy Birthday");
 
-Dialogue georgeMsg("Sample Text");
+Dialogue georgeMsg("Happy Birthday");
 
-Dialogue anneMsg("Sample Text");
+Dialogue anneMsg("Happy Birthday");
 
-Dialogue rogerMsg("Sample Text");
+Dialogue rogerMsg("Happy Birthday");
 
-Dialogue barbaraMsg("Sample Text");
+Dialogue barbaraMsg("Happy Birthday");
 
-Dialogue warrenMsg("Sample Text");
+Dialogue warrenMsg("Happy Birthday");
 
-Dialogue bekMsg("Sample Text");
+Dialogue bekMsg("Happy Birthday");
 
 }
