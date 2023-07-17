@@ -62,7 +62,7 @@ public:
 };
 static Title title;
 
-Hero hero(17,17);//(22, 6);//(7, 27);
+Hero hero(7, 27);
 
 static State state= State::RUNNING;
 static uint32_t tick= 0;

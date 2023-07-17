@@ -86,7 +86,7 @@ void PeterProp::interact() {
     }
 }
 
-static Dialogue peterItemMsg("     ITEM GET!\n       *Item");
+static Dialogue peterItemMsg("     ITEM GET!\n       *Date");
 void PeterParty::interact() {
     if( !triggered_ ){
         gameloop::pushWindow(&title_);
@@ -117,4 +117,10 @@ void Trunk::interact() {
     gameloop::pushWindow(&trunkMsg);
 }
 
+static Dialogue pickleJarMsg("     ITEM GET!\n       *Pickle");
+void Pickle::interact() {
+    if( !triggered_ ){
+        gameloop::pushWindow(&pickleJarMsg);
+    }
+}
 } // namespace map

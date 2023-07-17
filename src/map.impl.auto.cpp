@@ -42,6 +42,9 @@ Npc ren(22, "Ren", &dialogue::renMsg);
 Npc grahamandBarb(19, "Graham and Barb", &dialogue::grahamMsg);
 Npc leanneandNeil(22, "Leanne and Neil", &dialogue::leanne);
 Trunk trunk(94, "Trunk");
+Pickle pickle(76, "pickle");
+Npc batRichard(113, "BatRichard", &dialogue::batRichard);
+Npc batKim(114, "BatKim", &dialogue::batKim);
 
 // Run-time expanded array of objects
 // Not done at compile time to save ROM
@@ -64,7 +67,7 @@ void initObjects() {
     OBJECTS[17 + MAP_WIDTH*5] = &pickleDoor;
     OBJECTS[13 + MAP_WIDTH*13] = &peter_;
     OBJECTS[25 + MAP_WIDTH*15] = &campFire;
-    OBJECTS[15 + MAP_WIDTH*3] = &_pickleMan;
+    OBJECTS[13 + MAP_WIDTH*6] = &_pickleMan;
     OBJECTS[15 + MAP_WIDTH*23] = &peter__;
     OBJECTS[22 + MAP_WIDTH*24] = &peterPropose;
     OBJECTS[25 + MAP_WIDTH*9] = &ki_exit;
@@ -87,6 +90,9 @@ void initObjects() {
     OBJECTS[14 + MAP_WIDTH*27] = &grahamandBarb;
     OBJECTS[16 + MAP_WIDTH*27] = &leanneandNeil;
     OBJECTS[14 + MAP_WIDTH*22] = &trunk;
+    OBJECTS[16 + MAP_WIDTH*3] = &pickle;
+    OBJECTS[33 + MAP_WIDTH*13] = &batRichard;
+    OBJECTS[36 + MAP_WIDTH*13] = &batKim;
 }
 
 } // namespace map

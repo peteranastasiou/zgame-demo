@@ -305,4 +305,29 @@ private:
     uint8_t sprite_;
 };
 
+class Pickle : public Object {
+public:
+    Pickle(uint8_t sprite, char const * name){
+        sprite_ = sprite;
+        (void) name;
+    }
+
+    virtual bool passable() override { return false; }
+
+    virtual void render(int cycle, int x, int y) override {
+        (void)cycle;
+        *DRAW_COLORS = 0x0234;
+        render_(sprite_, x, y, 0);
+    }
+
+    virtual char const * getLabel() override {
+        return "";
+    }
+
+    virtual void interact() override;
+
+private:
+    uint8_t sprite_;
+};
+
 } // namespace map

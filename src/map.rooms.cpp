@@ -65,7 +65,7 @@ char const * getRoomLabel(int sx, int sy){
     //                 "--------------------"
     switch( roomIdx ){
         case 0: return "   Thomas' Party";
-        case 1: return "        USA";
+        case 1: return "Sandwich store, USA";
         case 2: return "  Kangaroo Island";
         case 3: return "-";
         case 4: return "     Blackwood";

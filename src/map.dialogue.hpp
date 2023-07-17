@@ -7,6 +7,9 @@ namespace dialogue {
 
 Dialogue peterBday("Sample Text");
 
+Dialogue batKim("Happy Batday Zoe!");
+Dialogue batRichard("Come be a bat with us!");
+
 Dialogue peterJervois("Sample Text");
 
 Dialogue suthanMsg("Sample Text");
