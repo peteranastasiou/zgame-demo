@@ -13,7 +13,15 @@ Dialogue suthanMsg("Sample Text");
 
 Dialogue sophieMsg("Sample Text");
 
+Dialogue renMsg("Sample Text");
+
+Dialogue grahamMsg("Sample Text");
+
+Dialogue leanne("Sample Text");
+
 Dialogue kateMsg("Sample Text");
+
+Dialogue evieMsg("Happy Birthday Zoe!");
 
 Dialogue peterWedding("Sample Text");
 

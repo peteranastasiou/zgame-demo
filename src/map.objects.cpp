@@ -112,4 +112,9 @@ void Exit::interact() {
     gameloop::pushWindow(&exitMsg1);
 }
 
+static Dialogue trunkMsg("     ITEM GET!\n*Unforgettable Memory");
+void Trunk::interact() {
+    gameloop::pushWindow(&trunkMsg);
+}
+
 } // namespace map

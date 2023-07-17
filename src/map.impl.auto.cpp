@@ -34,6 +34,14 @@ Npc george(36, "George", &dialogue::georgeMsg);
 Snake snake(108, "snake");
 Exit exit(68, "exit");
 Alfie alfie(118, "Alfie");
+Npc evie(98, "Evie", &dialogue::evieMsg);
+Npc sophie(97, "Sophie", &dialogue::sophieMsg);
+Npc kate(18, "Kate", &dialogue::kateMsg);
+Npc suthan(21, "Suthan", &dialogue::suthanMsg);
+Npc ren(22, "Ren", &dialogue::renMsg);
+Npc grahamandBarb(19, "Graham and Barb", &dialogue::grahamMsg);
+Npc leanneandNeil(22, "Leanne and Neil", &dialogue::leanne);
+Trunk trunk(94, "Trunk");
 
 // Run-time expanded array of objects
 // Not done at compile time to save ROM
@@ -71,6 +79,14 @@ void initObjects() {
     OBJECTS[20 + MAP_WIDTH*25] = &snake;
     OBJECTS[14 + MAP_WIDTH*11] = &exit;
     OBJECTS[16 + MAP_WIDTH*12] = &alfie;
+    OBJECTS[13 + MAP_WIDTH*25] = &evie;
+    OBJECTS[14 + MAP_WIDTH*25] = &sophie;
+    OBJECTS[12 + MAP_WIDTH*25] = &kate;
+    OBJECTS[16 + MAP_WIDTH*25] = &suthan;
+    OBJECTS[17 + MAP_WIDTH*25] = &ren;
+    OBJECTS[14 + MAP_WIDTH*27] = &grahamandBarb;
+    OBJECTS[16 + MAP_WIDTH*27] = &leanneandNeil;
+    OBJECTS[14 + MAP_WIDTH*22] = &trunk;
 }
 
 } // namespace map

@@ -255,6 +255,31 @@ private:
     uint8_t sprite_;
 };
 
+class Trunk : public Object {
+public:
+    Trunk(uint8_t sprite, char const * name){
+        sprite_ = sprite;
+        (void) name;
+    }
+
+    virtual bool passable() override { return false; }
+
+    virtual void render(int cycle, int x, int y) override {
+        (void) cycle;
+        *DRAW_COLORS = 0x0234;
+        render_(sprite_, x, y, 0);
+    }
+
+    virtual char const * getLabel() override {
+        return "Trunk";
+    }
+
+    virtual void interact() override;
+
+private:
+    uint8_t sprite_;
+};
+
 class Exit : public Object {
 public:
     Exit(uint8_t sprite, char const * name){
