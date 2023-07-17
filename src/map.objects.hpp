@@ -6,6 +6,7 @@
 #include "gameloop.hpp"
 #include "window.dialogue.hpp"
 #include "window.menu.hpp"
+#include "inventory.hpp"
 
 namespace map {
 
@@ -362,7 +363,7 @@ public:
         (void) name;
     }
 
-    virtual bool passable() override { return false; }
+    virtual bool passable() override { return triggered_; }
 
     virtual void render(int cycle, int x, int y) override {
         (void)cycle;
@@ -404,7 +405,6 @@ private:
 };
 
 
-
 class Tent : public Object {
 public:
     Tent(uint8_t sprite, char const * name){
@@ -442,6 +442,78 @@ public:
         (void)cycle;
         *DRAW_COLORS = 0x0234;
         render_(sprite_, x, y, 0);
+    }
+
+    virtual char const * getLabel() override {
+        return "";
+    }
+
+    virtual void interact() override;
+private:
+    uint8_t sprite_;
+};
+
+class Portal : public Object {
+public:
+    Portal(uint8_t sprite, char const * name){
+        sprite_ = sprite;
+        (void) name;
+    }
+
+    virtual bool passable() override { return inventory::love; }
+
+    virtual void render(int cycle, int x, int y) override {
+        (void)cycle;
+        *DRAW_COLORS = 0x0234;
+        render_(sprite_, x, y, 0);
+    }
+
+    virtual char const * getLabel() override {
+        return "";
+    }
+
+    virtual void interact() override {};
+private:
+    uint8_t sprite_;
+};
+
+class Cereal : public Object {
+public:
+    Cereal(uint8_t sprite, char const * name){
+        sprite_ = sprite;
+        (void) name;
+    }
+
+    virtual bool passable() override { return false; }
+
+    virtual void render(int cycle, int x, int y) override {
+        (void)cycle;
+        *DRAW_COLORS = 0x0234;
+        render_(sprite_, x, y, 0);
+    }
+
+    virtual char const * getLabel() override {
+        return "";
+    }
+
+    virtual void interact() override;
+private:
+    uint8_t sprite_;
+};
+
+class Self : public Object {
+public:
+    Self(uint8_t sprite, char const * name){
+        sprite_ = sprite;
+        (void) name;
+    }
+
+    virtual bool passable() override { return false; }
+
+    virtual void render(int cycle, int x, int y) override {
+        (void)cycle;
+        (void) x;
+        (void) y;
     }
 
     virtual char const * getLabel() override {

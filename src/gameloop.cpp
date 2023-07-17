@@ -27,9 +27,6 @@ struct Event {
     void * object;  // Window or map::Object
 };
 
-// hack!
-static bool gameStarted_ = false;
-
 class Title : public Window {
 public:
     Title() {}
@@ -39,7 +36,6 @@ public:
     // true means window is closing
     virtual bool update() override {
         if( gameloop::wasPressed(BUTTON_2) ){
-            gameStarted_ = true;
             return true;
         }
         return false;

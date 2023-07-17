@@ -69,14 +69,16 @@ public:
     void appendUint8(uint8_t n, char pad=0)
     {
         // hundreds:
+        bool h = false; // whether there is a digit in hundreds position
         if( n >= 100 ){
             append('0' + char(n / 100));
+            h = true;
             n = n % 100;
         }else if(pad){
             append(pad);
         }
         // tens:
-        if( n >= 10 ){
+        if( n >= 10 || h ){
             append('0' + char(n / 10));
             n = n % 10;
         }else if(pad){

@@ -2,10 +2,12 @@
 
 
 namespace inventory {
-extern bool lamby, invite, date, pickle,
+extern bool lamby, invite, cereal, date, pickle,
     batWing, ring, photo, love,
-    charades, tent, catan;
+    charades, tent, catan, self;
 
+void showScore();
 
 void show();
+
 };

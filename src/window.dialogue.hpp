@@ -19,6 +19,7 @@ private:
     uint16_t textY_;  // position to display text to be centred vertically
     int16_t charIdx_; // for animation
 
+protected:
     void setMessage(char const * msg) {
         msgPtr_ = msg;
         charIdx_ = 0;

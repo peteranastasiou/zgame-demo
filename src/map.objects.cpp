@@ -111,16 +111,19 @@ static Dialogue alfieMsg2("     ITEM GET!\n*Unconditional Love");
 void Alfie::interact() {
     gameloop::pushWindow(&alfieMsg);
     gameloop::pushWindow(&alfieMsg1);
-    if( !triggered_ ){
+    if( !inventory::love ){
         gameloop::pushWindow(&alfieMsg2);
         triggered_=true;
         inventory::love = true;
     }
 }
 
-static Dialogue exitMsg1("THE END?\rSCORE: 9999999\nMade with love by Peter!\rHappy Birthday :)");
+static Dialogue exitMsg1("THE END?");
+static Dialogue exitMsg2("Made with love by Peter!\rHappy Birthday :)");
 void Exit::interact() {
     gameloop::pushWindow(&exitMsg1);
+    inventory::showScore();
+    gameloop::pushWindow(&exitMsg2);
 }
 
 static Dialogue trunkMsg("     ITEM GET!\n*Wedding Photo");
@@ -177,11 +180,29 @@ void Tent::interact() {
     }
 }
 
-static Dialogue catanMsg("     ITEM GET!\n       *Catan");
+static Dialogue catanMsg("     ITEM GET!\n     *Catan");
 void Catan::interact() {
     if( !triggered_ ){
         inventory::catan = true;
         gameloop::pushWindow(&catanMsg);
+        triggered_= true;
+    }
+}
+
+static Dialogue cerealMsg("     ITEM GET!\n   *Cereal Bowl");
+void Cereal::interact() {
+    if( !triggered_ ){
+        inventory::cereal = true;
+        gameloop::pushWindow(&cerealMsg);
+        triggered_= true;
+    }
+}
+
+static Dialogue selfMsg("  SECRET ITEM GET!\n     *Self");
+void Self::interact() {
+    if( !triggered_ ){
+        inventory::self = true;
+        gameloop::pushWindow(&selfMsg);
         triggered_= true;
     }
 }

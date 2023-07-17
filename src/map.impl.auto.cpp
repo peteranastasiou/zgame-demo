@@ -49,6 +49,15 @@ Lamby lamby(34, "Lamby");
 Catan catan(34, "Catan");
 Tent tent(110, "Tent");
 Charades charades(120, "Charades");
+Alfie aflie(118, "Aflie");
+Alfie affie(118, "Affie");
+Alfie alfee(118, "Alfee");
+Alfie al(118, "Al");
+Portal fakePicture(49, "fakePicture");
+Portal fakeTree(54, "fakeTree");
+Portal fakeDoor(84, "fakeDoor");
+Cereal cerealbowl(145, "cereal bowl");
+Self self(34, "self");
 
 // Run-time expanded array of objects
 // Not done at compile time to save ROM
@@ -95,12 +104,21 @@ void initObjects() {
     OBJECTS[14 + MAP_WIDTH*22] = &trunk;
     OBJECTS[16 + MAP_WIDTH*3] = &pickle;
     OBJECTS[33 + MAP_WIDTH*13] = &batRichard;
-    OBJECTS[36 + MAP_WIDTH*13] = &batKim;
+    OBJECTS[35 + MAP_WIDTH*13] = &batKim;
     OBJECTS[36 + MAP_WIDTH*17] = &batWing;
     OBJECTS[8 + MAP_WIDTH*28] = &lamby;
     OBJECTS[18 + MAP_WIDTH*16] = &catan;
     OBJECTS[22 + MAP_WIDTH*14] = &tent;
     OBJECTS[21 + MAP_WIDTH*8] = &charades;
+    OBJECTS[31 + MAP_WIDTH*22] = &aflie;
+    OBJECTS[34 + MAP_WIDTH*25] = &affie;
+    OBJECTS[35 + MAP_WIDTH*21] = &alfee;
+    OBJECTS[37 + MAP_WIDTH*28] = &al;
+    OBJECTS[10 + MAP_WIDTH*14] = &fakePicture;
+    OBJECTS[20 + MAP_WIDTH*14] = &fakeTree;
+    OBJECTS[19 + MAP_WIDTH*14] = &fakeDoor;
+    OBJECTS[8 + MAP_WIDTH*17] = &cerealbowl;
+    OBJECTS[37 + MAP_WIDTH*6] = &self;
 }
 
 } // namespace map
