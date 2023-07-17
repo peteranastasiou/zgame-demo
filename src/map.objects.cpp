@@ -76,14 +76,44 @@ void PickleMan::interact() {
     }
 }
 
-static Dialogue peterPropMsg1("TODO");
-static Dialogue peterPropMsg2("     ITEM GET!\n    *Ring");
+static Dialogue peterPropMsg1("Zoe, will you marry me?");
+static Dialogue peterPropMsg2("     ITEM GET!\n       *Ring");
 void PeterProp::interact() {
     if( !triggered_ ){
         gameloop::pushWindow(&peterPropMsg1);
         gameloop::pushWindow(&peterPropMsg2);
         gameloop::pushObjectToTrigger(this); // trigger self after displaying message
     }
+}
+
+static Dialogue peterItemMsg("     ITEM GET!\n       *Item");
+void PeterParty::interact() {
+    if( !triggered_ ){
+        gameloop::pushWindow(&title_);
+        gameloop::pushWindow(dialogue_);
+        gameloop::pushWindow(&peterItemMsg);
+        gameloop::pushObjectToTrigger(this); // trigger self after displaying message
+    }
+}
+
+static Dialogue alfieMsg("Alfie");
+static Dialogue alfieMsg1("Woof!\nHappy Birthday!\nI love you mum!");
+static Dialogue alfieMsg2("     ITEM GET!\n*Unconditional Love");
+void Alfie::interact() {
+    if( !triggered_ ){
+        gameloop::pushWindow(&alfieMsg);
+        gameloop::pushWindow(&alfieMsg1);
+        gameloop::pushWindow(&alfieMsg2);
+    }
+}
+
+static Dialogue exitMsg1("THE END?");
+static Dialogue exitMsg2("SCORE: 9999999\nMade with love by Peter!");
+static Dialogue exitMsg3("Happy Birthday :)");
+void Exit::interact() {
+    gameloop::pushWindow(&exitMsg1);
+    gameloop::pushWindow(&exitMsg2);
+    gameloop::pushWindow(&exitMsg3);
 }
 
 } // namespace map

@@ -98,9 +98,9 @@ private:
     Dialogue title_;
 };
 
-class OneTimeNpc : public Object {
+class PeterParty : public Object {
 public:
-    OneTimeNpc(uint8_t sprite, char const * name, Dialogue * dialogue): 
+    PeterParty(uint8_t sprite, char const * name, Dialogue * dialogue): 
         title_(name) {
         sprite_ = sprite;
         dialogue_ = dialogue;
@@ -120,14 +120,7 @@ public:
         return name_;
     }
 
-    virtual void interact() override {
-        if( !triggered_ ){
-            gameloop::pushWindow(&title_);
-            gameloop::pushWindow(dialogue_);
-            gameloop::pushObjectToTrigger(this); // trigger self after displaying message
-        }
-    }
-
+    virtual void interact() override;
 private:
     uint8_t sprite_;
     char const * name_;
@@ -224,7 +217,7 @@ public:
 
     virtual void render(int cycle, int x, int y) override {
         *DRAW_COLORS = 0x0234;
-        if(triggered_) render_(sprite_ + cycle % 2, x, y, 0);
+        if(triggered_) render_(sprite_ + (cycle/2) % 2, x, y, 0);
     }
 
     virtual char const * getLabel() override {
@@ -233,6 +226,55 @@ public:
 
     virtual void interact() override {
     }
+
+private:
+    uint8_t sprite_;
+};
+
+class Alfie : public Object {
+public:
+    Alfie(uint8_t sprite, char const * name){
+        sprite_ = sprite;
+        (void) name;
+    }
+
+    virtual bool passable() override { return false; }
+
+    virtual void render(int cycle, int x, int y) override {
+        *DRAW_COLORS = 0x0234;
+        render_(sprite_ + (cycle/2) % 2, x, y, 0);
+    }
+
+    virtual char const * getLabel() override {
+        return "Alfie";
+    }
+
+    virtual void interact() override;
+
+private:
+    uint8_t sprite_;
+};
+
+class Exit : public Object {
+public:
+    Exit(uint8_t sprite, char const * name){
+        sprite_ = sprite;
+        (void) name;
+    }
+
+    virtual bool passable() override { return false; }
+
+    virtual void render(int cycle, int x, int y) override {
+        (void)cycle;
+        *DRAW_COLORS = 0x0234;
+        render_(sprite_, x, y, 0);
+    }
+
+    virtual char const * getLabel() override {
+        return "Exit";
+    }
+
+    virtual void interact() override;
 
 private:
     uint8_t sprite_;

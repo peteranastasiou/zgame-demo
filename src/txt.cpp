@@ -25,6 +25,8 @@ int16_t reflow(int16_t &numChars, char const * msg, int y, int maxLen, int maxLi
         // next character
         char c = msg[strIdx];
 
+        if( c == '_') c = ' '; // hack!
+
         if( c == '\0' || strIdx == maxLen || numLines == maxLines ) {
             // end of string
             // display remaining text in buffer

@@ -5,34 +5,42 @@
 
 namespace dialogue {
 
-Dialogue test("Hello this is a test");
+Dialogue peterBday("Sample Text");
 
-Dialogue becRMsg(
-"Dearest Zoe, happy 30th birthday to you!\n"
-);
+Dialogue peterJervois("Sample Text");
 
-Dialogue richardMsg(
-);
+Dialogue suthanMsg("Sample Text");
 
-Dialogue kathrynMsg(
-);
+Dialogue sophieMsg("Sample Text");
 
-Dialogue megFMsg(
-);
+Dialogue kateMsg("Sample Text");
 
-Dialogue thomasMsg(
-);
+Dialogue peterWedding("Sample Text");
 
-Dialogue anneMsg(
-);
+Dialogue jacintaMsg("Sample Text");
 
-Dialogue rogerMsg(
-);
+Dialogue becRMsg("Sample Text");
 
-Dialogue barbaraMsg(
-);
+Dialogue kimMsg("Sample Text");
 
-Dialogue warrenMsg(
-);
+Dialogue richardMsg("Sample Text");
+
+Dialogue kathrynMsg("Sample Text");
+
+Dialogue megFMsg("Sample Text");
+
+Dialogue thomasMsg("Sample Text");
+
+Dialogue georgeMsg("Sample Text");
+
+Dialogue anneMsg("Sample Text");
+
+Dialogue rogerMsg("Sample Text");
+
+Dialogue barbaraMsg("Sample Text");
+
+Dialogue warrenMsg("Sample Text");
+
+Dialogue bekMsg("Sample Text");
 
 }

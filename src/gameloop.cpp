@@ -62,7 +62,7 @@ public:
 };
 static Title title;
 
-Hero hero(7, 27);
+Hero hero(17,17);//(22, 6);//(7, 27);
 
 static State state= State::RUNNING;
 static uint32_t tick= 0;
@@ -116,14 +116,16 @@ void update(){
     // Screen specific update function
     map::update(screenX, screenY, tick);
 
-    // overlay the screen name
+    // top banner
     *DRAW_COLORS = 0x0044;
     rect(0, 0, SCREEN_SIZE, 16);
-    *DRAW_COLORS = 0x0041;
-    text(map::getRoomLabel(screenX, screenY), 3, 3);
 
     // Game state machine
     if( state == State::RUNNING ){
+        // room label
+        *DRAW_COLORS = 0x0041;
+        text(map::getRoomLabel(screenX, screenY), 3, 3);
+
         // Manage player character
         hero.update(tick);
 

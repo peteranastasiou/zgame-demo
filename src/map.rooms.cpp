@@ -17,7 +17,7 @@ static void triggerOn(Object * o1, Object * o2) {
 }
 
 static void usaUpdate() {
-    triggerOn(&pickleMan, &pickleDoor);
+    triggerOn(&_pickleMan, &pickleDoor);
 }
 
 static void ashbyUpdate() {
@@ -25,7 +25,7 @@ static void ashbyUpdate() {
 }
 
 static void thomasBdayUpdate() {
-    triggerOn(&peterBday, &backyardTree);
+    triggerOn(&peter, &backyardTree);
 }
 
 static void kiUpdate() {
@@ -73,8 +73,8 @@ char const * getRoomLabel(int sx, int sy){
         case 6: return "      Camping";
         case 7: return "-";
         case 8: return "  10 Ashby Avenue";
-        case 9: return "   Kuitpo Forest";
-        case 10: return "   Amidee Island";
+        case 9: return "   Burbrook Forest";
+        case 10: return "   Amedee Island";
         default: return "???";
     }
 }

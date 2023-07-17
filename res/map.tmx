@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="126">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="40" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="129">
  <editorsettings>
   <export target="map.json" format="json"/>
  </editorsettings>
@@ -11,19 +11,19 @@
   <data encoding="csv">
 53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,183,183,183,183,183,183,183,183,183,183,
 55,55,55,55,55,55,55,55,55,55,53,53,53,53,53,53,53,53,53,53,67,65,65,65,65,65,65,65,65,68,151,152,153,154,155,156,157,158,159,160,
-55,146,146,146,146,146,146,146,146,55,53,53,67,65,65,65,65,68,53,53,66,146,146,146,146,146,146,146,146,82,167,168,169,170,171,172,173,174,175,176,
-55,146,146,146,146,146,146,146,146,146,146,146,181,146,146,146,77,82,53,53,66,146,146,146,146,146,43,44,45,82,183,184,185,186,187,188,189,190,191,192,
-67,65,49,65,65,133,65,49,65,68,53,53,66,146,146,146,93,82,53,53,66,146,146,146,106,146,146,146,146,82,199,200,201,202,203,204,205,206,207,208,
+55,35,21,36,146,146,146,146,146,55,53,53,67,65,65,65,65,68,53,53,66,146,146,146,146,146,146,146,146,82,167,168,169,170,171,172,173,174,175,176,
+55,35,35,90,146,146,146,146,146,146,146,146,181,146,146,146,77,82,53,53,66,146,146,146,146,146,43,44,45,82,183,184,185,186,187,188,189,190,191,192,
+67,65,49,65,133,65,65,49,65,68,53,53,66,146,146,146,93,82,53,53,66,146,146,146,106,146,146,146,146,82,199,200,201,202,203,204,205,206,207,208,
 66,146,146,146,146,146,146,146,146,82,53,53,66,35,146,146,146,149,146,146,181,146,146,146,122,146,57,71,72,82,215,216,217,218,219,220,221,222,223,224,
 50,57,71,72,146,146,146,146,146,82,53,53,66,89,146,146,146,82,53,53,66,146,146,146,146,146,57,87,88,82,231,232,233,234,235,236,237,238,239,240,
 66,57,87,88,146,146,146,146,146,82,53,53,83,81,51,51,81,84,53,53,66,146,146,146,146,146,146,73,73,82,247,248,249,250,251,252,253,254,255,256,
-66,54,73,73,146,146,146,146,146,82,53,53,53,53,53,53,53,53,53,53,66,121,146,146,146,146,146,146,146,82,215,215,215,215,215,215,215,215,215,215,
+66,54,73,73,146,146,89,146,146,82,53,53,53,53,53,53,53,53,53,53,66,121,146,146,146,146,146,146,146,82,215,215,215,215,215,215,215,215,215,215,
 83,81,81,81,81,81,81,165,81,84,53,53,53,53,53,53,53,53,53,53,83,81,51,51,51,165,81,51,51,84,183,183,183,183,183,183,183,183,183,183,
 53,53,53,53,53,53,53,146,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,53,146,53,53,53,53,146,146,146,146,146,146,146,146,146,146,
 146,55,146,146,146,146,55,146,55,146,67,65,65,65,65,65,65,65,65,68,55,55,146,146,55,146,55,146,55,55,146,146,146,146,146,146,146,146,146,146,
 15,15,15,15,15,15,16,146,14,15,66,146,146,146,146,146,146,146,106,82,146,146,55,55,146,146,146,55,146,55,146,146,146,146,146,146,146,146,146,146,
 58,146,146,146,146,146,146,146,146,58,50,146,146,146,146,146,146,146,122,82,146,55,146,146,146,146,146,146,55,146,146,146,146,146,146,146,146,146,146,146,
-12,130,130,130,130,130,130,130,130,12,66,57,146,146,146,146,146,146,146,82,55,146,146,146,146,146,146,146,55,146,146,146,146,146,146,146,146,146,146,146,
+12,130,130,130,130,130,130,130,130,12,66,57,146,146,146,146,146,146,146,85,55,146,111,146,146,146,146,146,55,146,146,146,146,146,146,146,146,146,146,146,
 13,129,129,129,129,129,129,129,129,13,66,103,104,104,105,146,146,146,107,82,55,146,146,146,146,146,146,146,146,55,146,146,146,146,146,146,146,146,146,146,
 29,145,145,145,145,145,145,30,31,32,66,43,44,44,44,45,146,146,123,82,146,55,146,146,146,146,146,146,55,146,146,146,146,146,146,146,146,146,146,146,
 12,130,130,130,130,130,130,46,47,48,66,26,54,54,54,25,146,146,146,82,55,146,146,146,146,146,146,146,146,55,146,146,146,146,146,146,146,146,146,146,
@@ -31,18 +31,18 @@
 15,16,146,14,15,15,15,15,15,15,83,81,81,81,81,81,81,165,81,84,55,146,146,55,146,55,146,55,146,55,146,146,146,146,146,146,146,146,146,146,
 53,53,146,53,53,53,53,53,53,53,53,53,53,53,53,53,53,146,53,53,53,53,53,53,53,53,53,53,146,53,146,146,146,146,146,146,146,146,146,146,
 67,65,133,49,65,65,49,49,65,68,55,55,55,78,79,80,55,146,55,55,54,91,54,91,54,91,54,146,146,91,146,146,146,146,146,146,146,146,146,146,
-66,146,146,146,146,57,71,72,56,82,55,55,146,94,95,146,146,146,146,55,91,35,91,35,91,35,91,146,146,91,146,146,146,146,146,146,146,146,146,146,
-66,146,146,146,146,57,87,88,56,82,55,146,146,94,146,146,146,146,146,146,146,146,146,146,146,146,146,146,146,90,146,146,146,146,146,146,146,146,146,146,
-66,146,146,146,146,146,146,146,146,82,55,55,146,146,146,146,146,146,146,146,146,146,146,146,146,146,146,146,90,90,146,146,146,146,146,146,146,146,146,146,
-66,146,146,146,25,26,146,146,89,82,55,55,146,146,146,146,146,146,146,146,146,146,146,146,146,146,146,146,146,90,146,146,146,146,146,146,146,146,146,146,
-50,146,146,146,41,42,43,44,45,82,55,55,146,146,146,146,146,146,146,55,92,92,92,92,92,92,92,92,92,92,146,146,146,146,146,146,146,146,146,146,
+66,146,146,146,146,57,71,72,56,82,55,55,55,94,95,146,146,146,146,55,91,35,91,35,91,35,91,146,146,91,146,146,146,146,146,146,146,146,146,146,
+66,146,146,146,146,57,87,88,56,82,55,55,146,146,146,146,146,146,55,146,146,146,146,146,146,146,146,146,146,90,146,146,146,146,146,146,146,146,146,146,
+66,146,146,146,146,146,146,146,146,82,55,146,146,146,146,146,146,146,146,146,146,146,146,146,146,146,146,146,90,90,146,146,146,146,146,146,146,146,146,146,
+66,146,146,146,25,26,146,146,89,82,55,146,146,146,146,146,146,146,146,55,146,146,146,146,146,146,146,146,146,90,146,146,146,146,146,146,146,146,146,146,
+50,146,146,146,41,42,43,44,45,82,55,146,146,146,146,146,146,146,146,55,92,92,92,92,92,92,92,92,92,92,146,146,146,146,146,146,146,146,146,146,
 66,146,146,146,146,146,146,146,146,82,55,146,146,146,146,146,146,146,55,55,130,130,130,130,130,130,130,130,130,130,146,146,146,146,146,146,146,146,146,146,
-66,121,146,146,146,146,146,146,90,82,55,55,55,55,146,146,55,55,55,55,130,130,130,130,130,130,130,130,130,130,146,146,146,146,146,146,146,146,146,146,
-83,81,81,81,81,81,81,81,81,84,55,55,55,55,55,55,55,55,55,55,130,130,130,130,130,130,130,130,130,130,35,146,146,146,146,146,146,146,146,146
+66,121,146,146,146,146,146,146,90,82,55,55,55,146,146,146,146,55,55,55,130,130,130,130,130,130,130,130,130,130,146,146,146,146,146,146,146,146,146,146,
+83,81,81,101,81,81,81,81,81,84,55,55,55,55,55,55,55,55,55,55,130,130,130,130,130,130,130,130,130,130,35,146,146,146,146,146,146,146,146,146
 </data>
  </layer>
  <objectgroup id="4" name="Object Layer 1">
-  <object id="77" name="Bec Rowe" gid="23" x="32" y="48" width="16" height="16">
+  <object id="77" name="Bec" gid="23" x="80" y="112" width="16" height="16">
    <properties>
     <property name="class" value="Npc"/>
     <property name="constructor" value="&amp;dialogue::becRMsg"/>
@@ -66,15 +66,15 @@
     <property name="class" value="Door"/>
    </properties>
   </object>
-  <object id="82" name="Peter Bday" gid="18" x="128" y="64" width="16" height="16">
+  <object id="82" name="Peter" gid="18" x="112" y="64" width="16" height="16">
    <properties>
-    <property name="class" value="OneTimeNpc"/>
-    <property name="constructor" value="&amp;dialogue::test"/>
+    <property name="class" value="PeterParty"/>
+    <property name="constructor" value="&amp;dialogue::peterBday"/>
    </properties>
   </object>
-  <object id="90" name="Jacinta" gid="39" x="128" y="112" width="16" height="16">
+  <object id="90" name="Jacinta" gid="39" x="112" y="96" width="16" height="16">
    <properties>
-    <property name="constructor" value="&amp;dialogue::test"/>
+    <property name="constructor" value="&amp;dialogue::jacintaMsg"/>
    </properties>
   </object>
   <object id="91" name="Meg F" gid="40" x="128" y="128" width="16" height="16">
@@ -82,14 +82,9 @@
     <property name="constructor" value="&amp;dialogue::megFMsg"/>
    </properties>
   </object>
-  <object id="92" name="Adam L" gid="20" x="96" y="48" width="16" height="16">
+  <object id="94" name="Bek" gid="23" x="96" y="48" width="16" height="16">
    <properties>
-    <property name="constructor" value="&amp;dialogue::test"/>
-   </properties>
-  </object>
-  <object id="94" name="Bec L" gid="23" x="112" y="48" width="16" height="16">
-   <properties>
-    <property name="constructor" value="&amp;dialogue::test"/>
+    <property name="constructor" value="&amp;dialogue::bekMsg"/>
    </properties>
   </object>
   <object id="96" name="backyardTree" gid="55" x="144" y="64" width="16" height="16">
@@ -98,9 +93,9 @@
    </properties>
   </object>
   <object id="99" name="pickleDoor" gid="85" x="272" y="96" width="16" height="16"/>
-  <object id="100" name="Peter jervois" gid="17" x="192" y="224" width="16" height="16">
+  <object id="100" name="Peter_" gid="17" x="208" y="224" width="16" height="16">
    <properties>
-    <property name="constructor" value="&amp;dialogue::test"/>
+    <property name="constructor" value="&amp;dialogue::peterJervois"/>
    </properties>
   </object>
   <object id="102" name="campFire" gid="59" x="400" y="256" width="16" height="16">
@@ -108,15 +103,15 @@
     <property name="class" value="CampFire"/>
    </properties>
   </object>
-  <object id="103" name="pickleMan" gid="21" x="240" y="64" width="16" height="16">
+  <object id="103" name="_pickleMan" gid="21" x="240" y="64" width="16" height="16">
    <properties>
     <property name="class" value="PickleMan"/>
     <property name="constructor" value=""/>
    </properties>
   </object>
-  <object id="106" name="Peter wedding" gid="17" x="208" y="384" width="16" height="16">
+  <object id="106" name="Peter__" gid="17" x="240" y="384" width="16" height="16">
    <properties>
-    <property name="constructor" value="&amp;dialogue::test"/>
+    <property name="constructor" value="&amp;dialogue::peterWedding"/>
    </properties>
   </object>
   <object id="107" name="PeterPropose" gid="63" x="352" y="400" width="16" height="16">
@@ -126,23 +121,23 @@
    </properties>
   </object>
   <object id="110" name="ki_exit" gid="101" x="400" y="160" width="16" height="16"/>
-  <object id="112" name="anne" gid="23" x="352" y="64" width="16" height="16">
+  <object id="112" name="Anne" gid="23" x="352" y="64" width="16" height="16">
    <properties>
     <property name="constructor" value="&amp;dialogue::anneMsg"/>
    </properties>
   </object>
-  <object id="113" name="roger" gid="22" x="368" y="64" width="16" height="16">
+  <object id="113" name="Roger" gid="22" x="368" y="64" width="16" height="16">
    <properties>
     <property name="constructor" value="&amp;dialogue::rogerMsg"/>
    </properties>
   </object>
-  <object id="114" name="kim" gid="97" x="336" y="112" width="16" height="16">
+  <object id="114" name="Kim" gid="97" x="336" y="112" width="16" height="16">
    <properties>
     <property name="class" value="Npc"/>
-    <property name="constructor" value="&amp;dialogue::test"/>
+    <property name="constructor" value="&amp;dialogue::kimMsg"/>
    </properties>
   </object>
-  <object id="115" name="richard" gid="36" x="384" y="112" width="16" height="16">
+  <object id="115" name="Richard" gid="36" x="384" y="112" width="16" height="16">
    <properties>
     <property name="constructor" value="&amp;dialogue::richardMsg"/>
    </properties>
@@ -152,24 +147,34 @@
     <property name="constructor" value="&amp;dialogue::kathrynMsg"/>
    </properties>
   </object>
-  <object id="119" name="Kahla" gid="23" x="368" y="240" width="16" height="16">
+  <object id="119" name="Thomas and Kahla" gid="23" x="368" y="256" width="16" height="16">
    <properties>
-    <property name="constructor" value="&amp;dialogue::test"/>
+    <property name="constructor" value="&amp;dialogue::thomasMsg"/>
    </properties>
   </object>
-  <object id="121" name="Thomas" gid="22" x="352" y="256" width="16" height="16">
+  <object id="121" name="Thomas and Kahla_" gid="22" x="368" y="272" width="16" height="16">
    <properties>
     <property name="constructor" value="&amp;dialogue::thomasMsg"/>
    </properties>
   </object>
   <object id="122" name="George" gid="37" x="432" y="272" width="16" height="16">
    <properties>
-    <property name="constructor" value="&amp;dialogue::test"/>
+    <property name="constructor" value="&amp;dialogue::georgeMsg"/>
    </properties>
   </object>
   <object id="123" name="snake" gid="109" x="320" y="416" width="16" height="16">
    <properties>
     <property name="class" value="Snake"/>
+   </properties>
+  </object>
+  <object id="127" name="exit" gid="69" x="224" y="192" width="16" height="16">
+   <properties>
+    <property name="class" value="Exit"/>
+   </properties>
+  </object>
+  <object id="128" name="Alfie" gid="119" x="256" y="208" width="16" height="16">
+   <properties>
+    <property name="class" value="Alfie"/>
    </properties>
   </object>
  </objectgroup>
